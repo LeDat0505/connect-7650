@@ -3835,3 +3835,160 @@ body,
     align-items: center !important;
   }
 }
+
+/* ==========================================================
+   ABOUT TAB: "Về chúng tôi" (roles, idea, tools, feedback)
+   ========================================================== */
+.team-members-list li {
+  align-items: flex-start;
+}
+
+.team-member-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.team-member-name {
+  font-weight: 700;
+}
+
+.team-member-role {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--saigon-muted);
+  line-height: 1.4;
+}
+
+.about-idea-section,
+.about-tools-section,
+.about-feedback-section {
+  margin-bottom: 24px;
+}
+
+.about-paragraph {
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.about-tools-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 10px;
+}
+
+.about-tools-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  background: var(--saigon-bg);
+  border: 1px solid var(--saigon-border);
+  border-left: 4px solid var(--heritage-gold-bright);
+  border-radius: var(--radius-md);
+}
+
+.about-tool-name {
+  font-weight: 700;
+  color: var(--saigon-dark);
+}
+
+.about-tool-purpose {
+  font-size: 0.86rem;
+  color: var(--saigon-muted);
+  line-height: 1.5;
+}
+
+.about-feedback-body {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.btn-feedback-form {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  padding: 10px 20px;
+  background: var(--heritage-red);
+  color: #FFFFFF;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+}
+
+.btn-feedback-form:hover {
+  background: var(--heritage-red-dark);
+}
+
+.about-feedback-qr {
+  flex-shrink: 0;
+  padding: 6px;
+  background: #FFFFFF;
+  border: 1px solid var(--saigon-border);
+  border-radius: var(--radius-md);
+}
+
+@media (max-width: 768px) {
+  .about-feedback-body {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-tools-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+.team-photo {
+  margin: 0 0 18px;
+}
+
+.team-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+.team-photo figcaption {
+  margin-top: 8px;
+  font-size: 0.82rem;
+  color: var(--saigon-muted);
+  text-align: center;
+  font-style: italic;
+}
+
+.about-tools-note {
+  margin-top: 12px;
+  font-size: 0.86rem;
+  color: var(--saigon-slate);
+}
+
+.about-opensource-label {
+  margin-top: 16px;
+}
+
+.about-opensource-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.about-opensource-list li {
+  padding: 4px 10px;
+  font-size: 0.78rem;
+  color: var(--saigon-muted);
+  background: var(--saigon-bg);
+  border: 1px solid var(--saigon-border);
+  border-radius: 999px;
+}

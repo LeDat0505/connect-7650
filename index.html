@@ -360,7 +360,10 @@
             CONNECT 7650 là dự án do nhóm học sinh lớp 11A13, Trường THPT Lê Quý Đôn, phường Xuân Hòa thực hiện, thuộc khuôn khổ dự án liên trường “5001 Khắc Dấu Rạng Đông” của Trường THPT Lê Quý Đôn.
           </p>
 
-          <!-- Rendered from CONNECT_DATA.project.team — edit members in data/historical_data.js -->
+          <!-- "Về chúng tôi": content comes from data/about.js; empty sections stay hidden -->
+          <section class="intro-feature-card about-idea-section hidden" id="about-idea-section" aria-label="Ý tưởng và xuất phát điểm"></section>
+
+          <!-- Members from CONNECT_DATA.project.team, roles from data/about.js -->
           <section class="intro-feature-card team-section" id="project-team-section" aria-label="Nhóm thực hiện dự án"></section>
 
           <div class="intro-grid">
@@ -391,6 +394,10 @@
 
           <!-- Rendered from CONNECT_DATA.project.ward_name_meaning -->
           <section class="intro-feature-card ward-meaning-section" id="ward-name-meaning-section" aria-label="Ý nghĩa tên gọi phường Xuân Hòa"></section>
+
+          <section class="intro-feature-card about-tools-section hidden" id="about-tools-section" aria-label="Công cụ hỗ trợ"></section>
+
+          <section class="intro-feature-card about-feedback-section hidden" id="about-feedback-section" aria-label="Góp ý và đính chính"></section>
         </div>
       </section>
 
@@ -604,6 +611,7 @@
   
   <!-- Structured Historical Data -->
   <script defer src="data/historical_data.js"></script>
+  <script defer src="data/about.js"></script>
   
   <!-- Main Application Logic -->
   <script defer src="app.js"></script>

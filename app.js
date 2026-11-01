@@ -3501,22 +3501,86 @@ function renderSourcesTab() {
 // ============================================================================
 function renderAboutTab() {
   const project = window.CONNECT_DATA.project || {};
+  const about = window.CONNECT_ABOUT || {};
+  const roles = about.roles || {};
   const team = project.team;
   const teamEl = document.getElementById('project-team-section');
+  const photo = about.photo || {};
+  const photoHtml = photo.src ? `
+      <figure class="team-photo">
+        <img src="${escapeHtml(photo.src)}"
+          ${photo.srcSmall ? `srcset="${escapeHtml(photo.srcSmall)} 700w, ${escapeHtml(photo.src)} 1170w" sizes="(max-width: 768px) 100vw, 900px"` : ''}
+          alt="${escapeHtml(photo.alt || '')}" width="1170" height="792" loading="lazy" decoding="async">
+        ${photo.caption ? `<figcaption>${escapeHtml(photo.caption)}</figcaption>` : ''}
+      </figure>` : '';
   if (teamEl && team) {
     teamEl.innerHTML = `
       <h3 class="team-section-title">${escapeHtml(team.title)}</h3>
+      ${photoHtml}
       <dl class="team-info-list">
         <div><dt>Đơn vị thực hiện</dt><dd>${escapeHtml(team.unit)}</dd></div>
         <div><dt>Tên dự án</dt><dd>${escapeHtml(team.project_name)}</dd></div>
         <div><dt>Khuôn khổ</dt><dd>${escapeHtml(team.program)}</dd></div>
       </dl>
-      <div class="team-members-label">Danh sách thành viên (${team.members.length})</div>
+      <div class="team-members-label">Thành viên & phân công (${team.members.length})</div>
       <ol class="team-members-list">
-        ${team.members.map(name => `<li>${escapeHtml(name)}</li>`).join('')}
+        ${team.members.map(name => `
+          <li>
+            <div class="team-member-text">
+              <span class="team-member-name">${escapeHtml(name)}</span>
+              ${roles[name] ? `<span class="team-member-role">${escapeHtml(roles[name])}</span>` : ''}
+            </div>
+          </li>`).join('')}
       </ol>
     `;
   }
+
+  // Each "Về chúng tôi" section is shown only once it has content in data/about.js
+  const showSection = (id, html) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.innerHTML = html || '';
+    el.classList.toggle('hidden', !html);
+  };
+
+  const idea = about.idea || {};
+  showSection('about-idea-section', (idea.paragraphs || []).length ? `
+    <h3 class="team-section-title">${escapeHtml(idea.title || 'Ý TƯỞNG & XUẤT PHÁT ĐIỂM')}</h3>
+    ${idea.paragraphs.map(p => `<p class="about-paragraph">${escapeHtml(p)}</p>`).join('')}
+  ` : '');
+
+  const tools = about.tools || [];
+  const openSource = about.openSource || [];
+  showSection('about-tools-section', tools.length ? `
+    <h3 class="team-section-title">CÔNG CỤ HỖ TRỢ</h3>
+    <ul class="about-tools-list">
+      ${tools.map(t => `
+        <li>
+          <span class="about-tool-name">${escapeHtml(t.name)}</span>
+          <span class="about-tool-purpose">${escapeHtml(t.purpose)}</span>
+        </li>`).join('')}
+    </ul>
+    ${about.toolsNote ? `<p class="about-tools-note">${escapeHtml(about.toolsNote)}</p>` : ''}
+    ${openSource.length ? `
+      <div class="team-members-label about-opensource-label">Thư viện & dữ liệu mở được sử dụng</div>
+      <ul class="about-opensource-list">${openSource.map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul>
+    ` : ''}
+  ` : '');
+
+  const feedback = about.feedback || {};
+  const formUrl = /^https:\/\//.test(feedback.formUrl || '') ? feedback.formUrl : '';
+  showSection('about-feedback-section', formUrl ? `
+    <h3 class="team-section-title">${escapeHtml(feedback.title || 'GÓP Ý & ĐÍNH CHÍNH')}</h3>
+    <div class="about-feedback-body">
+      <div>
+        <p class="about-paragraph">${escapeHtml(feedback.text || '')}</p>
+        <a class="btn-feedback-form" href="${escapeHtml(formUrl)}" target="_blank" rel="noopener noreferrer">📝 Mở biểu mẫu góp ý</a>
+      </div>
+      <img class="about-feedback-qr" width="140" height="140" loading="lazy"
+        src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(formUrl)}"
+        alt="Mã QR mở biểu mẫu góp ý">
+    </div>
+  ` : '');
 
   const meaning = project.ward_name_meaning;
   const meaningEl = document.getElementById('ward-name-meaning-section');
