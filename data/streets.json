@@ -3974,8 +3974,8 @@
     "significance": "Tên đường gợi nhắc phong trào Đồng Khởi năm 1960 của nhân dân miền Nam.",
     "figure_id": null,
     "naming_history": {
-      "previous_names": "Rue Catinat (thời Pháp thuộc), đường Tự Do (trước 1975)",
-      "decision": "Đổi tên thành Đồng Khởi sau năm 1975 (chưa xác minh số quyết định)",
+      "previous_names": "Rue N°6, sau đó Rue Catinat (thời Pháp thuộc, theo tên chiến hạm Catinat); đường Tự Do (sau khi người Pháp rút đi đến 1975)",
+      "decision": "Đổi tên thành Đồng Khởi sau năm 1975 (chưa xác minh thời điểm và số văn bản)",
       "year": null,
       "verified": false
     },
@@ -3983,8 +3983,8 @@
     "milestones": [],
     "nearby_sites": [],
     "sources": [
-      "PLO – Đường Nguyễn Huệ, Đồng Khởi qua các thời kỳ",
-      "Vietnamtourism – Phố Đồng Khởi"
+      "Wikipedia: Đồng Khởi Street",
+      "Báo Pháp Luật TP.HCM – Đường Nguyễn Huệ, Đồng Khởi qua các thời kỳ"
     ],
     "verification_status": "pending",
     "description": "Tuyến đường trung tâm thuộc khu vực Quận 1 và Quận 3 cũ.",
@@ -4003,7 +4003,7 @@
       {
         "era": "Thời Pháp thuộc",
         "name": "Rue Catinat",
-        "note": "Phố thương mại lát đá đầu tiên của Sài Gòn thuộc Pháp"
+        "note": "Ban đầu là Rue N°6"
       },
       {
         "era": "Trước 1975",
@@ -4136,16 +4136,18 @@
     "significance": "Tôn vinh Lê Lợi, người lãnh đạo khởi nghĩa Lam Sơn và sáng lập nhà Hậu Lê.",
     "figure_id": null,
     "naming_history": {
-      "previous_names": "Chưa có tư liệu xác minh trong cơ sở dữ liệu dự án",
-      "decision": "Chưa có tư liệu xác minh về thời điểm và văn bản đặt tên",
-      "year": null,
-      "verified": false
+      "previous_names": "Đường số 13, từ năm 1865 là Boulevard Bonard (thời Pháp thuộc)",
+      "decision": "Năm 1955 chính quyền Việt Nam Cộng hòa đổi tên thành đại lộ Lê Lợi; tên được giữ đến nay",
+      "year": 1955,
+      "verified": true
     },
     "biography_summary": "Lê Lợi (1385–1433) lãnh đạo khởi nghĩa Lam Sơn đánh đuổi quân Minh, lên ngôi năm 1428.",
     "milestones": [],
     "nearby_sites": [],
-    "sources": [],
-    "verification_status": "pending",
+    "sources": [
+      "Wikipedia tiếng Việt: Đường Lê Lợi, Thành phố Hồ Chí Minh"
+    ],
+    "verification_status": "verified",
     "description": "Tuyến đường trung tâm thuộc khu vực Quận 1 và Quận 3 cũ.",
     "coordinates": [
       [
@@ -4219,6 +4221,23 @@
       "site_nha_hat_thanh_pho",
       "site_cong_truong_quach_thi_trang",
       "site_cho_ben_thanh"
+    ],
+    "naming_eras": [
+      {
+        "era": "Trước 1865",
+        "name": "Đường số 13",
+        "note": ""
+      },
+      {
+        "era": "1865 – 1955",
+        "name": "Boulevard Bonard",
+        "note": ""
+      },
+      {
+        "era": "Từ 1955 – Nay",
+        "name": "Đường Lê Lợi",
+        "note": ""
+      }
     ]
   },
   {
@@ -4860,8 +4879,8 @@
     "significance": "Tưởng nhớ người thanh niên cách mạng Lý Tự Trọng (1914–1931).",
     "figure_id": null,
     "naming_history": {
-      "previous_names": "Đường Gia Long (trước 1975)",
-      "decision": "Đổi tên thành Lý Tự Trọng sau năm 1975 (chưa xác minh số quyết định)",
+      "previous_names": "Rue du Gouverneur (mở năm 1863), Rue De La Grandière (từ 1870), đường Gia Long (trước 1975)",
+      "decision": "Đổi tên thành Lý Tự Trọng sau năm 1975 (chưa xác minh thời điểm và số văn bản)",
       "year": null,
       "verified": false
     },
@@ -4869,6 +4888,7 @@
     "milestones": [],
     "nearby_sites": [],
     "sources": [
+      "Báo Tuổi Trẻ – Lý Tự Trọng, con đường có lá me bay",
       "Saigoneer (Tim Doling) – giao lộ Đồn Đất – Gia Long (Thái Văn Lung – Lý Tự Trọng)"
     ],
     "verification_status": "pending",
@@ -4918,6 +4938,16 @@
     "geometry_source": "OpenStreetMap (ODbL), cắt theo ranh giới phường",
     "naming_eras": [
       {
+        "era": "1863 – 1870",
+        "name": "Rue du Gouverneur",
+        "note": ""
+      },
+      {
+        "era": "Từ 1870",
+        "name": "Rue De La Grandière",
+        "note": ""
+      },
+      {
         "era": "Trước 1975",
         "name": "Đường Gia Long",
         "note": ""
@@ -4958,7 +4988,8 @@
     "milestones": [],
     "nearby_sites": [],
     "sources": [
-      "Saigoneer (Tim Doling) – nhắc rue d'Espagne (Lê Thánh Tôn)"
+      "Saigoneer (Tim Doling) – nhắc rue d'Espagne (Lê Thánh Tôn)",
+      "Plan Saigon 1952 (entreprises-coloniales.fr) – ghi tên Rue d'Espagne"
     ],
     "verification_status": "pending",
     "description": "Tuyến đường trung tâm thuộc khu vực Quận 1 và Quận 3 cũ.",
@@ -5028,15 +5059,17 @@
     "significance": "Tôn vinh Cao Thắng, thủ lĩnh nghĩa quân trong phong trào Cần Vương cuối thế kỷ XIX.",
     "figure_id": null,
     "naming_history": {
-      "previous_names": "Chưa có tư liệu xác minh trong cơ sở dữ liệu dự án",
-      "decision": "Chưa có tư liệu xác minh về thời điểm và văn bản đặt tên",
+      "previous_names": "Rue Audouit (thời Pháp thuộc)",
+      "decision": "Chưa xác minh thời điểm đặt tên Cao Thắng (năm 1955 chính quyền Ngô Đình Diệm chỉ thị thay toàn bộ tên đường tiếng Pháp bằng tên Việt)",
       "year": null,
       "verified": false
     },
     "biography_summary": "Cao Thắng (1864–1893) là thủ lĩnh nghĩa quân Hương Khê dưới sự lãnh đạo của Phan Đình Phùng.",
     "milestones": [],
     "nearby_sites": [],
-    "sources": [],
+    "sources": [
+      "Báo Pháp Luật TP.HCM – Những con đường người lịch sử"
+    ],
     "verification_status": "pending",
     "description": "Tuyến đường trung tâm thuộc khu vực Quận 1 và Quận 3 cũ.",
     "coordinates": [
@@ -5073,6 +5106,18 @@
       "Bàn Cờ",
       "Cầu Ông Lãnh"
     ],
-    "landmarks_along": []
+    "landmarks_along": [],
+    "naming_eras": [
+      {
+        "era": "Thời Pháp thuộc",
+        "name": "Rue Audouit",
+        "note": ""
+      },
+      {
+        "era": "Hiện nay",
+        "name": "Đường Cao Thắng",
+        "note": "Chưa xác minh năm đặt tên"
+      }
+    ]
   }
 ]

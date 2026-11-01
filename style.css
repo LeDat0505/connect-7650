@@ -3591,8 +3591,13 @@ body,
   padding-top: env(safe-area-inset-top);
 }
 
-/* Main tabs scroll sideways at every width (phones, iPad portrait, small laptops) */
-.header-content > * {
+/* Main tabs scroll sideways at every width (phones, iPad portrait, small laptops).
+   Only the tab row may shrink; the logo keeps its width so the two never overlap. */
+.brand-section {
+  flex-shrink: 0;
+}
+
+.header-content > .nav-tabs {
   min-width: 0;
 }
 

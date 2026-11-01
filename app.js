@@ -1015,6 +1015,7 @@ function openHeritageSiteDetails(siteId) {
 
   const verificationNotes = {
     official: 'Tên phường mới theo Nghị quyết 1685/NQ-UBTVQH15 (hiệu lực 01/07/2025).',
+    press: 'Tên phường mới theo địa chỉ được cơ quan, báo chí công bố sau 01/07/2025 (xem nguồn bên dưới).',
     osm_boundary: 'Tên phường mới xác định theo ranh giới phường trên OpenStreetMap – cần đối chiếu thêm văn bản chính thức.',
     unverified: 'Chưa xác minh được tên phường mới; đang giữ địa chỉ trước 01/07/2025.'
   };

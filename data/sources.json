@@ -95,8 +95,8 @@
     "date": "Tra cứu 11/2026",
     "type": "Nghiên cứu lịch sử đô thị",
     "archive": "en.wikipedia.org, saigoneer.com",
-    "notes": "Lê Duẩn (Norodom → Thống Nhứt 1955 → 30 Tháng 4 năm 1975 → Lê Duẩn 1986), Tôn Đức Thắng (1980), Hàm Nghi (de la Somme), Pasteur (Pellerin, 1955).",
-    "status": "pending"
+    "notes": "Lê Duẩn (Norodom → Thống Nhứt 1955 → 30 Tháng 4 năm 1975 → Lê Duẩn 1986), Tôn Đức Thắng (1980), Hàm Nghi (Canton, de la Somme → Hàm Nghi sau 1955), Pasteur (Pellerin → Pasteur 1955), Lê Lợi (Bonard 1865 → Lê Lợi 1955). Năm và văn bản đổi tên của Đồng Khởi, Lý Tự Trọng, Lê Thánh Tôn, Cao Thắng, Nguyễn Du chưa có trong nguồn này – xem trạng thái từng tuyến đường.",
+    "status": "verified"
   },
   {
     "id": "src_osm",
@@ -105,6 +105,15 @@
     "type": "Dữ liệu bản đồ mở (ODbL)",
     "archive": "openstreetmap.org (Overpass API)",
     "notes": "Mỗi địa điểm ghi rõ mã đối tượng OSM trong trường coord_source để kiểm tra lại.",
+    "status": "verified"
+  },
+  {
+    "id": "src_verification_2026_11",
+    "title": "Đợt đối chiếu tư liệu tháng 11/2026 – Wikipedia tiếng Việt và báo chí (VOH, Pháp Luật TP.HCM, Tuổi Trẻ, Báo Văn Hóa, Nhân Dân)",
+    "date": "11/2026",
+    "type": "Đối chiếu tư liệu",
+    "archive": "vi.wikipedia.org, voh.com.vn, plo.vn, tuoitre.vn, baovanhoa.vn, nhandan.vn",
+    "notes": "Xác minh năm xây dựng, kiến trúc sư, mốc lịch sử của các địa điểm trung tâm và tên phường mới của các địa chỉ. Đã sửa: Nhà hát dùng làm trụ sở Quốc hội VNCH từ 1955 (không phải 1956); tượng Quách Thị Trang đã di dời khi xây ga Metro Bến Thành; bỏ thông tin chưa có căn cứ về ga Metro tại công viên Lê Văn Tám.",
     "status": "verified"
   }
 ]

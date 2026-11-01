@@ -4012,8 +4012,8 @@ var CONNECT_DATA = {
       "significance": "Tên đường gợi nhắc phong trào Đồng Khởi năm 1960 của nhân dân miền Nam.",
       "figure_id": null,
       "naming_history": {
-        "previous_names": "Rue Catinat (thời Pháp thuộc), đường Tự Do (trước 1975)",
-        "decision": "Đổi tên thành Đồng Khởi sau năm 1975 (chưa xác minh số quyết định)",
+        "previous_names": "Rue N°6, sau đó Rue Catinat (thời Pháp thuộc, theo tên chiến hạm Catinat); đường Tự Do (sau khi người Pháp rút đi đến 1975)",
+        "decision": "Đổi tên thành Đồng Khởi sau năm 1975 (chưa xác minh thời điểm và số văn bản)",
         "year": null,
         "verified": false
       },
@@ -4021,8 +4021,8 @@ var CONNECT_DATA = {
       "milestones": [],
       "nearby_sites": [],
       "sources": [
-        "PLO – Đường Nguyễn Huệ, Đồng Khởi qua các thời kỳ",
-        "Vietnamtourism – Phố Đồng Khởi"
+        "Wikipedia: Đồng Khởi Street",
+        "Báo Pháp Luật TP.HCM – Đường Nguyễn Huệ, Đồng Khởi qua các thời kỳ"
       ],
       "verification_status": "pending",
       "description": "Tuyến đường trung tâm thuộc khu vực Quận 1 và Quận 3 cũ.",
@@ -4041,7 +4041,7 @@ var CONNECT_DATA = {
         {
           "era": "Thời Pháp thuộc",
           "name": "Rue Catinat",
-          "note": "Phố thương mại lát đá đầu tiên của Sài Gòn thuộc Pháp"
+          "note": "Ban đầu là Rue N°6"
         },
         {
           "era": "Trước 1975",
@@ -4174,16 +4174,18 @@ var CONNECT_DATA = {
       "significance": "Tôn vinh Lê Lợi, người lãnh đạo khởi nghĩa Lam Sơn và sáng lập nhà Hậu Lê.",
       "figure_id": null,
       "naming_history": {
-        "previous_names": "Chưa có tư liệu xác minh trong cơ sở dữ liệu dự án",
-        "decision": "Chưa có tư liệu xác minh về thời điểm và văn bản đặt tên",
-        "year": null,
-        "verified": false
+        "previous_names": "Đường số 13, từ năm 1865 là Boulevard Bonard (thời Pháp thuộc)",
+        "decision": "Năm 1955 chính quyền Việt Nam Cộng hòa đổi tên thành đại lộ Lê Lợi; tên được giữ đến nay",
+        "year": 1955,
+        "verified": true
       },
       "biography_summary": "Lê Lợi (1385–1433) lãnh đạo khởi nghĩa Lam Sơn đánh đuổi quân Minh, lên ngôi năm 1428.",
       "milestones": [],
       "nearby_sites": [],
-      "sources": [],
-      "verification_status": "pending",
+      "sources": [
+        "Wikipedia tiếng Việt: Đường Lê Lợi, Thành phố Hồ Chí Minh"
+      ],
+      "verification_status": "verified",
       "description": "Tuyến đường trung tâm thuộc khu vực Quận 1 và Quận 3 cũ.",
       "coordinates": [
         [
@@ -4257,6 +4259,23 @@ var CONNECT_DATA = {
         "site_nha_hat_thanh_pho",
         "site_cong_truong_quach_thi_trang",
         "site_cho_ben_thanh"
+      ],
+      "naming_eras": [
+        {
+          "era": "Trước 1865",
+          "name": "Đường số 13",
+          "note": ""
+        },
+        {
+          "era": "1865 – 1955",
+          "name": "Boulevard Bonard",
+          "note": ""
+        },
+        {
+          "era": "Từ 1955 – Nay",
+          "name": "Đường Lê Lợi",
+          "note": ""
+        }
       ]
     },
     {
@@ -4898,8 +4917,8 @@ var CONNECT_DATA = {
       "significance": "Tưởng nhớ người thanh niên cách mạng Lý Tự Trọng (1914–1931).",
       "figure_id": null,
       "naming_history": {
-        "previous_names": "Đường Gia Long (trước 1975)",
-        "decision": "Đổi tên thành Lý Tự Trọng sau năm 1975 (chưa xác minh số quyết định)",
+        "previous_names": "Rue du Gouverneur (mở năm 1863), Rue De La Grandière (từ 1870), đường Gia Long (trước 1975)",
+        "decision": "Đổi tên thành Lý Tự Trọng sau năm 1975 (chưa xác minh thời điểm và số văn bản)",
         "year": null,
         "verified": false
       },
@@ -4907,6 +4926,7 @@ var CONNECT_DATA = {
       "milestones": [],
       "nearby_sites": [],
       "sources": [
+        "Báo Tuổi Trẻ – Lý Tự Trọng, con đường có lá me bay",
         "Saigoneer (Tim Doling) – giao lộ Đồn Đất – Gia Long (Thái Văn Lung – Lý Tự Trọng)"
       ],
       "verification_status": "pending",
@@ -4956,6 +4976,16 @@ var CONNECT_DATA = {
       "geometry_source": "OpenStreetMap (ODbL), cắt theo ranh giới phường",
       "naming_eras": [
         {
+          "era": "1863 – 1870",
+          "name": "Rue du Gouverneur",
+          "note": ""
+        },
+        {
+          "era": "Từ 1870",
+          "name": "Rue De La Grandière",
+          "note": ""
+        },
+        {
           "era": "Trước 1975",
           "name": "Đường Gia Long",
           "note": ""
@@ -4996,7 +5026,8 @@ var CONNECT_DATA = {
       "milestones": [],
       "nearby_sites": [],
       "sources": [
-        "Saigoneer (Tim Doling) – nhắc rue d'Espagne (Lê Thánh Tôn)"
+        "Saigoneer (Tim Doling) – nhắc rue d'Espagne (Lê Thánh Tôn)",
+        "Plan Saigon 1952 (entreprises-coloniales.fr) – ghi tên Rue d'Espagne"
       ],
       "verification_status": "pending",
       "description": "Tuyến đường trung tâm thuộc khu vực Quận 1 và Quận 3 cũ.",
@@ -5066,15 +5097,17 @@ var CONNECT_DATA = {
       "significance": "Tôn vinh Cao Thắng, thủ lĩnh nghĩa quân trong phong trào Cần Vương cuối thế kỷ XIX.",
       "figure_id": null,
       "naming_history": {
-        "previous_names": "Chưa có tư liệu xác minh trong cơ sở dữ liệu dự án",
-        "decision": "Chưa có tư liệu xác minh về thời điểm và văn bản đặt tên",
+        "previous_names": "Rue Audouit (thời Pháp thuộc)",
+        "decision": "Chưa xác minh thời điểm đặt tên Cao Thắng (năm 1955 chính quyền Ngô Đình Diệm chỉ thị thay toàn bộ tên đường tiếng Pháp bằng tên Việt)",
         "year": null,
         "verified": false
       },
       "biography_summary": "Cao Thắng (1864–1893) là thủ lĩnh nghĩa quân Hương Khê dưới sự lãnh đạo của Phan Đình Phùng.",
       "milestones": [],
       "nearby_sites": [],
-      "sources": [],
+      "sources": [
+        "Báo Pháp Luật TP.HCM – Những con đường người lịch sử"
+      ],
       "verification_status": "pending",
       "description": "Tuyến đường trung tâm thuộc khu vực Quận 1 và Quận 3 cũ.",
       "coordinates": [
@@ -5111,7 +5144,19 @@ var CONNECT_DATA = {
         "Bàn Cờ",
         "Cầu Ông Lãnh"
       ],
-      "landmarks_along": []
+      "landmarks_along": [],
+      "naming_eras": [
+        {
+          "era": "Thời Pháp thuộc",
+          "name": "Rue Audouit",
+          "note": ""
+        },
+        {
+          "era": "Hiện nay",
+          "name": "Đường Cao Thắng",
+          "note": "Chưa xác minh năm đặt tên"
+        }
+      ]
     }
   ],
   "heritage_sites": [
@@ -5155,8 +5200,8 @@ var CONNECT_DATA = {
         106.686755
       ],
       "image_url": "https://images.unsplash.com/photo-1548625361-125032598822?w=600&auto=format&fit=crop",
-      "history": "Được xây dựng ngay tại vị trí Hòa thượng Thích Quảng Đức thực hiện cuộc tự thiêu lịch sử vào ngày 11/06/1963 nhằm phản đối chính sách đàn áp Phật giáo của chính quyền Ngô Đình Diệm, làm chấn động lương tri toàn cầu.",
-      "highlights": "Tượng đài Bồ tát bằng đồng nguyên khối cao 6m và cụm phù điêu khắc họa ngọn lửa từ bi bất diệt cùng quả tim bất diệt.",
+      "history": "Tượng đài đặt tại góc giao lộ nơi Hòa thượng Thích Quảng Đức tự thiêu ngày 11/06/1963 (khi đó là ngã tư Phan Đình Phùng – Lê Văn Duyệt, nay là Nguyễn Đình Chiểu – Cách Mạng Tháng Tám) để phản đối chính sách đàn áp Phật giáo của chính quyền Ngô Đình Diệm.",
+      "highlights": "Tượng đài tưởng niệm hình Bồ tát trong ngọn lửa, lắp đặt năm 2010 trong công viên nhỏ tại góc giao lộ (theo Atlas Obscura; chưa có nguồn trong nước xác nhận năm lắp đặt và chất liệu).",
       "opening_hours": "Mở cửa tự do toàn thời gian",
       "verified": true,
       "related_street_id": "street_cach_mang_thang_tam",
@@ -5172,6 +5217,9 @@ var CONNECT_DATA = {
         "cong vien thich quang duc"
       ],
       "sources": [
+        "Wikipedia: Thích Quảng Đức (vị trí sự kiện 11/06/1963)",
+        "Atlas Obscura – The Venerable Thich Quang Duc Monument (năm lắp đặt 2010)",
+        "Báo Pháp Luật TP.HCM (2025) – đoàn rước xá lợi qua tượng đài tại ngã tư",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
       "ward": "Xuân Hòa"
@@ -5271,9 +5319,9 @@ var CONNECT_DATA = {
     },
     {
       "id": "site_ben_nha_rong",
-      "name": "Bảo tàng Hồ Chí Minh - Bến Nhà Rồng",
+      "name": "Bảo tàng Hồ Chí Minh – Chi nhánh TP.HCM (Bến Nhà Rồng)",
       "category": "museum",
-      "address": "Số 01 Nguyễn Tất Thành, Phường 12, Quận 4 (địa chỉ trước 01/07/2025 – đang đối chiếu tên phường mới)",
+      "address": "01 Nguyễn Tất Thành, Phường Xóm Chiếu, TP. Hồ Chí Minh",
       "coordinates": [
         10.768251,
         106.706807
@@ -5285,8 +5333,8 @@ var CONNECT_DATA = {
       "verified": true,
       "related_street_id": "street_nam_ky_khoi_nghia",
       "street_address": "01 Nguyễn Tất Thành",
-      "address_old": "Số 01 Nguyễn Tất Thành, Phường 12, Quận 4",
-      "address_verification": "unverified",
+      "address_old": "Số 01 Nguyễn Tất Thành, Quận 4 (các nguồn cũ ghi Phường 12 hoặc Phường 13)",
+      "address_verification": "press",
       "coord_source": "OSM way 808022726",
       "place_type": "museum",
       "is_red_address": true,
@@ -5295,9 +5343,12 @@ var CONNECT_DATA = {
         "bao tang ho chi minh"
       ],
       "sources": [
+        "Báo Văn Hóa – Khởi công dự án cải tạo, chỉnh trang Bảo tàng Hồ Chí Minh – Chi nhánh TP.HCM (ghi phường Xóm Chiếu)",
+        "Bảo tàng Hồ Chí Minh – Bến Nhà Rồng (sự kiện 05/06/1911)",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
-      "ward": null
+      "ward": "Xóm Chiếu",
+      "ward_override": "Xóm Chiếu"
     },
     {
       "id": "site_truong_le_quy_don",
@@ -5408,16 +5459,16 @@ var CONNECT_DATA = {
         106.686485
       ],
       "coord_source": "OSM way 225209627 (Chùa Phật Học Xá Lợi)",
-      "history": "Chùa khởi công ngày 05/08/1956 trên khu đất khoảng 2.500 m², theo thiết kế của các kiến trúc sư Trần Văn Đường và Đỗ Bá Vinh, hoàn thành năm 1958. Năm 1963, chùa là một trung tâm của phong trào Phật giáo đấu tranh chống chính sách kỳ thị tôn giáo của chính quyền Ngô Đình Diệm; đêm 20 rạng sáng 21/08/1963, lực lượng của chính quyền đã tấn công vào chùa.",
-      "highlights": "Tháp chuông bảy tầng xây dựng năm 1960; tháp bạc thờ xá lợi được trao tặng ngày 11/12/1960.",
+      "history": "Chùa khởi công ngày 05/08/1956 trong khuôn viên rộng 2.500 m², theo thiết kế của các kiến trúc sư Trần Văn Đường và Đỗ Bá Vinh, hoàn thành ngày 02/05/1958. Năm 1963, đây là trung tâm của phong trào Phật giáo đấu tranh tại Sài Gòn: nơi tập trung tăng ni, họp báo, phát hành truyền đơn và tổ chức biểu tình. Khoảng 0 giờ 20 phút ngày 21/08/1963, lực lượng Đặc biệt và cảnh sát dã chiến theo lệnh Ngô Đình Nhu đã tấn công vào chùa.",
+      "highlights": "Tháp chuông 7 tầng, cao 32 m, khánh thành năm 1961.",
       "opening_hours": "Chưa có thông tin giờ mở cửa đã xác minh",
       "related_street_id": "street_ba_huyen_thanh_quan",
       "sources": [
-        "Vinwonders / Mia.vn – lịch sử xây dựng chùa Xá Lợi (cần đối chiếu thêm với tư liệu Phật giáo chính thức)",
+        "Wikipedia tiếng Việt: Chùa Xá Lợi (khởi công, hoàn thành, kiến trúc sư, tháp chuông)",
         "Wikipedia: Xá Lợi Pagoda raids (sự kiện 21/08/1963)",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
-      "verified": false,
+      "verified": true,
       "aliases": [
         "chua xa loi",
         "xa loi"
@@ -5474,15 +5525,15 @@ var CONNECT_DATA = {
         106.703219
       ],
       "coord_source": "OSM way 801710792",
-      "history": "Công trình kiến trúc Pháp hoàn thành năm 1900 (Opéra de Saigon). Giai đoạn 1956 – 1975, tòa nhà từng được dùng làm trụ sở Hạ nghị viện của chính quyền Sài Gòn; sau năm 1975 trở lại chức năng nhà hát.",
+      "history": "Khởi công năm 1898, khánh thành ngày 01/01/1900, do các kiến trúc sư Félix Olivier, Ernest Guichard và Eugène Ferret thiết kế. Sau khi tu bổ năm 1955, tòa nhà được dùng làm trụ sở Quốc hội Việt Nam Cộng hòa (sau là Hạ nghị viện); sau năm 1975 được trả lại chức năng biểu diễn nghệ thuật.",
       "highlights": "Mặt tiền kiến trúc tân cổ điển, là không gian biểu diễn nghệ thuật trung tâm thành phố; gần ga Metro Nhà hát Thành phố.",
       "opening_hours": "Theo lịch biểu diễn",
       "related_street_id": "street_dong_khoi",
       "sources": [
-        "Wikipedia: Municipal Theatre, Ho Chi Minh City",
+        "Wikipedia tiếng Việt: Nhà hát Thành phố Hồ Chí Minh",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
-      "verified": false,
+      "verified": true,
       "aliases": [
         "nha hat thanh pho",
         "nha hat lon",
@@ -5505,15 +5556,15 @@ var CONNECT_DATA = {
         106.700021
       ],
       "coord_source": "OSM way 39514793",
-      "history": "Công trình xây dựng trong giai đoạn 1886 – 1891 thời Pháp thuộc, là một trong những công trình kiến trúc công cộng tiêu biểu của Sài Gòn cuối thế kỷ XIX.",
-      "highlights": "Sảnh mái vòm, hai bản đồ cổ vẽ tay và chân dung Chủ tịch Hồ Chí Minh trong sảnh chính.",
+      "history": "Tòa nhà hiện nay được người Pháp xây dựng trong giai đoạn 1886 – 1891 theo đồ án của các kiến trúc sư Auguste Henri Vildieu và Alfred Foulhoux, là công trình kiến trúc công cộng tiêu biểu của Sài Gòn cuối thế kỷ XIX.",
+      "highlights": "Hệ vòm cung đỡ bằng trụ sắt chạm hoa văn; hai bản đồ lịch sử trên tường sảnh: \"Saigon et ses environs\" (1892) và \"Lignes télégraphiques du Sud Vietnam et du Cambodge\" (1936).",
       "opening_hours": "Giờ hành chính (chưa xác minh giờ cụ thể)",
       "related_street_id": "street_dong_khoi",
       "sources": [
-        "Wikipedia: Saigon Central Post Office",
+        "Wikipedia tiếng Việt: Bưu điện Trung tâm Sài Gòn",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
-      "verified": false,
+      "verified": true,
       "aliases": [
         "buu dien trung tam",
         "buu dien thanh pho",
@@ -5536,15 +5587,15 @@ var CONNECT_DATA = {
         106.699058
       ],
       "coord_source": "OSM way 801950766",
-      "history": "Nhà thờ khởi công năm 1877 và khánh thành năm 1880, là công trình kiến trúc tôn giáo tiêu biểu thời Pháp thuộc tại trung tâm Sài Gòn.",
-      "highlights": "Hai tháp chuông, gạch đỏ xây dựng; quảng trường Công xã Paris phía trước.",
+      "history": "Ngày 07/10/1877, Giám mục Isidore Colombert đặt viên đá đầu tiên; nhà thờ khánh thành ngày 11/04/1880 (Lễ Phục Sinh). Năm 1959, nhà thờ được Tòa Thánh nâng lên hàng Vương cung thánh đường (lễ tôn phong ngày 05/12/1959).",
+      "highlights": "Hai tháp chuông, tường gạch đỏ đặt làm riêng từ Pháp; quảng trường Công xã Paris phía trước.",
       "opening_hours": "Theo lịch sinh hoạt tôn giáo",
       "related_street_id": "street_dong_khoi",
       "sources": [
-        "Wikipedia: Notre-Dame Cathedral Basilica of Saigon",
+        "Wikipedia tiếng Việt: Nhà thờ chính tòa Đức Bà Sài Gòn",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
-      "verified": false,
+      "verified": true,
       "aliases": [
         "nha tho duc ba",
         "vuong cung thanh duong",
@@ -5561,20 +5612,22 @@ var CONNECT_DATA = {
       "is_red_address": false,
       "street_address": "131 Nam Kỳ Khởi Nghĩa",
       "address_old": "131 Nam Kỳ Khởi Nghĩa, Quận 1",
-      "address_verification": "osm_boundary",
+      "address_verification": "press",
       "coordinates": [
         10.775712,
         106.69793
       ],
       "coord_source": "OSM relation 2531662",
-      "history": "Công trình kiến trúc thời Pháp thuộc (Palais de Justice) xây dựng cuối thế kỷ XIX tại trung tâm Sài Gòn. Chưa có tư liệu xác minh về năm khởi công và hoàn thành trong cơ sở dữ liệu dự án.",
-      "highlights": "Kiến trúc công quyền cổ điển Pháp nằm trên trục Nam Kỳ Khởi Nghĩa, gần Dinh Độc Lập.",
+      "history": "Tòa nhà thời Pháp mang tên Palais de Justice de Saigon, khởi công năm 1881 và hoàn thành năm 1885, do kiến trúc sư Jules Bourard thiết kế. Năm 2012, Bộ Văn hóa, Thể thao và Du lịch công nhận là Di tích kiến trúc nghệ thuật cấp Quốc gia.",
+      "highlights": "Khối nhà Pháp hình chữ U và khối nhà phía sau xây thêm tạo thành mặt bằng hình chữ H; công trình được trùng tu theo hình thức cuốn chiếu, khởi công đầu năm 2016.",
       "opening_hours": "Cơ quan nhà nước – không phải điểm tham quan tự do",
       "related_street_id": "street_nam_ky_khoi_nghia",
       "sources": [
+        "Vietbao / Znews – trụ sở TAND TP.HCM sau trùng tu (năm xây dựng, kiến trúc sư, xếp hạng di tích)",
+        "Danh sách địa chỉ TAND tại TP.HCM từ 01/07/2025 (phường Bến Thành)",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
-      "verified": false,
+      "verified": true,
       "aliases": [
         "toa an nhan dan",
         "toa an thanh pho"
@@ -5589,22 +5642,22 @@ var CONNECT_DATA = {
       "place_type": "museum",
       "is_red_address": false,
       "street_address": "65 Lý Tự Trọng",
-      "address_old": "65 Lý Tự Trọng, Quận 1",
-      "address_verification": "osm_boundary",
+      "address_old": "65 Lý Tự Trọng, Phường Bến Nghé, Quận 1",
+      "address_verification": "official",
       "coordinates": [
         10.775916,
         106.699673
       ],
       "coord_source": "OSM way 802105071",
-      "history": "Tòa nhà xây dựng giai đoạn 1885 – 1890 thời Pháp thuộc, trước năm 1975 được biết đến với tên Dinh Gia Long. Hiện là Bảo tàng Thành phố Hồ Chí Minh, trưng bày về lịch sử, văn hóa và quá trình đấu tranh của thành phố.",
+      "history": "Tòa nhà khởi công năm 1885, hoàn thành năm 1890, do kiến trúc sư Alfred Foulhoux thiết kế, ban đầu dự định làm Bảo tàng Thương mại. Công trình lần lượt là dinh Phó soái, dinh Thống đốc Nam Kỳ (từ 1912), dinh Khâm sai Nam Kỳ (8/1945) và được Quốc trưởng Bảo Đại đặt tên Dinh Gia Long năm 1954. Ngày 12/08/1978 thành lập Bảo tàng Cách mạng TP.HCM; ngày 13/12/1999 đổi tên thành Bảo tàng Thành phố Hồ Chí Minh.",
       "highlights": "Hệ thống hầm ngầm, kiến trúc kết hợp cổ điển Âu – Á, các chuyên đề lịch sử Sài Gòn – TP.HCM.",
       "opening_hours": "Chưa xác minh giờ mở cửa",
       "related_street_id": "street_ly_tu_trong",
       "sources": [
-        "Wikipedia: Ho Chi Minh City Museum",
+        "Wikipedia tiếng Việt: Bảo tàng Thành phố Hồ Chí Minh",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
-      "verified": false,
+      "verified": true,
       "aliases": [
         "bao tang thanh pho",
         "dinh gia long",
@@ -5621,21 +5674,22 @@ var CONNECT_DATA = {
       "is_red_address": false,
       "street_address": "97A Phó Đức Chính",
       "address_old": "97A Phó Đức Chính, Phường Nguyễn Thái Bình, Quận 1",
-      "address_verification": "osm_boundary",
+      "address_verification": "press",
       "coordinates": [
         10.769646,
         106.699247
       ],
       "coord_source": "OSM way 802157425",
-      "history": "Bảo tàng đặt trong tòa nhà kiến trúc Pháp – Hoa đầu thế kỷ XX của gia đình Hui Bon Hoa (Chú Hỏa); bảo tàng được thành lập năm 1987.",
+      "history": "Bảo tàng đặt trong tòa nhà của thương nhân Hui Bon Hoa (Huỳnh Văn Hoà, Chú Hỏa), do kiến trúc sư người Pháp Rivera thiết kế năm 1929 và xây xong năm 1934. Bảo tàng được thành lập năm 1987.",
       "highlights": "Sưu tập mỹ thuật Việt Nam hiện đại, cổ vật và kiến trúc biệt thự cổ.",
       "opening_hours": "Chưa xác minh giờ mở cửa",
       "related_street_id": null,
       "sources": [
-        "Wikipedia: Ho Chi Minh City Museum of Fine Arts",
+        "Wikipedia tiếng Việt: Bảo tàng Mỹ thuật Thành phố Hồ Chí Minh",
+        "Báo Đấu thầu (2026) – thông báo đấu giá ghi địa chỉ 97A Phó Đức Chính, phường Bến Thành",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
-      "verified": false,
+      "verified": true,
       "aliases": [
         "bao tang my thuat",
         "nha chu hoa"
@@ -5657,15 +5711,15 @@ var CONNECT_DATA = {
         106.704918
       ],
       "coord_source": "OSM relation 17758150",
-      "history": "Tòa nhà xây dựng cuối thập niên 1920 với tên gọi Bảo tàng Blanchard de la Brosse thời Pháp thuộc; sau năm 1975 trở thành Bảo tàng Lịch sử.",
+      "history": "Tòa nhà xây dựng trong ba năm 1926 – 1928 với tên gọi Bảo tàng Blanchard de la Brosse, khánh thành ngày 01/01/1929. Ngày 26/08/1979 đổi tên thành Bảo tàng Lịch sử.",
       "highlights": "Các sưu tập hiện vật lịch sử Việt Nam từ thời tiền sử, văn hóa Óc Eo, Chăm Pa.",
       "opening_hours": "Chưa xác minh giờ mở cửa",
       "related_street_id": null,
       "sources": [
-        "Wikipedia: Museum of Vietnamese History, Ho Chi Minh City",
+        "Wikipedia tiếng Việt: Bảo tàng Lịch sử Thành phố Hồ Chí Minh",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
-      "verified": false,
+      "verified": true,
       "aliases": [
         "bao tang lich su",
         "blanchard de la brosse"
@@ -5687,14 +5741,16 @@ var CONNECT_DATA = {
         106.699695
       ],
       "coord_source": "OSM node 11708010270",
-      "history": "Không gian văn hóa đọc ngoài trời khai trương đầu năm 2016 trên tuyến đường ngắn giữa Nhà thờ Đức Bà và Bưu điện Trung tâm.",
+      "history": "Không gian văn hóa đọc ngoài trời chính thức khai trương chiều ngày 09/01/2016 trên tuyến đường ngắn giữa Nhà thờ Đức Bà và Bưu điện Trung tâm.",
       "highlights": "Các gian hàng sách, không gian giao lưu tác giả và hoạt động văn hóa đọc.",
       "opening_hours": "Hằng ngày",
       "related_street_id": null,
       "sources": [
+        "VOH – Con đường \"Đánh thức văn hóa đọc\" (khai trương 09/01/2016)",
+        "Báo Pháp Luật TP.HCM – Đường sách TP.HCM đã thành điểm hẹn",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
-      "verified": false,
+      "verified": true,
       "aliases": [
         "duong sach",
         "nguyen van binh"
@@ -5716,14 +5772,17 @@ var CONNECT_DATA = {
         106.698394
       ],
       "coord_source": "OSM way 1475190937; tượng: OSM node 6909743958",
-      "history": "Quảng trường mang tên nữ sinh Quách Thị Trang, người hy sinh ngày 25/08/1963 trong cuộc biểu tình của học sinh, sinh viên Sài Gòn chống chính quyền Ngô Đình Diệm. Tượng Quách Thị Trang đặt tại công trường.",
-      "highlights": "Không gian giao thông, công cộng trước chợ Bến Thành, nằm cạnh ga Metro Bến Thành.",
+      "history": "Khu vực trước cổng chợ Bến Thành mang tên nữ sinh Quách Thị Trang (sinh năm 1948), người hy sinh ngày 25/08/1963 khi tham gia cuộc biểu tình của hơn 5.000 học sinh, sinh viên phản đối lệnh thiết quân luật của chính quyền Việt Nam Cộng hòa. Tượng bán thân của chị được dựng tại bùng binh ngày 25/08/1964. Năm 2014, bùng binh được tháo dỡ để xây dựng ga ngầm Bến Thành của tuyến Metro số 1; tượng được di dời và theo báo chí hiện đặt tạm tại công viên Bách Tùng Diệp (đường Lý Tự Trọng).",
+      "highlights": "Không gian giao thông, công cộng trước chợ Bến Thành, nằm trên ga ngầm Metro Bến Thành.",
       "opening_hours": "Không gian công cộng",
       "related_street_id": "street_le_loi",
       "sources": [
+        "Wikipedia tiếng Việt: Quách Thị Trang",
+        "Báo Đấu thầu – Tháo dỡ vòng xoay Quách Thị Trang để xây dựng nhà ga ngầm Bến Thành",
+        "Báo Pháp Luật TP.HCM – phương án đặt lại tượng (vị trí tượng hiện nay cần kiểm tra thêm)",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
-      "verified": false,
+      "verified": true,
       "aliases": [
         "quach thi trang",
         "cong truong quach thi trang",
@@ -5746,15 +5805,15 @@ var CONNECT_DATA = {
         106.698017
       ],
       "coord_source": "OSM way 39514795",
-      "history": "Chợ được xây dựng tại vị trí hiện nay và khánh thành năm 1914, là biểu tượng thương mại lâu đời của Sài Gòn.",
+      "history": "Chợ khởi công xây dựng tại vị trí hiện nay từ năm 1912, hoàn tất cuối tháng 3/1914 và khánh thành trong ba ngày 28 – 30/03/1914; là biểu tượng thương mại lâu đời của Sài Gòn.",
       "highlights": "Cổng chính có tháp đồng hồ; khu chợ truyền thống và ẩm thực.",
       "opening_hours": "Chưa xác minh giờ mở cửa",
       "related_street_id": "street_le_loi",
       "sources": [
-        "Wikipedia: Bến Thành Market",
+        "Wikipedia tiếng Việt: Chợ Bến Thành",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
-      "verified": false,
+      "verified": true,
       "aliases": [
         "cho ben thanh",
         "ben thanh market"
@@ -5776,14 +5835,17 @@ var CONNECT_DATA = {
         106.704187
       ],
       "coord_source": "OSM relation 4851995",
-      "history": "Không gian đi bộ khánh thành ngày 29/04/2015 trên đại lộ Nguyễn Huệ, phía trước Trụ sở UBND Thành phố và Tượng đài Chủ tịch Hồ Chí Minh.",
+      "history": "Quảng trường đi bộ dài khoảng 670 m, hoàn thành ngày 29/04/2015 trên đại lộ Nguyễn Huệ, phía trước Trụ sở UBND Thành phố và Tượng đài Chủ tịch Hồ Chí Minh (một số nguồn ghi ngày khánh thành 30/04/2015).",
       "highlights": "Quảng trường đi bộ, nơi diễn ra nhiều sự kiện văn hóa và lễ hội lớn của thành phố.",
       "opening_hours": "Không gian công cộng",
       "related_street_id": "street_nguyen_hue",
       "sources": [
+        "Wikipedia: Nguyễn Huệ Boulevard",
+        "Báo Nhân Dân – Người dân TP.HCM thích thú với đường đi bộ Nguyễn Huệ",
+        "Báo Pháp Luật TP.HCM – Đường Nguyễn Huệ, dòng kênh thành quảng trường đi bộ đầu tiên",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
-      "verified": false,
+      "verified": true,
       "aliases": [
         "pho di bo",
         "pho di bo nguyen hue",
@@ -5806,11 +5868,12 @@ var CONNECT_DATA = {
         106.693942
       ],
       "coord_source": "OSM relation 14939719",
-      "history": "Tên công viên gợi nhắc ngày Nam Bộ kháng chiến 23/9/1945.",
+      "history": "Tên công viên gợi nhắc ngày 23/9/1945, khi thực dân Pháp nổ súng tái chiếm Sài Gòn, mở đầu cuộc kháng chiến của nhân dân Nam Bộ. Khu đất công viên trước đây là ga xe lửa Sài Gòn (dời về đây từ năm 1915); thời điểm ga bị giải tỏa được các nguồn ghi khác nhau.",
       "highlights": "Công viên tuyến dài giữa khu trung tâm, gần ga Metro Bến Thành.",
       "opening_hours": "Không gian công cộng",
       "related_street_id": null,
       "sources": [
+        "Báo Pháp Luật TP.HCM – Từ ga xe lửa biến thành công viên",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
       "verified": false,
@@ -5829,20 +5892,21 @@ var CONNECT_DATA = {
       "is_red_address": false,
       "street_address": "Đường Trương Định",
       "address_old": "Phường Bến Thành, Quận 1",
-      "address_verification": "osm_boundary",
+      "address_verification": "official",
       "coordinates": [
         10.774492,
         106.692653
       ],
       "coord_source": "OSM way 500888743",
-      "history": "Công viên cây xanh lớn tại trung tâm thành phố, nằm cạnh khuôn viên Dinh Độc Lập.",
+      "history": "Thời Pháp, khu vườn có tên chính thức là Jardin de la Ville, người Việt thường gọi là Vườn Ông Thượng hoặc Vườn Bồ-Rô. Sau khi người Pháp rút đi, vườn được đổi tên thành Vườn Tao Đàn. Công viên nằm cạnh khuôn viên Dinh Độc Lập.",
       "highlights": "Hệ thống cây cổ thụ, không gian sinh hoạt cộng đồng.",
       "opening_hours": "Không gian công cộng",
       "related_street_id": "street_truong_dinh",
       "sources": [
+        "Wikipedia tiếng Việt: Công viên Tao Đàn",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
-      "verified": false,
+      "verified": true,
       "aliases": [
         "cong vien tao dan",
         "tao dan"
@@ -5864,15 +5928,16 @@ var CONNECT_DATA = {
         106.695889
       ],
       "coord_source": "OSM node 1770193841",
-      "history": "Vòng xoay giao lộ Phạm Ngọc Thạch – Võ Văn Tần – Trần Cao Vân, quen gọi là Hồ Con Rùa, là không gian công cộng gắn với ký ức đô thị Sài Gòn.",
+      "history": "Tên chính thức là Công trường Quốc tế (đặt từ năm 1972); Hồ Con Rùa là tên gọi dân gian. Đây là bùng binh giao lộ Võ Văn Tần – Phạm Ngọc Thạch – Trần Cao Vân. Công trình hiện nay do kiến trúc sư Nguyễn Kỳ thiết kế; năm xây dựng chưa được xác định chính xác (tài liệu ghi 1965 hoặc 1967).",
       "highlights": "Hồ nước và công trình trang trí tại vòng xoay; không gian sinh hoạt của giới trẻ.",
       "opening_hours": "Không gian công cộng",
       "related_street_id": "street_pham_ngoc_thach",
       "sources": [
+        "Wikipedia tiếng Việt: Hồ Con Rùa",
         "Wikipedia: Xuân Hòa, Ho Chi Minh City (danh sách địa danh)",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
-      "verified": false,
+      "verified": true,
       "aliases": [
         "ho con rua",
         "cong truong quoc te"
@@ -5886,29 +5951,31 @@ var CONNECT_DATA = {
       "name": "Công viên Lê Văn Tám",
       "place_type": "public_space",
       "is_red_address": false,
-      "street_address": "Đường Hai Bà Trưng – Điện Biên Phủ",
+      "street_address": "Giao lộ Điện Biên Phủ – Hai Bà Trưng – Phan Liêm – Võ Thị Sáu",
       "address_old": "Phường Đa Kao, Quận 1",
-      "address_verification": "osm_boundary",
+      "address_verification": "press",
       "coordinates": [
         10.788241,
         106.693757
       ],
       "coord_source": "OSM way 32735082",
-      "history": "Công viên cây xanh trong khu trung tâm; tại đây đang xây dựng ga Công viên Lê Văn Tám thuộc tuyến Metro số 2 (chưa khai thác).",
+      "history": "Khu đất công viên trước đây là nghĩa trang Mạc Đĩnh Chi thời Pháp. Năm 1983, UBND TP.HCM ra nghị quyết giải tỏa nghĩa trang để làm công viên và khu vui chơi thiếu nhi; công viên mở cửa năm 1985.",
       "highlights": "Không gian xanh, sinh hoạt cộng đồng.",
       "opening_hours": "Không gian công cộng",
       "related_street_id": "street_hai_ba_trung",
       "sources": [
+        "Wikipedia: Lê Văn Tám Park",
+        "Báo Tuổi Trẻ (2026) – phường Tân Định trồng cây xanh tại công viên Lê Văn Tám",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
-      "verified": false,
+      "verified": true,
       "aliases": [
         "cong vien le van tam",
         "le van tam"
       ],
       "category": "public_space",
       "ward": "Tân Định",
-      "address": "Đường Hai Bà Trưng – Điện Biên Phủ, Phường Tân Định, TP. Hồ Chí Minh"
+      "address": "Giao lộ Điện Biên Phủ – Hai Bà Trưng – Phan Liêm – Võ Thị Sáu, Phường Tân Định, TP. Hồ Chí Minh"
     },
     {
       "id": "site_nha_tho_tan_dinh",
@@ -5923,15 +5990,15 @@ var CONNECT_DATA = {
         106.690658
       ],
       "coord_source": "OSM way 60118189",
-      "history": "Nhà thờ xây dựng thời Pháp thuộc, hoàn thành năm 1876, nổi bật với sắc hồng đặc trưng.",
-      "highlights": "Kiến trúc Gothic kết hợp Roman, màu sơn hồng; gần chợ Tân Định.",
+      "history": "Nhà thờ khởi công năm 1870 và khánh thành ngày 16/12/1876. Công trình được sơn màu hồng từ năm 1957.",
+      "highlights": "Kiến trúc theo phong cách Roman, kết hợp yếu tố Gothic và Phục hưng; màu sơn hồng đặc trưng; gần chợ Tân Định.",
       "opening_hours": "Theo lịch sinh hoạt tôn giáo",
       "related_street_id": "street_hai_ba_trung",
       "sources": [
-        "Wikipedia: Tân Định Church",
+        "Wikipedia tiếng Việt: Nhà thờ Tân Định",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
-      "verified": false,
+      "verified": true,
       "aliases": [
         "nha tho tan dinh",
         "nha tho mau hong"
@@ -5953,15 +6020,15 @@ var CONNECT_DATA = {
         106.682295
       ],
       "coord_source": "OSM way 494789249",
-      "history": "Ngôi chùa lớn tại khu trung tâm, xây dựng trong thập niên 1960 – 1970, mang tên tổ đình Vĩnh Nghiêm (Bắc Giang).",
-      "highlights": "Tháp xá lợi nhiều tầng, kiến trúc chùa Việt hiện đại.",
+      "history": "Chùa khởi công năm 1964 và cơ bản hoàn thành các hạng mục chính năm 1971, do hai Hòa thượng Thích Tâm Giác và Thích Thanh Kiểm từ miền Bắc vào sáng lập. Nguyên mẫu thiết kế lấy từ ngôi chùa gỗ cùng tên ở làng Đức La, Yên Dũng, Bắc Giang.",
+      "highlights": "Tháp Quán Thế Âm 7 tầng và tháp Xá Lợi Cộng đồng 4 tầng.",
       "opening_hours": "Theo lịch sinh hoạt tôn giáo",
       "related_street_id": "street_nam_ky_khoi_nghia",
       "sources": [
-        "Wikipedia: Vĩnh Nghiêm Pagoda",
+        "Wikipedia tiếng Việt: Chùa Vĩnh Nghiêm (Thành phố Hồ Chí Minh)",
         "Tọa độ: OpenStreetMap (ODbL)"
       ],
-      "verified": false,
+      "verified": true,
       "aliases": [
         "chua vinh nghiem",
         "vinh nghiem"
@@ -6296,8 +6363,8 @@ var CONNECT_DATA = {
       "date": "Tra cứu 11/2026",
       "type": "Nghiên cứu lịch sử đô thị",
       "archive": "en.wikipedia.org, saigoneer.com",
-      "notes": "Lê Duẩn (Norodom → Thống Nhứt 1955 → 30 Tháng 4 năm 1975 → Lê Duẩn 1986), Tôn Đức Thắng (1980), Hàm Nghi (de la Somme), Pasteur (Pellerin, 1955).",
-      "status": "pending"
+      "notes": "Lê Duẩn (Norodom → Thống Nhứt 1955 → 30 Tháng 4 năm 1975 → Lê Duẩn 1986), Tôn Đức Thắng (1980), Hàm Nghi (Canton, de la Somme → Hàm Nghi sau 1955), Pasteur (Pellerin → Pasteur 1955), Lê Lợi (Bonard 1865 → Lê Lợi 1955). Năm và văn bản đổi tên của Đồng Khởi, Lý Tự Trọng, Lê Thánh Tôn, Cao Thắng, Nguyễn Du chưa có trong nguồn này – xem trạng thái từng tuyến đường.",
+      "status": "verified"
     },
     {
       "id": "src_osm",
@@ -6306,6 +6373,15 @@ var CONNECT_DATA = {
       "type": "Dữ liệu bản đồ mở (ODbL)",
       "archive": "openstreetmap.org (Overpass API)",
       "notes": "Mỗi địa điểm ghi rõ mã đối tượng OSM trong trường coord_source để kiểm tra lại.",
+      "status": "verified"
+    },
+    {
+      "id": "src_verification_2026_11",
+      "title": "Đợt đối chiếu tư liệu tháng 11/2026 – Wikipedia tiếng Việt và báo chí (VOH, Pháp Luật TP.HCM, Tuổi Trẻ, Báo Văn Hóa, Nhân Dân)",
+      "date": "11/2026",
+      "type": "Đối chiếu tư liệu",
+      "archive": "vi.wikipedia.org, voh.com.vn, plo.vn, tuoitre.vn, baovanhoa.vn, nhandan.vn",
+      "notes": "Xác minh năm xây dựng, kiến trúc sư, mốc lịch sử của các địa điểm trung tâm và tên phường mới của các địa chỉ. Đã sửa: Nhà hát dùng làm trụ sở Quốc hội VNCH từ 1955 (không phải 1956); tượng Quách Thị Trang đã di dời khi xây ga Metro Bến Thành; bỏ thông tin chưa có căn cứ về ga Metro tại công viên Lê Văn Tám.",
       "status": "verified"
     }
   ],
