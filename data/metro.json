@@ -1,0 +1,499 @@
+[
+  {
+    "id": "metro_line_1",
+    "name": "Tuyến Metro số 1 Bến Thành – Suối Tiên",
+    "short_name": "Metro số 1",
+    "status": "operating",
+    "status_label": "Đang khai thác",
+    "length_km": 19.7,
+    "station_count": 14,
+    "color": "#0E7490",
+    "stations": [
+      {
+        "id": "station_ben_thanh",
+        "name": "Ga Bến Thành",
+        "order": 1,
+        "coordinates": [
+          10.770949,
+          106.697883
+        ],
+        "coord_source": "OSM way 1162981728",
+        "structure": "underground",
+        "area": "Phường Bến Thành, TP. Hồ Chí Minh",
+        "ward": "Bến Thành",
+        "is_central": true,
+        "aliases": [
+          "ga bến thành"
+        ]
+      },
+      {
+        "id": "station_nha_hat_thanh_pho",
+        "name": "Ga Nhà hát Thành phố",
+        "order": 2,
+        "coordinates": [
+          10.775303,
+          106.702068
+        ],
+        "coord_source": "OSM way 1162989826",
+        "structure": "underground",
+        "area": "Phường Sài Gòn, TP. Hồ Chí Minh",
+        "ward": "Sài Gòn",
+        "is_central": true,
+        "aliases": [
+          "ga nhà hát thành phố"
+        ]
+      },
+      {
+        "id": "station_ba_son",
+        "name": "Ga Ba Son",
+        "order": 3,
+        "coordinates": [
+          10.781791,
+          106.70834
+        ],
+        "coord_source": "OSM way 1163010587",
+        "structure": "underground",
+        "area": "Phường Sài Gòn, TP. Hồ Chí Minh",
+        "ward": "Sài Gòn",
+        "is_central": true,
+        "aliases": [
+          "ga ba son"
+        ]
+      },
+      {
+        "id": "station_cong_vien_van_thanh",
+        "name": "Ga Công viên Văn Thánh",
+        "order": 4,
+        "coordinates": [
+          10.796055,
+          106.715506
+        ],
+        "coord_source": "OSM node 11586280298",
+        "structure": "elevated",
+        "area": "Khu vực Bình Thạnh cũ",
+        "ward": null,
+        "is_central": false,
+        "aliases": [
+          "ga công viên văn thánh"
+        ]
+      },
+      {
+        "id": "station_tan_cang",
+        "name": "Ga Tân Cảng",
+        "order": 5,
+        "coordinates": [
+          10.798588,
+          106.723239
+        ],
+        "coord_source": "OSM node 11586280299",
+        "structure": "elevated",
+        "area": "Khu vực Bình Thạnh cũ",
+        "ward": null,
+        "is_central": false,
+        "aliases": [
+          "ga tân cảng"
+        ]
+      },
+      {
+        "id": "station_thao_dien",
+        "name": "Ga Thảo Điền",
+        "order": 6,
+        "coordinates": [
+          10.800487,
+          106.733651
+        ],
+        "coord_source": "OSM node 11586280300",
+        "structure": "elevated",
+        "area": "Khu vực TP. Thủ Đức cũ",
+        "ward": null,
+        "is_central": false,
+        "aliases": [
+          "ga thảo điền"
+        ]
+      },
+      {
+        "id": "station_an_phu",
+        "name": "Ga An Phú",
+        "order": 7,
+        "coordinates": [
+          10.802134,
+          106.74225
+        ],
+        "coord_source": "OSM node 11586280301",
+        "structure": "elevated",
+        "area": "Khu vực TP. Thủ Đức cũ",
+        "ward": null,
+        "is_central": false,
+        "aliases": [
+          "ga an phú"
+        ]
+      },
+      {
+        "id": "station_rach_chiec",
+        "name": "Ga Rạch Chiếc",
+        "order": 8,
+        "coordinates": [
+          10.808554,
+          106.755277
+        ],
+        "coord_source": "OSM node 11586280302",
+        "structure": "elevated",
+        "area": "Khu vực TP. Thủ Đức cũ",
+        "ward": null,
+        "is_central": false,
+        "aliases": [
+          "ga rạch chiếc"
+        ]
+      },
+      {
+        "id": "station_phuoc_long",
+        "name": "Ga Phước Long",
+        "order": 9,
+        "coordinates": [
+          10.821435,
+          106.758185
+        ],
+        "coord_source": "OSM node 11586280303",
+        "structure": "elevated",
+        "area": "Khu vực TP. Thủ Đức cũ",
+        "ward": null,
+        "is_central": false,
+        "aliases": [
+          "ga phước long"
+        ]
+      },
+      {
+        "id": "station_binh_thai",
+        "name": "Ga Bình Thái",
+        "order": 10,
+        "coordinates": [
+          10.832652,
+          106.763894
+        ],
+        "coord_source": "OSM node 11586280304",
+        "structure": "elevated",
+        "area": "Khu vực TP. Thủ Đức cũ",
+        "ward": null,
+        "is_central": false,
+        "aliases": [
+          "ga bình thái"
+        ]
+      },
+      {
+        "id": "station_thu_duc",
+        "name": "Ga Thủ Đức",
+        "order": 11,
+        "coordinates": [
+          10.846406,
+          106.771652
+        ],
+        "coord_source": "OSM node 11586280327",
+        "structure": "elevated",
+        "area": "Khu vực TP. Thủ Đức cũ",
+        "ward": null,
+        "is_central": false,
+        "aliases": [
+          "ga thủ đức"
+        ]
+      },
+      {
+        "id": "station_khu_cong_nghe_cao",
+        "name": "Ga Khu Công nghệ cao",
+        "order": 12,
+        "coordinates": [
+          10.858989,
+          106.788836
+        ],
+        "coord_source": "OSM node 11586280305",
+        "structure": "elevated",
+        "area": "Khu vực TP. Thủ Đức cũ",
+        "ward": null,
+        "is_central": false,
+        "aliases": [
+          "ga khu công nghệ cao"
+        ]
+      },
+      {
+        "id": "station_dai_hoc_quoc_gia",
+        "name": "Ga Đại học Quốc gia",
+        "order": 13,
+        "coordinates": [
+          10.866299,
+          106.801201
+        ],
+        "coord_source": "OSM node 11586280306",
+        "structure": "elevated",
+        "area": "Khu vực TP. Thủ Đức cũ",
+        "ward": null,
+        "is_central": false,
+        "aliases": [
+          "ga đại học quốc gia"
+        ]
+      },
+      {
+        "id": "station_ben_xe_suoi_tien",
+        "name": "Ga Bến xe Suối Tiên",
+        "order": 14,
+        "coordinates": [
+          10.879545,
+          106.814093
+        ],
+        "coord_source": "OSM node 11586280307",
+        "structure": "elevated",
+        "area": "Khu vực TP. Thủ Đức cũ",
+        "ward": null,
+        "is_central": false,
+        "aliases": [
+          "ga bến xe suối tiên"
+        ]
+      }
+    ],
+    "coordinates": [
+      [
+        10.770775,
+        106.697569
+      ],
+      [
+        10.771846,
+        106.698573
+      ],
+      [
+        10.775203,
+        106.701888
+      ],
+      [
+        10.77631,
+        106.703201
+      ],
+      [
+        10.785468,
+        106.711661
+      ],
+      [
+        10.786294,
+        106.712348
+      ],
+      [
+        10.78693,
+        106.712696
+      ],
+      [
+        10.787295,
+        106.712811
+      ],
+      [
+        10.790016,
+        106.713348
+      ],
+      [
+        10.790672,
+        106.713436
+      ],
+      [
+        10.79317,
+        106.713536
+      ],
+      [
+        10.793574,
+        106.71359
+      ],
+      [
+        10.794315,
+        106.71383
+      ],
+      [
+        10.794979,
+        106.714263
+      ],
+      [
+        10.795375,
+        106.714658
+      ],
+      [
+        10.797428,
+        106.717298
+      ],
+      [
+        10.797604,
+        106.717575
+      ],
+      [
+        10.797777,
+        106.717947
+      ],
+      [
+        10.797893,
+        106.718351
+      ],
+      [
+        10.798652,
+        106.723855
+      ],
+      [
+        10.7989,
+        106.725325
+      ],
+      [
+        10.802604,
+        106.745032
+      ],
+      [
+        10.802939,
+        106.746432
+      ],
+      [
+        10.803297,
+        106.74833
+      ],
+      [
+        10.803547,
+        106.749211
+      ],
+      [
+        10.804414,
+        106.751217
+      ],
+      [
+        10.80483,
+        106.751869
+      ],
+      [
+        10.805268,
+        106.752399
+      ],
+      [
+        10.806219,
+        106.753274
+      ],
+      [
+        10.806981,
+        106.754202
+      ],
+      [
+        10.80729,
+        106.754499
+      ],
+      [
+        10.808857,
+        106.755465
+      ],
+      [
+        10.810023,
+        106.755974
+      ],
+      [
+        10.811257,
+        106.75627
+      ],
+      [
+        10.819493,
+        106.757752
+      ],
+      [
+        10.82077,
+        106.758028
+      ],
+      [
+        10.822597,
+        106.758554
+      ],
+      [
+        10.824003,
+        106.759108
+      ],
+      [
+        10.825531,
+        106.75989
+      ],
+      [
+        10.846948,
+        106.771972
+      ],
+      [
+        10.847789,
+        106.772464
+      ],
+      [
+        10.848864,
+        106.773223
+      ],
+      [
+        10.849811,
+        106.774074
+      ],
+      [
+        10.850453,
+        106.774761
+      ],
+      [
+        10.851089,
+        106.775569
+      ],
+      [
+        10.851554,
+        106.77627
+      ],
+      [
+        10.861827,
+        106.793723
+      ],
+      [
+        10.86665,
+        106.801825
+      ],
+      [
+        10.867415,
+        106.803035
+      ],
+      [
+        10.867819,
+        106.80358
+      ],
+      [
+        10.868971,
+        106.804942
+      ],
+      [
+        10.870239,
+        106.80613
+      ],
+      [
+        10.871033,
+        106.806767
+      ],
+      [
+        10.875652,
+        106.810174
+      ],
+      [
+        10.875877,
+        106.810401
+      ],
+      [
+        10.87612,
+        106.810746
+      ],
+      [
+        10.876701,
+        106.811898
+      ],
+      [
+        10.87705,
+        106.812346
+      ],
+      [
+        10.877279,
+        106.81255
+      ],
+      [
+        10.879569,
+        106.81417
+      ]
+    ],
+    "geometry_source": "OpenStreetMap relation 11919223 \"Bến Thành - Suối Tiên\" (ODbL)",
+    "sources": [
+      "Thông tin tuyến: khoảng 19,7 km, 14 nhà ga (theo yêu cầu dự án và nguồn báo chí)",
+      "Hình học tuyến & vị trí ga: OpenStreetMap"
+    ]
+  }
+]

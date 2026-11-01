@@ -1,0 +1,857 @@
+[
+  {
+    "id": "site_bao_tang_phu_nu_nam_bo",
+    "name": "Bảo tàng Phụ nữ Nam Bộ",
+    "category": "museum",
+    "address": "202 Võ Thị Sáu, Phường Xuân Hòa, TP. Hồ Chí Minh",
+    "coordinates": [
+      10.784169,
+      106.687398
+    ],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Southern_Women%27s_Museum_HCMC.jpg/640px-Southern_Women%27s_Museum_HCMC.jpg",
+    "history": "Tiền thân là Nhà truyền thống Phụ nữ Nam Bộ thành lập năm 1985. Đây là nơi trưng bày và lưu giữ hơn 30.000 hiện vật quý giá tái hiện truyền thống 'Anh hùng, bất khuất, trung hậu, đảm đang' của phụ nữ miền Nam trong các cuộc kháng chiến và xây dựng đất nước.",
+    "highlights": "Khu trưng bày chuyên đề Nữ tướng Nguyễn Thị Định, Nữ anh hùng Võ Thị Sáu, trang phục truyền thống và phong trào Đội quân tóc dài huyền thoại.",
+    "opening_hours": "07:30 - 17:00 (Hàng ngày)",
+    "verified": true,
+    "related_street_id": "street_vo_thi_sau",
+    "street_address": "202 Võ Thị Sáu",
+    "address_old": "202 Võ Thị Sáu, Phường Võ Thị Sáu, Quận 3",
+    "address_verification": "official",
+    "coord_source": "OSM way 1019040791",
+    "place_type": "museum",
+    "is_red_address": true,
+    "aliases": [
+      "bao tang phu nu",
+      "phu nu nam bo"
+    ],
+    "sources": [
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "ward": "Xuân Hòa"
+  },
+  {
+    "id": "site_thich_quang_duc",
+    "name": "Đài tưởng niệm Bồ tát Thích Quảng Đức",
+    "category": "monument",
+    "address": "Giao lộ Cách Mạng Tháng Tám – Nguyễn Đình Chiểu, Phường Xuân Hòa, TP. Hồ Chí Minh",
+    "coordinates": [
+      10.775448,
+      106.686755
+    ],
+    "image_url": "https://images.unsplash.com/photo-1548625361-125032598822?w=600&auto=format&fit=crop",
+    "history": "Được xây dựng ngay tại vị trí Hòa thượng Thích Quảng Đức thực hiện cuộc tự thiêu lịch sử vào ngày 11/06/1963 nhằm phản đối chính sách đàn áp Phật giáo của chính quyền Ngô Đình Diệm, làm chấn động lương tri toàn cầu.",
+    "highlights": "Tượng đài Bồ tát bằng đồng nguyên khối cao 6m và cụm phù điêu khắc họa ngọn lửa từ bi bất diệt cùng quả tim bất diệt.",
+    "opening_hours": "Mở cửa tự do toàn thời gian",
+    "verified": true,
+    "related_street_id": "street_cach_mang_thang_tam",
+    "street_address": "Giao lộ Cách Mạng Tháng Tám – Nguyễn Đình Chiểu",
+    "address_old": "Ngã tư Cách Mạng Tháng Tám – Nguyễn Đình Chiểu, Quận 3",
+    "address_verification": "osm_boundary",
+    "coord_source": "OSM node 4122275990 (Tượng Bồ Tát Thích Quảng Đức)",
+    "place_type": "monument",
+    "is_red_address": false,
+    "aliases": [
+      "thich quang duc",
+      "tuong dai thich quang duc",
+      "cong vien thich quang duc"
+    ],
+    "sources": [
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "ward": "Xuân Hòa"
+  },
+  {
+    "id": "site_bao_tang_chung_tich",
+    "name": "Bảo tàng Chứng tích Chiến tranh",
+    "category": "museum",
+    "address": "28 Võ Văn Tần, Phường Xuân Hòa, TP. Hồ Chí Minh",
+    "coordinates": [
+      10.779379,
+      106.692192
+    ],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/War_Remnants_Museum_HCMC.jpg/640px-War_Remnants_Museum_HCMC.jpg",
+    "history": "Thành lập ngày 04/09/1975 với tên gọi ban đầu 'Nhà trưng bày tội ác chiến tranh Mỹ - Ngụy'. Là bảo tàng chuyên đề nghiên cứu, sưu tầm và trưng bày bằng chứng về những hậu quả khốc liệt của chiến tranh xâm lược đối với nhân dân Việt Nam.",
+    "highlights": "Bộ sưu tập ảnh phóng viên chiến trường 'Hồi niệm', khu trưng bày hậu quả chất độc da cam, máy bay phản lực và chuồng cọp mô phỏng Côn Đảo.",
+    "opening_hours": "07:30 - 17:30 (Mở cửa tất cả các ngày)",
+    "verified": true,
+    "related_street_id": "street_vo_van_tan",
+    "street_address": "28 Võ Văn Tần",
+    "address_old": "28 Võ Văn Tần, Phường Võ Thị Sáu, Quận 3",
+    "address_verification": "official",
+    "coord_source": "OSM way 186249226",
+    "place_type": "museum",
+    "is_red_address": true,
+    "aliases": [
+      "bao tang chung tich",
+      "chung tich chien tranh",
+      "war remnants"
+    ],
+    "sources": [
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "ward": "Xuân Hòa"
+  },
+  {
+    "id": "site_ham_biet_dong",
+    "name": "Di tích Hầm chứa vũ khí Biệt động Sài Gòn",
+    "category": "relic",
+    "address": "287/70 Nguyễn Đình Chiểu, Phường Bàn Cờ, TP. Hồ Chí Minh",
+    "coordinates": [
+      10.775,
+      106.6828
+    ],
+    "image_url": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&auto=format&fit=crop",
+    "history": "Di tích lịch sử - văn hóa quốc gia. Nơi chiến sĩ biệt động Trần Văn Lai (Năm Lai) đào hầm bí mật ngay giữa trung tâm đô thị Sài Gòn, cất giấu gần 3 tấn vũ khí các loại phục vụ trực tiếp trận đánh cảm tử vào Dinh Độc Lập Tết Mậu Thân 1968.",
+    "highlights": "Căn hầm nguyên bản dưới sàn nhà, nắp hầm tinh xảo bằng gỗ, hệ thống tủ giấu lối thoát hiểm và các phương tiện vũ khí còn nguyên vẹn.",
+    "opening_hours": "08:00 - 16:30 (Thứ Ba đến Chủ Nhật)",
+    "verified": true,
+    "related_street_id": "street_nguyen_dinh_chieu",
+    "street_address": "287/70 Nguyễn Đình Chiểu",
+    "address_old": "287/70 Nguyễn Đình Chiểu, Phường 5, Quận 3",
+    "address_verification": "official",
+    "coord_source": "Tọa độ dữ liệu gốc của dự án (chưa đối chiếu được với OSM)",
+    "place_type": "relic",
+    "is_red_address": true,
+    "aliases": [
+      "ham biet dong",
+      "ham vu khi",
+      "biet dong sai gon"
+    ],
+    "sources": [
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "ward": "Bàn Cờ"
+  },
+  {
+    "id": "site_dinh_doc_lap",
+    "name": "Di tích Quốc gia đặc biệt Dinh Độc Lập (Hội trường Thống Nhất)",
+    "category": "relic",
+    "address": "135 Nam Kỳ Khởi Nghĩa, Phường Bến Thành, TP. Hồ Chí Minh",
+    "coordinates": [
+      10.777017,
+      106.695403
+    ],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Reunification_Palace_in_Ho_Chi_Minh_City.jpg/640px-Reunification_Palace_in_Ho_Chi_Minh_City.jpg",
+    "history": "Chứng tích lịch sử vĩ đại của ngày 30/4/1975, thời khắc xe tăng quân Giải phóng húc đổ cổng sắt, cắm lá cờ chiến thắng lên nóc dinh, đánh dấu non sông thu về một mối, kết thúc trọn vẹn cuộc kháng chiến chống Mỹ cứu nước.",
+    "highlights": "Xe tăng lịch sử số hiệu 390 và 843, phòng khánh tiết, khu hầm chỉ huy tác chiến ngầm thời chiến tranh.",
+    "opening_hours": "08:00 - 16:30 (Hàng ngày)",
+    "verified": true,
+    "related_street_id": "street_nam_ky_khoi_nghia",
+    "street_address": "135 Nam Kỳ Khởi Nghĩa",
+    "address_old": "135 Nam Kỳ Khởi Nghĩa, Phường Bến Thành, Quận 1",
+    "address_verification": "official",
+    "coord_source": "OSM way 39598493",
+    "place_type": "relic",
+    "is_red_address": true,
+    "aliases": [
+      "dinh doc lap",
+      "hoi truong thong nhat",
+      "dinh thong nhat"
+    ],
+    "sources": [
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "ward": "Bến Thành"
+  },
+  {
+    "id": "site_ben_nha_rong",
+    "name": "Bảo tàng Hồ Chí Minh - Bến Nhà Rồng",
+    "category": "museum",
+    "address": "Số 01 Nguyễn Tất Thành, Phường 12, Quận 4 (địa chỉ trước 01/07/2025 – đang đối chiếu tên phường mới)",
+    "coordinates": [
+      10.768251,
+      106.706807
+    ],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Ben_Nha_Rong_2011.jpg/640px-Ben_Nha_Rong_2011.jpg",
+    "history": "Nơi vào ngày 05/06/1911, người thanh niên yêu nước Nguyễn Tất Thành (Chủ tịch Hồ Chí Minh) đã bước chân lên con tàu Amiral Latouche-Tréville ra đi tìm đường cứu nước, mở ra khúc quanh lịch sử của toàn thể dân tộc Việt Nam.",
+    "highlights": "Tòa nhà trụ sở cảng kiểu Pháp với đôi rồng ngậm trân châu trên nóc, hiện vật cuộc đời hoạt động cách mạng của Bác Hồ.",
+    "opening_hours": "07:30 - 11:30 & 13:30 - 17:00 (Thứ Ba - Chủ Nhật)",
+    "verified": true,
+    "related_street_id": "street_nam_ky_khoi_nghia",
+    "street_address": "01 Nguyễn Tất Thành",
+    "address_old": "Số 01 Nguyễn Tất Thành, Phường 12, Quận 4",
+    "address_verification": "unverified",
+    "coord_source": "OSM way 808022726",
+    "place_type": "museum",
+    "is_red_address": true,
+    "aliases": [
+      "ben nha rong",
+      "bao tang ho chi minh"
+    ],
+    "sources": [
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "ward": null
+  },
+  {
+    "id": "site_truong_le_quy_don",
+    "name": "Trường THPT Lê Quý Đôn (Thành lập năm 1874)",
+    "category": "relic",
+    "address": "110 Nguyễn Thị Minh Khai, Phường Xuân Hòa, TP. Hồ Chí Minh",
+    "coordinates": [
+      10.779649,
+      106.694094
+    ],
+    "image_url": "https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?w=600&auto=format&fit=crop",
+    "history": "Được thành lập từ năm 1874 (tên thời Pháp là Collège Chasseloup-Laubat), là trường trung học đầu tiên và cổ kính nhất của Sài Gòn. Nơi đào tạo nhiều thế hệ danh nhân yêu nước lỗi lạc.",
+    "highlights": "Quần thể kiến trúc cổ điển Pháp với các dãy nhà ngói đỏ, hành lang vòm và vườn cây cổ thụ di sản.",
+    "opening_hours": "Giờ hành chính & tham quan theo quy định trường",
+    "verified": true,
+    "related_street_id": "street_le_quy_don",
+    "street_address": "110 Nguyễn Thị Minh Khai",
+    "address_old": "110 Nguyễn Thị Minh Khai, Phường Võ Thị Sáu, Quận 3",
+    "address_verification": "official",
+    "coord_source": "OSM way 469843391 (khuôn viên Trường THPT Lê Quý Đôn, 110 Nguyễn Thị Minh Khai)",
+    "place_type": "education",
+    "is_red_address": false,
+    "aliases": [
+      "truong le quy don",
+      "thpt le quy don",
+      "truong lqd",
+      "lqd",
+      "le quy don school"
+    ],
+    "sources": [
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "ward": "Xuân Hòa"
+  },
+  {
+    "id": "site_ubnd_tphcm",
+    "name": "Trụ sở HĐND & UBND Thành phố Hồ Chí Minh",
+    "category": "monument",
+    "address": "86 Lê Thánh Tôn, Phường Sài Gòn, TP. Hồ Chí Minh",
+    "coordinates": [
+      10.776596,
+      106.700955
+    ],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Ho_Chi_Minh_City_Hall_2022.jpg/640px-Ho_Chi_Minh_City_Hall_2022.jpg",
+    "history": "Xây dựng từ 1898 đến 1909 (tên cũ Hôtel de Ville / Tòa Đô Chánh). Là biểu tượng kiến trúc công quyền di sản hơn 100 năm tuổi của TP.HCM. Phía trước là Quảng trường tượng đài Chủ tịch Hồ Chí Minh.",
+    "highlights": "Mặt tiền kiến trúc Phục Hưng lộng lẫy, tháp chuông trung tâm và Tượng đài Bác Hồ với thiếu nhi.",
+    "opening_hours": "Mở cửa các dịp lễ đặc biệt và tham quan kiến trúc",
+    "verified": true,
+    "related_street_id": "street_nam_ky_khoi_nghia",
+    "street_address": "86 Lê Thánh Tôn",
+    "address_old": "86 Lê Thánh Tôn, Phường Bến Nghé, Quận 1",
+    "address_verification": "official",
+    "coord_source": "OSM way 341504305",
+    "place_type": "architecture",
+    "is_red_address": false,
+    "aliases": [
+      "ubnd thanh pho",
+      "tru so uy ban",
+      "toa do chanh",
+      "hotel de ville"
+    ],
+    "sources": [
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "ward": "Sài Gòn"
+  },
+  {
+    "id": "site_dinh_xuan_hoa",
+    "name": "Đình Xuân Hòa",
+    "place_type": "religious",
+    "is_red_address": false,
+    "street_address": "129 Lý Chính Thắng",
+    "address_old": "129 Lý Chính Thắng, Quận 3",
+    "address_verification": "official",
+    "coordinates": [
+      10.786517,
+      106.68486
+    ],
+    "coord_source": "OSM way 1381826602",
+    "history": "Đình Xuân Hòa là địa điểm văn hóa gắn với lịch sử hình thành địa danh Xuân Hòa. Theo tư liệu lịch sử, năm 1880, thôn Tân Định được đổi tên thành thôn Xuân Hòa, đồng thời đình Tân Định cũng đổi tên thành Đình Xuân Hòa. Đây là địa điểm giúp người xem tìm hiểu thêm về lịch sử và nguồn gốc tên gọi của địa phương.",
+    "highlights": "Đình được xếp hạng di tích kiến trúc nghệ thuật cấp Thành phố ngày 05/08/2003.",
+    "opening_hours": "Chưa có thông tin giờ mở cửa đã xác minh",
+    "related_street_id": "street_ly_chinh_thang",
+    "sources": [
+      "Báo Pháp Luật TP.HCM (07/05/2025) – lịch sử tên gọi Xuân Hòa và Đình Xuân Hòa",
+      "Wikipedia: Xuân Hòa, Ho Chi Minh City",
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": true,
+    "aliases": [
+      "dinh xuan hoa",
+      "dinh tan dinh"
+    ],
+    "category": "religious",
+    "ward": "Xuân Hòa",
+    "address": "129 Lý Chính Thắng, Phường Xuân Hòa, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_chua_xa_loi",
+    "name": "Chùa Xá Lợi",
+    "place_type": "religious",
+    "is_red_address": false,
+    "street_address": "89 Bà Huyện Thanh Quan",
+    "address_old": "89 Bà Huyện Thanh Quan, Phường Võ Thị Sáu, Quận 3",
+    "address_verification": "official",
+    "coordinates": [
+      10.778081,
+      106.686485
+    ],
+    "coord_source": "OSM way 225209627 (Chùa Phật Học Xá Lợi)",
+    "history": "Chùa khởi công ngày 05/08/1956 trên khu đất khoảng 2.500 m², theo thiết kế của các kiến trúc sư Trần Văn Đường và Đỗ Bá Vinh, hoàn thành năm 1958. Năm 1963, chùa là một trung tâm của phong trào Phật giáo đấu tranh chống chính sách kỳ thị tôn giáo của chính quyền Ngô Đình Diệm; đêm 20 rạng sáng 21/08/1963, lực lượng của chính quyền đã tấn công vào chùa.",
+    "highlights": "Tháp chuông bảy tầng xây dựng năm 1960; tháp bạc thờ xá lợi được trao tặng ngày 11/12/1960.",
+    "opening_hours": "Chưa có thông tin giờ mở cửa đã xác minh",
+    "related_street_id": "street_ba_huyen_thanh_quan",
+    "sources": [
+      "Vinwonders / Mia.vn – lịch sử xây dựng chùa Xá Lợi (cần đối chiếu thêm với tư liệu Phật giáo chính thức)",
+      "Wikipedia: Xá Lợi Pagoda raids (sự kiện 21/08/1963)",
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": false,
+    "aliases": [
+      "chua xa loi",
+      "xa loi"
+    ],
+    "category": "religious",
+    "ward": "Xuân Hòa",
+    "address": "89 Bà Huyện Thanh Quan, Phường Xuân Hòa, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_pho_binh",
+    "name": "Phở Bình – Sở chỉ huy tiền phương Phân khu 6",
+    "place_type": "relic",
+    "is_red_address": true,
+    "street_address": "7 Lý Chính Thắng",
+    "address_old": "7 Yên Đổ (trước 1975); 7 Lý Chính Thắng, Phường 8, Quận 3 (trước 01/07/2025)",
+    "address_verification": "official",
+    "coordinates": [
+      10.790891,
+      106.687077
+    ],
+    "coord_source": "OSM node 13437582047 (Phở Bình, tourism=attraction)",
+    "history": "Phở Bình là địa điểm lịch sử gắn với hoạt động của lực lượng Biệt động Sài Gòn và công tác chuẩn bị cho cuộc Tổng tiến công và nổi dậy Xuân Mậu Thân năm 1968. Nơi đây từng được sử dụng làm Sở chỉ huy tiền phương Phân khu 6; chủ quán là ông Ngô Toại. Quán là nơi tập kết cán bộ, chiến sĩ để truyền đạt mệnh lệnh trước giờ nổ súng.",
+    "highlights": "Quán còn lưu giữ một số hiện vật như chiếc tủ thờ ngụy trang từng dùng cất giấu bản đồ tác chiến và bộ bàn ghế nơi cán bộ họp bàn.",
+    "opening_hours": "Quán vẫn hoạt động hằng ngày (chưa xác minh giờ cụ thể)",
+    "related_street_id": "street_ly_chinh_thang",
+    "sources": [
+      "VnExpress – 4 điểm thăm lại Biệt động Sài Gòn xưa",
+      "VOV – Ký ức của những người làm nên chiến dịch Tết Mậu Thân",
+      "Báo Nhân Dân – Theo dấu chân Biệt động Sài Gòn",
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": true,
+    "aliases": [
+      "pho binh",
+      "quan pho binh",
+      "so chi huy tien phuong",
+      "phan khu 6",
+      "7 yen do"
+    ],
+    "category": "relic",
+    "ward": "Xuân Hòa",
+    "address": "7 Lý Chính Thắng, Phường Xuân Hòa, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_nha_hat_thanh_pho",
+    "name": "Nhà hát Thành phố Hồ Chí Minh",
+    "place_type": "architecture",
+    "is_red_address": false,
+    "street_address": "7 Công trường Lam Sơn",
+    "address_old": "7 Công trường Lam Sơn, Phường Bến Nghé, Quận 1",
+    "address_verification": "official",
+    "coordinates": [
+      10.776711,
+      106.703219
+    ],
+    "coord_source": "OSM way 801710792",
+    "history": "Công trình kiến trúc Pháp hoàn thành năm 1900 (Opéra de Saigon). Giai đoạn 1956 – 1975, tòa nhà từng được dùng làm trụ sở Hạ nghị viện của chính quyền Sài Gòn; sau năm 1975 trở lại chức năng nhà hát.",
+    "highlights": "Mặt tiền kiến trúc tân cổ điển, là không gian biểu diễn nghệ thuật trung tâm thành phố; gần ga Metro Nhà hát Thành phố.",
+    "opening_hours": "Theo lịch biểu diễn",
+    "related_street_id": "street_dong_khoi",
+    "sources": [
+      "Wikipedia: Municipal Theatre, Ho Chi Minh City",
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": false,
+    "aliases": [
+      "nha hat thanh pho",
+      "nha hat lon",
+      "opera house"
+    ],
+    "category": "architecture",
+    "ward": "Sài Gòn",
+    "address": "7 Công trường Lam Sơn, Phường Sài Gòn, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_buu_dien_trung_tam",
+    "name": "Bưu điện Trung tâm Sài Gòn",
+    "place_type": "architecture",
+    "is_red_address": false,
+    "street_address": "2 Công xã Paris",
+    "address_old": "2 Công xã Paris, Phường Bến Nghé, Quận 1",
+    "address_verification": "official",
+    "coordinates": [
+      10.779981,
+      106.700021
+    ],
+    "coord_source": "OSM way 39514793",
+    "history": "Công trình xây dựng trong giai đoạn 1886 – 1891 thời Pháp thuộc, là một trong những công trình kiến trúc công cộng tiêu biểu của Sài Gòn cuối thế kỷ XIX.",
+    "highlights": "Sảnh mái vòm, hai bản đồ cổ vẽ tay và chân dung Chủ tịch Hồ Chí Minh trong sảnh chính.",
+    "opening_hours": "Giờ hành chính (chưa xác minh giờ cụ thể)",
+    "related_street_id": "street_dong_khoi",
+    "sources": [
+      "Wikipedia: Saigon Central Post Office",
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": false,
+    "aliases": [
+      "buu dien trung tam",
+      "buu dien thanh pho",
+      "buu dien sai gon"
+    ],
+    "category": "architecture",
+    "ward": "Sài Gòn",
+    "address": "2 Công xã Paris, Phường Sài Gòn, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_nha_tho_duc_ba",
+    "name": "Nhà thờ Đức Bà Sài Gòn",
+    "place_type": "religious",
+    "is_red_address": false,
+    "street_address": "1 Công xã Paris",
+    "address_old": "1 Công xã Paris, Phường Bến Nghé, Quận 1",
+    "address_verification": "official",
+    "coordinates": [
+      10.779771,
+      106.699058
+    ],
+    "coord_source": "OSM way 801950766",
+    "history": "Nhà thờ khởi công năm 1877 và khánh thành năm 1880, là công trình kiến trúc tôn giáo tiêu biểu thời Pháp thuộc tại trung tâm Sài Gòn.",
+    "highlights": "Hai tháp chuông, gạch đỏ xây dựng; quảng trường Công xã Paris phía trước.",
+    "opening_hours": "Theo lịch sinh hoạt tôn giáo",
+    "related_street_id": "street_dong_khoi",
+    "sources": [
+      "Wikipedia: Notre-Dame Cathedral Basilica of Saigon",
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": false,
+    "aliases": [
+      "nha tho duc ba",
+      "vuong cung thanh duong",
+      "nha tho lon"
+    ],
+    "category": "religious",
+    "ward": "Sài Gòn",
+    "address": "1 Công xã Paris, Phường Sài Gòn, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_toa_an_nhan_dan",
+    "name": "Tòa án Nhân dân TP. Hồ Chí Minh",
+    "place_type": "architecture",
+    "is_red_address": false,
+    "street_address": "131 Nam Kỳ Khởi Nghĩa",
+    "address_old": "131 Nam Kỳ Khởi Nghĩa, Quận 1",
+    "address_verification": "osm_boundary",
+    "coordinates": [
+      10.775712,
+      106.69793
+    ],
+    "coord_source": "OSM relation 2531662",
+    "history": "Công trình kiến trúc thời Pháp thuộc (Palais de Justice) xây dựng cuối thế kỷ XIX tại trung tâm Sài Gòn. Chưa có tư liệu xác minh về năm khởi công và hoàn thành trong cơ sở dữ liệu dự án.",
+    "highlights": "Kiến trúc công quyền cổ điển Pháp nằm trên trục Nam Kỳ Khởi Nghĩa, gần Dinh Độc Lập.",
+    "opening_hours": "Cơ quan nhà nước – không phải điểm tham quan tự do",
+    "related_street_id": "street_nam_ky_khoi_nghia",
+    "sources": [
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": false,
+    "aliases": [
+      "toa an nhan dan",
+      "toa an thanh pho"
+    ],
+    "category": "architecture",
+    "ward": "Bến Thành",
+    "address": "131 Nam Kỳ Khởi Nghĩa, Phường Bến Thành, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_bao_tang_tp_hcm",
+    "name": "Bảo tàng Thành phố Hồ Chí Minh",
+    "place_type": "museum",
+    "is_red_address": false,
+    "street_address": "65 Lý Tự Trọng",
+    "address_old": "65 Lý Tự Trọng, Quận 1",
+    "address_verification": "osm_boundary",
+    "coordinates": [
+      10.775916,
+      106.699673
+    ],
+    "coord_source": "OSM way 802105071",
+    "history": "Tòa nhà xây dựng giai đoạn 1885 – 1890 thời Pháp thuộc, trước năm 1975 được biết đến với tên Dinh Gia Long. Hiện là Bảo tàng Thành phố Hồ Chí Minh, trưng bày về lịch sử, văn hóa và quá trình đấu tranh của thành phố.",
+    "highlights": "Hệ thống hầm ngầm, kiến trúc kết hợp cổ điển Âu – Á, các chuyên đề lịch sử Sài Gòn – TP.HCM.",
+    "opening_hours": "Chưa xác minh giờ mở cửa",
+    "related_street_id": "street_ly_tu_trong",
+    "sources": [
+      "Wikipedia: Ho Chi Minh City Museum",
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": false,
+    "aliases": [
+      "bao tang thanh pho",
+      "dinh gia long",
+      "bao tang tp hcm"
+    ],
+    "category": "museum",
+    "ward": "Sài Gòn",
+    "address": "65 Lý Tự Trọng, Phường Sài Gòn, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_bao_tang_my_thuat",
+    "name": "Bảo tàng Mỹ thuật TP. Hồ Chí Minh",
+    "place_type": "museum",
+    "is_red_address": false,
+    "street_address": "97A Phó Đức Chính",
+    "address_old": "97A Phó Đức Chính, Phường Nguyễn Thái Bình, Quận 1",
+    "address_verification": "osm_boundary",
+    "coordinates": [
+      10.769646,
+      106.699247
+    ],
+    "coord_source": "OSM way 802157425",
+    "history": "Bảo tàng đặt trong tòa nhà kiến trúc Pháp – Hoa đầu thế kỷ XX của gia đình Hui Bon Hoa (Chú Hỏa); bảo tàng được thành lập năm 1987.",
+    "highlights": "Sưu tập mỹ thuật Việt Nam hiện đại, cổ vật và kiến trúc biệt thự cổ.",
+    "opening_hours": "Chưa xác minh giờ mở cửa",
+    "related_street_id": null,
+    "sources": [
+      "Wikipedia: Ho Chi Minh City Museum of Fine Arts",
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": false,
+    "aliases": [
+      "bao tang my thuat",
+      "nha chu hoa"
+    ],
+    "category": "museum",
+    "ward": "Bến Thành",
+    "address": "97A Phó Đức Chính, Phường Bến Thành, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_bao_tang_lich_su",
+    "name": "Bảo tàng Lịch sử TP. Hồ Chí Minh",
+    "place_type": "museum",
+    "is_red_address": false,
+    "street_address": "2 Nguyễn Bỉnh Khiêm (trong khuôn viên Thảo Cầm Viên)",
+    "address_old": "2 Nguyễn Bỉnh Khiêm, Phường Bến Nghé, Quận 1",
+    "address_verification": "official",
+    "coordinates": [
+      10.787962,
+      106.704918
+    ],
+    "coord_source": "OSM relation 17758150",
+    "history": "Tòa nhà xây dựng cuối thập niên 1920 với tên gọi Bảo tàng Blanchard de la Brosse thời Pháp thuộc; sau năm 1975 trở thành Bảo tàng Lịch sử.",
+    "highlights": "Các sưu tập hiện vật lịch sử Việt Nam từ thời tiền sử, văn hóa Óc Eo, Chăm Pa.",
+    "opening_hours": "Chưa xác minh giờ mở cửa",
+    "related_street_id": null,
+    "sources": [
+      "Wikipedia: Museum of Vietnamese History, Ho Chi Minh City",
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": false,
+    "aliases": [
+      "bao tang lich su",
+      "blanchard de la brosse"
+    ],
+    "category": "museum",
+    "ward": "Sài Gòn",
+    "address": "2 Nguyễn Bỉnh Khiêm (trong khuôn viên Thảo Cầm Viên), Phường Sài Gòn, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_duong_sach",
+    "name": "Đường sách Nguyễn Văn Bình",
+    "place_type": "public_space",
+    "is_red_address": false,
+    "street_address": "Đường Nguyễn Văn Bình",
+    "address_old": "Đường Nguyễn Văn Bình, Phường Bến Nghé, Quận 1",
+    "address_verification": "official",
+    "coordinates": [
+      10.780574,
+      106.699695
+    ],
+    "coord_source": "OSM node 11708010270",
+    "history": "Không gian văn hóa đọc ngoài trời khai trương đầu năm 2016 trên tuyến đường ngắn giữa Nhà thờ Đức Bà và Bưu điện Trung tâm.",
+    "highlights": "Các gian hàng sách, không gian giao lưu tác giả và hoạt động văn hóa đọc.",
+    "opening_hours": "Hằng ngày",
+    "related_street_id": null,
+    "sources": [
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": false,
+    "aliases": [
+      "duong sach",
+      "nguyen van binh"
+    ],
+    "category": "public_space",
+    "ward": "Sài Gòn",
+    "address": "Đường Nguyễn Văn Bình, Phường Sài Gòn, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_cong_truong_quach_thi_trang",
+    "name": "Công trường Quách Thị Trang",
+    "place_type": "public_space",
+    "is_red_address": false,
+    "street_address": "Công trường Quách Thị Trang (trước chợ Bến Thành)",
+    "address_old": "Công trường Quách Thị Trang, Phường Bến Thành, Quận 1",
+    "address_verification": "official",
+    "coordinates": [
+      10.771862,
+      106.698394
+    ],
+    "coord_source": "OSM way 1475190937; tượng: OSM node 6909743958",
+    "history": "Quảng trường mang tên nữ sinh Quách Thị Trang, người hy sinh ngày 25/08/1963 trong cuộc biểu tình của học sinh, sinh viên Sài Gòn chống chính quyền Ngô Đình Diệm. Tượng Quách Thị Trang đặt tại công trường.",
+    "highlights": "Không gian giao thông, công cộng trước chợ Bến Thành, nằm cạnh ga Metro Bến Thành.",
+    "opening_hours": "Không gian công cộng",
+    "related_street_id": "street_le_loi",
+    "sources": [
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": false,
+    "aliases": [
+      "quach thi trang",
+      "cong truong quach thi trang",
+      "bung binh ben thanh"
+    ],
+    "category": "public_space",
+    "ward": "Bến Thành",
+    "address": "Công trường Quách Thị Trang (trước chợ Bến Thành), Phường Bến Thành, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_cho_ben_thanh",
+    "name": "Chợ Bến Thành",
+    "place_type": "public_space",
+    "is_red_address": false,
+    "street_address": "Công trường Quách Thị Trang",
+    "address_old": "Phường Bến Thành, Quận 1",
+    "address_verification": "official",
+    "coordinates": [
+      10.772571,
+      106.698017
+    ],
+    "coord_source": "OSM way 39514795",
+    "history": "Chợ được xây dựng tại vị trí hiện nay và khánh thành năm 1914, là biểu tượng thương mại lâu đời của Sài Gòn.",
+    "highlights": "Cổng chính có tháp đồng hồ; khu chợ truyền thống và ẩm thực.",
+    "opening_hours": "Chưa xác minh giờ mở cửa",
+    "related_street_id": "street_le_loi",
+    "sources": [
+      "Wikipedia: Bến Thành Market",
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": false,
+    "aliases": [
+      "cho ben thanh",
+      "ben thanh market"
+    ],
+    "category": "public_space",
+    "ward": "Bến Thành",
+    "address": "Công trường Quách Thị Trang, Phường Bến Thành, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_pho_di_bo_nguyen_hue",
+    "name": "Phố đi bộ Nguyễn Huệ",
+    "place_type": "public_space",
+    "is_red_address": false,
+    "street_address": "Đường Nguyễn Huệ",
+    "address_old": "Đường Nguyễn Huệ, Phường Bến Nghé, Quận 1",
+    "address_verification": "official",
+    "coordinates": [
+      10.773538,
+      106.704187
+    ],
+    "coord_source": "OSM relation 4851995",
+    "history": "Không gian đi bộ khánh thành ngày 29/04/2015 trên đại lộ Nguyễn Huệ, phía trước Trụ sở UBND Thành phố và Tượng đài Chủ tịch Hồ Chí Minh.",
+    "highlights": "Quảng trường đi bộ, nơi diễn ra nhiều sự kiện văn hóa và lễ hội lớn của thành phố.",
+    "opening_hours": "Không gian công cộng",
+    "related_street_id": "street_nguyen_hue",
+    "sources": [
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": false,
+    "aliases": [
+      "pho di bo",
+      "pho di bo nguyen hue",
+      "quang truong nguyen hue"
+    ],
+    "category": "public_space",
+    "ward": "Sài Gòn",
+    "address": "Đường Nguyễn Huệ, Phường Sài Gòn, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_cong_vien_23_9",
+    "name": "Công viên 23 tháng 9",
+    "place_type": "public_space",
+    "is_red_address": false,
+    "street_address": "Đường Phạm Ngũ Lão – Lê Lai",
+    "address_old": "Phường Phạm Ngũ Lão / Bến Thành, Quận 1",
+    "address_verification": "official",
+    "coordinates": [
+      10.769568,
+      106.693942
+    ],
+    "coord_source": "OSM relation 14939719",
+    "history": "Tên công viên gợi nhắc ngày Nam Bộ kháng chiến 23/9/1945.",
+    "highlights": "Công viên tuyến dài giữa khu trung tâm, gần ga Metro Bến Thành.",
+    "opening_hours": "Không gian công cộng",
+    "related_street_id": null,
+    "sources": [
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": false,
+    "aliases": [
+      "cong vien 23 thang 9",
+      "cong vien 23/9"
+    ],
+    "category": "public_space",
+    "ward": "Bến Thành",
+    "address": "Đường Phạm Ngũ Lão – Lê Lai, Phường Bến Thành, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_cong_vien_tao_dan",
+    "name": "Công viên Tao Đàn",
+    "place_type": "public_space",
+    "is_red_address": false,
+    "street_address": "Đường Trương Định",
+    "address_old": "Phường Bến Thành, Quận 1",
+    "address_verification": "osm_boundary",
+    "coordinates": [
+      10.774492,
+      106.692653
+    ],
+    "coord_source": "OSM way 500888743",
+    "history": "Công viên cây xanh lớn tại trung tâm thành phố, nằm cạnh khuôn viên Dinh Độc Lập.",
+    "highlights": "Hệ thống cây cổ thụ, không gian sinh hoạt cộng đồng.",
+    "opening_hours": "Không gian công cộng",
+    "related_street_id": "street_truong_dinh",
+    "sources": [
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": false,
+    "aliases": [
+      "cong vien tao dan",
+      "tao dan"
+    ],
+    "category": "public_space",
+    "ward": "Bến Thành",
+    "address": "Đường Trương Định, Phường Bến Thành, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_ho_con_rua",
+    "name": "Hồ Con Rùa (Công trường Quốc tế)",
+    "place_type": "public_space",
+    "is_red_address": false,
+    "street_address": "Công trường Quốc tế",
+    "address_old": "Công trường Quốc tế, Phường Võ Thị Sáu, Quận 3",
+    "address_verification": "official",
+    "coordinates": [
+      10.782588,
+      106.695889
+    ],
+    "coord_source": "OSM node 1770193841",
+    "history": "Vòng xoay giao lộ Phạm Ngọc Thạch – Võ Văn Tần – Trần Cao Vân, quen gọi là Hồ Con Rùa, là không gian công cộng gắn với ký ức đô thị Sài Gòn.",
+    "highlights": "Hồ nước và công trình trang trí tại vòng xoay; không gian sinh hoạt của giới trẻ.",
+    "opening_hours": "Không gian công cộng",
+    "related_street_id": "street_pham_ngoc_thach",
+    "sources": [
+      "Wikipedia: Xuân Hòa, Ho Chi Minh City (danh sách địa danh)",
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": false,
+    "aliases": [
+      "ho con rua",
+      "cong truong quoc te"
+    ],
+    "category": "public_space",
+    "ward": "Xuân Hòa",
+    "address": "Công trường Quốc tế, Phường Xuân Hòa, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_cong_vien_le_van_tam",
+    "name": "Công viên Lê Văn Tám",
+    "place_type": "public_space",
+    "is_red_address": false,
+    "street_address": "Đường Hai Bà Trưng – Điện Biên Phủ",
+    "address_old": "Phường Đa Kao, Quận 1",
+    "address_verification": "osm_boundary",
+    "coordinates": [
+      10.788241,
+      106.693757
+    ],
+    "coord_source": "OSM way 32735082",
+    "history": "Công viên cây xanh trong khu trung tâm; tại đây đang xây dựng ga Công viên Lê Văn Tám thuộc tuyến Metro số 2 (chưa khai thác).",
+    "highlights": "Không gian xanh, sinh hoạt cộng đồng.",
+    "opening_hours": "Không gian công cộng",
+    "related_street_id": "street_hai_ba_trung",
+    "sources": [
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": false,
+    "aliases": [
+      "cong vien le van tam",
+      "le van tam"
+    ],
+    "category": "public_space",
+    "ward": "Tân Định",
+    "address": "Đường Hai Bà Trưng – Điện Biên Phủ, Phường Tân Định, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_nha_tho_tan_dinh",
+    "name": "Nhà thờ Tân Định",
+    "place_type": "religious",
+    "is_red_address": false,
+    "street_address": "289 Hai Bà Trưng",
+    "address_old": "289 Hai Bà Trưng, Phường 8, Quận 3 (sau là Phường Võ Thị Sáu)",
+    "address_verification": "official",
+    "coordinates": [
+      10.788349,
+      106.690658
+    ],
+    "coord_source": "OSM way 60118189",
+    "history": "Nhà thờ xây dựng thời Pháp thuộc, hoàn thành năm 1876, nổi bật với sắc hồng đặc trưng.",
+    "highlights": "Kiến trúc Gothic kết hợp Roman, màu sơn hồng; gần chợ Tân Định.",
+    "opening_hours": "Theo lịch sinh hoạt tôn giáo",
+    "related_street_id": "street_hai_ba_trung",
+    "sources": [
+      "Wikipedia: Tân Định Church",
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": false,
+    "aliases": [
+      "nha tho tan dinh",
+      "nha tho mau hong"
+    ],
+    "category": "religious",
+    "ward": "Xuân Hòa",
+    "address": "289 Hai Bà Trưng, Phường Xuân Hòa, TP. Hồ Chí Minh"
+  },
+  {
+    "id": "site_chua_vinh_nghiem",
+    "name": "Chùa Vĩnh Nghiêm",
+    "place_type": "religious",
+    "is_red_address": false,
+    "street_address": "339 Nam Kỳ Khởi Nghĩa",
+    "address_old": "339 Nam Kỳ Khởi Nghĩa, Phường 7, Quận 3 (sau là Phường Võ Thị Sáu)",
+    "address_verification": "official",
+    "coordinates": [
+      10.790363,
+      106.682295
+    ],
+    "coord_source": "OSM way 494789249",
+    "history": "Ngôi chùa lớn tại khu trung tâm, xây dựng trong thập niên 1960 – 1970, mang tên tổ đình Vĩnh Nghiêm (Bắc Giang).",
+    "highlights": "Tháp xá lợi nhiều tầng, kiến trúc chùa Việt hiện đại.",
+    "opening_hours": "Theo lịch sinh hoạt tôn giáo",
+    "related_street_id": "street_nam_ky_khoi_nghia",
+    "sources": [
+      "Wikipedia: Vĩnh Nghiêm Pagoda",
+      "Tọa độ: OpenStreetMap (ODbL)"
+    ],
+    "verified": false,
+    "aliases": [
+      "chua vinh nghiem",
+      "vinh nghiem"
+    ],
+    "category": "religious",
+    "ward": "Xuân Hòa",
+    "address": "339 Nam Kỳ Khởi Nghĩa, Phường Xuân Hòa, TP. Hồ Chí Minh"
+  }
+]

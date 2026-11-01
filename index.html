@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONNECT 7650 — Bản Đồ Ký Ức Thành Phố Hồ Chí Minh (1976 - 2026)</title>
+  <meta name="description" content="Nền tảng bản đồ số tương tác kết nối lịch sử TP.HCM nhân kỷ niệm 50 năm Thành phố mang tên Bác (1976-2026). Khám phá nguồn gốc tên đường, nhân vật lịch sử và các địa chỉ đỏ tại Phường Xuân Hòa và toàn thành phố.">
+  
+  <!-- Google Fonts: Be Vietnam Pro -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Leaflet Map CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- TOP ANNIVERSARY BANNER (1976 - 2026: 50 NĂM) -->
+    <header class="top-anniversary-bar">
+      <div class="badge-star">
+        <span aria-hidden="true">★</span>
+        <span>1976 – 2026</span>
+        <span aria-hidden="true">|</span>
+        <span>KỶ NIỆM 50 NĂM THÀNH PHỐ CHÍNH THỨC MANG TÊN BÁC</span>
+      </div>
+      <div class="anniversary-quote">
+        “Mỗi con đường là một câu chuyện. Mỗi địa danh là một dấu mốc. Lịch sử hiện diện ngay trong không gian chúng ta sống.”
+      </div>
+    </header>
+
+    <!-- MAIN APP HEADER & TAB NAVIGATION -->
+    <nav class="main-header" aria-label="Thanh điều hướng chính">
+      <div class="header-content">
+        <a class="brand-section" href="#" id="brand-logo-link" aria-label="CONNECT 7650 - Về trang chủ bản đồ">
+          <div class="brand-logo-mark" aria-hidden="true">C76</div>
+          <div class="brand-text">
+            <h1>CONNECT <span class="tag-7650">7650</span></h1>
+            <p>Bản đồ ký ức Thành phố Hồ Chí Minh</p>
+          </div>
+        </a>
+
+        <!-- 6 Main Tabs Defined in Document -->
+        <ul class="nav-tabs" id="main-nav-tabs" role="tablist" aria-label="Điều hướng chính của ứng dụng">
+          <li role="presentation">
+            <button class="nav-tab-btn active" id="tab-btn-map" role="tab" aria-selected="true" aria-controls="tab-map" data-tab="map">
+              <span aria-hidden="true">🗺️</span> Bản đồ lịch sử
+            </button>
+          </li>
+          <li role="presentation">
+            <button class="nav-tab-btn" id="tab-btn-timeline" role="tab" aria-selected="false" aria-controls="tab-timeline" data-tab="timeline">
+              <span aria-hidden="true">⏳</span> Dòng thời gian
+            </button>
+          </li>
+          <li role="presentation">
+            <button class="nav-tab-btn" id="tab-btn-archive" role="tab" aria-selected="false" aria-controls="tab-archive" data-tab="archive">
+              <span aria-hidden="true">📚</span> Kho nội dung
+            </button>
+          </li>
+          <li role="presentation">
+            <button class="nav-tab-btn" id="tab-btn-about" role="tab" aria-selected="false" aria-controls="tab-about" data-tab="about">
+              <span aria-hidden="true">🏛️</span> Giới thiệu dự án
+            </button>
+          </li>
+          <li role="presentation">
+            <button class="nav-tab-btn" id="tab-btn-brand" role="tab" aria-selected="false" aria-controls="tab-brand" data-tab="brand">
+              <span aria-hidden="true">🎨</span> Bộ nhận diện
+            </button>
+          </li>
+          <li role="presentation">
+            <button class="nav-tab-btn" id="tab-btn-sources" role="tab" aria-selected="false" aria-controls="tab-sources" data-tab="sources">
+              <span aria-hidden="true">📜</span> Nguồn tư liệu
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT VIEWPORTS -->
+    <main class="main-content-area">
+      
+      <!-- ==============================================================
+           TAB 01: BẢN ĐỒ LỊCH SỬ (MAIN INTERACTIVE MAP + DRAWER + CHATBOT)
+           ============================================================== -->
+      <section class="tab-panel active" id="tab-map" role="tabpanel" aria-labelledby="tab-btn-map">
+        <div class="map-wrapper">
+          <!-- Leaflet Interactive Map -->
+          <div id="leaflet-map" role="region" aria-label="Bản đồ tương tác các tuyến đường và di tích TP.HCM"></div>
+
+          <!-- Modern Google Maps-style Floating Search & Filter Bar -->
+          <div class="map-search-container" id="map-search-container">
+            <div class="search-bar-pill">
+              <span class="search-pill-icon" aria-hidden="true">🔍</span>
+              <input type="text" id="map-search-input" placeholder="Tìm tên đường, danh nhân, sự kiện, địa chỉ đỏ..." aria-label="Tìm kiếm địa danh trên bản đồ">
+              <button class="search-clear-btn hidden" id="search-clear-btn" aria-label="Xóa nội dung tìm kiếm" title="Xóa tìm kiếm">✕</button>
+              <div class="search-results-dropdown" id="search-dropdown" role="listbox" aria-label="Kết quả tìm kiếm địa danh"></div>
+            </div>
+
+            <!-- Horizontal Scrollable Filter Chips with Navigation Controls -->
+            <div class="filter-chips-wrapper">
+              <button class="chip-scroll-nav-btn prev hidden" id="chip-scroll-prev" data-scroll="left" aria-label="Cuộn bộ lọc sang trái" title="Cuộn sang trái">‹</button>
+              <div class="filter-chips-scroll" id="filter-chips-scroll" role="toolbar" aria-label="Bộ lọc chuyên đề bản đồ">
+                <button class="filter-chip-item active" data-category="all">Tất cả</button>
+                <button class="filter-chip-item" data-category="revolutionary_figure">★ Cách mạng & Liệt sĩ</button>
+                <button class="filter-chip-item" data-category="cultural_scholar">📖 Danh nhân văn hóa</button>
+                <button class="filter-chip-item" data-category="historic_event">⏳ Sự kiện</button>
+                <button class="filter-chip-item tag-red" data-category="heritage">🚩 Địa chỉ đỏ</button>
+                <button class="filter-chip-item" data-category="landmark">🏛 Di tích & Kiến trúc</button>
+                <button class="filter-chip-item" data-category="public_space">🌳 Không gian công cộng</button>
+                <button class="filter-chip-item" data-category="metro">🚇 Metro số 1</button>
+                <button class="filter-chip-item chip-action" data-action="reset-xuan-hoa">🎯 Phường Xuân Hòa</button>
+                <button class="filter-chip-item chip-action" data-action="tour">🚶 Gợi ý tour</button>
+              </div>
+              <button class="chip-scroll-nav-btn next" id="chip-scroll-next" data-scroll="right" aria-label="Cuộn bộ lọc sang phải" title="Cuộn sang phải">›</button>
+            </div>
+          </div>
+
+          <!-- Floating Map Controls Group (Bottom-Left Vertical Toolbar) -->
+          <div class="map-left-controls" id="map-left-controls" aria-label="Thanh công cụ bản đồ nhanh">
+            <button class="map-control-btn map-locate-fab-btn" id="map-locate-fab-btn" aria-label="Định vị vị trí của tôi và chỉ đường" title="Vị trí của tôi & Tìm đường">
+              <span aria-hidden="true">📍</span>
+            </button>
+            <div class="map-layer-fab-container" id="map-layer-fab-container">
+              <button class="map-control-btn map-layer-fab-btn" id="map-layer-fab-btn" aria-label="Tùy chọn lớp bản đồ nền" title="Chọn lớp bản đồ">
+                <span aria-hidden="true">🗺️</span>
+              </button>
+              <div class="map-layer-menu" id="map-layer-menu" role="menu" aria-label="Danh sách lớp bản đồ nền">
+                <div class="layer-menu-header">LỚP NỀN BẢN ĐỒ</div>
+                <label class="layer-option">
+                  <input type="radio" name="base-layer-radio" value="esri_street" checked>
+                  <span>Esri World Street (Mặc định)</span>
+                </label>
+                <label class="layer-option">
+                  <input type="radio" name="base-layer-radio" value="osm_de">
+                  <span>OpenStreetMap (Tiếng Việt)</span>
+                </label>
+                <label class="layer-option">
+                  <input type="radio" name="base-layer-radio" value="esri_topo">
+                  <span>Esri Topo (Sáng dịu)</span>
+                </label>
+
+                <div class="layer-menu-header">LỚP DỮ LIỆU</div>
+                <label class="layer-option">
+                  <input type="checkbox" name="data-layer-toggle" value="places" checked>
+                  <span>Địa điểm</span>
+                </label>
+                <label class="layer-option">
+                  <input type="checkbox" name="data-layer-toggle" value="streets" checked>
+                  <span>Tuyến đường</span>
+                </label>
+                <label class="layer-option">
+                  <input type="checkbox" name="data-layer-toggle" value="metro" checked>
+                  <span>Metro số 1 (đang khai thác)</span>
+                </label>
+
+                <div class="layer-menu-header">NHÓM TUYẾN ĐƯỜNG</div>
+                <select id="street-axis-select" class="layer-select" aria-label="Lọc tuyến đường theo nhóm">
+                  <option value="all">Tất cả tuyến đường</option>
+                  <option value="historic">Mang tên sự kiện lịch sử</option>
+                  <option value="person">Mang tên danh nhân</option>
+                  <option value="commercial">Trục thương mại</option>
+                  <option value="cultural">Trục văn hóa</option>
+                  <option value="transport">Trục giao thông</option>
+                </select>
+
+                <div class="layer-menu-header">CHÚ GIẢI</div>
+                <ul class="map-legend">
+                  <li><span class="legend-icon legend-red">★</span> Địa chỉ đỏ</li>
+                  <li><span class="legend-icon legend-landmark">🏛</span><span class="legend-icon legend-landmark">🔔</span> Di tích, bảo tàng, kiến trúc, tôn giáo</li>
+                  <li><span class="legend-icon legend-public">🌳</span> Không gian công cộng</li>
+                  <li><span class="legend-icon legend-station">M</span> Ga Metro số 1</li>
+                  <li><span class="legend-line legend-line-metro"></span> Tuyến Metro số 1</li>
+                  <li><span class="legend-line legend-line-street"></span> Tuyến đường lịch sử (màu theo danh mục)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide-in Detail Drawer for Street / Heritage Site (Docked on Right) -->
+          <aside class="map-detail-drawer" id="map-detail-drawer" aria-label="Bảng thông tin chi tiết địa danh">
+            <div class="drawer-header">
+              <div class="drawer-header-top">
+                <span class="drawer-badge" id="drawer-badge">Tuyến đường lịch sử</span>
+                <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Đóng bảng thông tin chi tiết" title="Đóng bảng thông tin">✕</button>
+              </div>
+              <h2 class="drawer-title" id="drawer-title">Đường Võ Thị Sáu</h2>
+              <p class="drawer-subtitle" id="drawer-subtitle">Phường Xuân Hòa, TP. Hồ Chí Minh</p>
+              <div class="drawer-header-actions">
+                <button class="btn-drawer-route" id="btn-drawer-route" title="Chỉ đường từ vị trí của bạn tới đây" aria-label="Chỉ đường tới đây">
+                  <span class="route-icon" aria-hidden="true">🧭</span>
+                  <span class="route-text">Chỉ đường</span>
+                </button>
+                <button class="btn-drawer-audio" id="btn-drawer-audio" title="Thuyết minh âm thanh về địa danh này" aria-label="Nghe thuyết minh âm thanh">
+                  <span class="audio-icon" aria-hidden="true">🔊</span>
+                  <span class="audio-text">Thuyết minh</span>
+                </button>
+                <button class="btn-drawer-ask-chat" id="btn-drawer-ask-chat" title="Hỏi trợ lý về địa danh này">
+                  <span aria-hidden="true">💬</span> Hỏi trợ lý
+                </button>
+              </div>
+            </div>
+            <div class="drawer-body" id="drawer-body-content">
+              <!-- Content dynamically rendered via app.js -->
+            </div>
+          </aside>
+
+          <!-- Interactive Guided Tour Bar (Docked at Bottom-Center of Map) -->
+          <div class="guided-tour-bar hidden" id="guided-tour-bar" role="region" aria-label="Thanh điều hướng tour du khảo">
+            <div class="tour-bar-header">
+              <span class="tour-badge">🚶 TOUR DU KHẢO DI SẢN</span>
+              <span class="tour-step-counter" id="tour-step-counter">Trạm 1/5</span>
+            </div>
+            <div class="tour-bar-body">
+              <div class="tour-station-info">
+                <h4 class="tour-station-title" id="tour-station-title">Bảo tàng Chứng tích Chiến tranh</h4>
+                <p class="tour-station-sub" id="tour-station-sub">28 Võ Văn Tần, Phường Xuân Hòa, TP. Hồ Chí Minh</p>
+              </div>
+              <div class="tour-bar-controls">
+                <button class="btn-tour-nav prev" id="btn-tour-prev" aria-label="Trạm trước">◀ Trạm trước</button>
+                <button class="btn-tour-nav next" id="btn-tour-next" aria-label="Trạm tiếp theo">Trạm tiếp ▶</button>
+                <button class="btn-tour-close" id="btn-tour-close" aria-label="Kết thúc tour">✕ Kết thúc</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Route Summary Card (Docked at Bottom-Center of Map) -->
+          <div class="route-summary-card hidden" id="route-summary-card" role="region" aria-label="Bảng tóm tắt chỉ đường">
+            <div class="route-card-header">
+              <div class="route-header-title">
+                <span class="route-header-badge">🧭 CHỈ ĐƯỜNG THỰC TẾ</span>
+                <h4 class="route-dest-name" id="route-dest-name">Địa điểm</h4>
+              </div>
+              <button class="route-card-close" id="btn-clear-route" aria-label="Xóa chỉ đường" title="Xóa đường đi">✕</button>
+            </div>
+            
+            <div class="route-card-metrics">
+              <div class="route-metric-item">
+                <span class="metric-icon" aria-hidden="true">🚶</span>
+                <div class="metric-text">
+                  <span class="metric-label">Đi bộ</span>
+                  <strong class="metric-val" id="route-walk-val">~650m (8 phút)</strong>
+                </div>
+              </div>
+              <div class="route-metric-divider"></div>
+              <div class="route-metric-item">
+                <span class="metric-icon" aria-hidden="true">🛵</span>
+                <div class="metric-text">
+                  <span class="metric-label">Xe máy</span>
+                  <strong class="metric-val" id="route-moto-val">~2 phút</strong>
+                </div>
+              </div>
+              <a class="btn-open-gmaps" id="btn-open-gmaps" href="#" target="_blank" rel="noopener noreferrer" title="Mở dẫn đường bằng giọng nói trên Google Maps">
+                <span aria-hidden="true">🔗</span> Google Maps
+              </a>
+            </div>
+
+            <div class="route-nearby-section">
+              <div class="nearby-title-row">
+                <span class="nearby-label">📍 Hoặc đổi điểm đến gần bạn nhất:</span>
+              </div>
+              <div class="route-nearby-chips" id="route-nearby-chips">
+                <!-- Dynamically rendered Top 3 nearest destinations -->
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ==============================================================
+           TAB 02: DÒNG THỜI GIAN (TIMELINE SÀI GÒN - TP.HCM 1698 - 2026)
+           ============================================================== -->
+      <section class="tab-panel" id="tab-timeline" role="tabpanel" aria-labelledby="tab-btn-timeline">
+        <div class="content-page-container">
+          <div class="section-hero">
+            <span class="hero-badge">Biên niên sử Đô thị</span>
+            <h2>Dòng Thời Gian Lịch Sử Thành Phố</h2>
+            <p>Hành trình từ dấu mốc 50 năm ngày thành phố mang tên Bác (1976 – 2026) ngược dòng thời gian hơn 300 năm hình thành và phát triển đô thị Sài Gòn – TP.HCM.</p>
+          </div>
+
+          <!-- SPECIAL ANNIVERSARY BANNER (1976 - 2026) -->
+          <div class="special-anniversary-banner">
+            <div class="banner-badge-year">★ DẤU MỐC KỶ NIỆM VÀNG (1976 – 2026)</div>
+            <h3>50 Năm Thành Phố Mang Tên Bác: Từ Ký Ức Đến Tương Lai</h3>
+            <p>
+              Ngày 2 tháng 7 năm 1976, tại Kỳ họp thứ nhất Quốc hội khóa VI, Quốc hội đã quyết định chính thức đổi tên thành phố Sài Gòn – Gia Định thành <strong>Thành phố Hồ Chí Minh</strong>. Dấu mốc lịch sử này kết tinh trọn vẹn tình cảm thiêng liêng của đồng bào miền Nam 'Thành đồng Tổ quốc' và cả nước đối với Bác Hồ kính yêu.
+            </p>
+            <p>
+              50 năm nhìn lại, lịch sử thành phố hiện diện sống động trong từng tên đường, góc phố, di tích đỏ và trong nhịp thở vươn mình của một đô thị sáng tạo, văn minh, hiện đại.
+            </p>
+          </div>
+
+          <!-- Timeline Stepper Items -->
+          <div class="timeline-stepper" id="timeline-stepper-container">
+            <!-- Rendered dynamically from historical_data.js -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================================
+           TAB 03: KHO NỘI DUNG LỊCH SỬ (ARCHIVE)
+           ============================================================== -->
+      <section class="tab-panel" id="tab-archive" role="tabpanel" aria-labelledby="tab-btn-archive">
+        <div class="content-page-container">
+          <div class="section-hero">
+            <span class="hero-badge">Thư viện số hóa</span>
+            <h2>Kho Nội Dung & Di Sản Thành Phố</h2>
+            <p>Hệ thống hồ sơ xác minh về các tuyến đường, danh nhân, liệt sĩ, sự kiện lịch sử và các địa chỉ đỏ tiêu biểu.</p>
+          </div>
+
+          <div class="archive-controls">
+            <div class="archive-subtabs" id="archive-subtabs" role="tablist" aria-label="Phân loại kho nội dung">
+              <button class="subtab-btn active" role="tab" aria-selected="true" data-subtab="streets">Tuyến đường</button>
+              <button class="subtab-btn" role="tab" aria-selected="false" data-subtab="figures">Hồ sơ nhân vật</button>
+              <button class="subtab-btn" role="tab" aria-selected="false" data-subtab="sites">Địa điểm</button>
+              <button class="subtab-btn" role="tab" aria-selected="false" data-subtab="stations">Ga Metro số 1</button>
+            </div>
+            <div class="archive-search">
+              <input type="text" id="archive-search-box" placeholder="Lọc nội dung thư viện..." aria-label="Lọc nội dung thư viện">
+            </div>
+          </div>
+
+          <div class="archive-grid" id="archive-grid-container">
+            <!-- Rendered dynamically -->
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================================
+           TAB 04: GIỚI THIỆU DỰ ÁN (ABOUT)
+           ============================================================== -->
+      <section class="tab-panel" id="tab-about" role="tabpanel" aria-labelledby="tab-btn-about">
+        <div class="content-page-container">
+          <div class="section-hero">
+            <span class="hero-badge">Về Dự Án</span>
+            <h2>CONNECT 7650 — Bản Đồ Ký Ức</h2>
+            <p>Dự án số hóa và tương tác lịch sử Thành phố Hồ Chí Minh nhân dịp kỷ niệm 50 năm thành phố chính thức mang tên Bác (1976 – 2026).</p>
+          </div>
+
+          <div class="philosophy-banner">
+            <blockquote>“Mỗi con đường là một câu chuyện. Mỗi địa danh là một dấu mốc. Lịch sử hiện diện ngay trong không gian chúng ta sống.”</blockquote>
+            <cite>Thông điệp cốt lõi — Dự án CONNECT 7650</cite>
+          </div>
+
+          <p class="project-unit-statement">
+            CONNECT 7650 là dự án do nhóm học sinh lớp 11A13, Trường THPT Lê Quý Đôn, phường Xuân Hòa thực hiện, thuộc khuôn khổ dự án liên trường “5001 Khắc Dấu Rạng Đông” của Trường THPT Lê Quý Đôn.
+          </p>
+
+          <!-- Rendered from CONNECT_DATA.project.team — edit members in data/historical_data.js -->
+          <section class="intro-feature-card team-section" id="project-team-section" aria-label="Nhóm thực hiện dự án"></section>
+
+          <div class="intro-grid">
+            <div class="intro-feature-card">
+              <div class="intro-feature-icon" aria-hidden="true">🎯</div>
+              <h3>Ý tưởng & Nguồn cảm hứng</h3>
+              <p>Thay vì lưu trữ lịch sử dưới dạng các bài khảo cứu hàn lâm khô cứng, CONNECT 7650 chuyển hóa thành không gian tương tác trực quan trên bản đồ địa lý số. Lấy trọng tâm khởi đầu từ phường Xuân Hòa (thuộc Quận 3 cũ) - khu vực tập trung dày đặc các tuyến đường và di tích di sản Sài Gòn, dự án lan tỏa và kết nối toàn bộ hệ thống ký ức của thành phố.</p>
+            </div>
+
+            <div class="intro-feature-card">
+              <div class="intro-feature-icon" aria-hidden="true">🔍</div>
+              <h3>Nguyên tắc xác thực & Kiểm chứng</h3>
+              <p>Mọi dữ liệu tên đường, sự kiện, thời điểm đặt tên và tiểu sử nhân vật đều được tra cứu đối chiếu từ các quyết định hành chính chính thức của UBND TP.HCM (như Quyết định 142/QĐ-UB năm 1975, Quyết định năm 1985), Trung tâm Lưu trữ Quốc gia II và các bảo tàng chuyên ngành. Dữ liệu chưa xác minh rõ ràng được dán nhãn minh bạch 'Đang đối chiếu tài liệu'.</p>
+            </div>
+
+            <div class="intro-feature-card">
+              <div class="intro-feature-icon" aria-hidden="true">👥</div>
+              <h3>Giáo dục lịch sử cho thế hệ trẻ</h3>
+              <p>Học sinh, sinh viên và người dân có thể tra cứu nhanh chóng nguồn gốc con đường mình đi mỗi ngày, phân biệt rõ ràng giữa liệt sĩ, danh nhân văn hóa, nhà khoa học và sự kiện lịch sử, từ đó bồi đắp lòng tự hào và tình yêu đối với nơi mình sinh sống và trưởng thành.</p>
+            </div>
+
+            <div class="intro-feature-card">
+              <div class="intro-feature-icon" aria-hidden="true">🚀</div>
+              <h3>Định hướng phát triển tương lai</h3>
+              <p>Thử nghiệm tại phường Xuân Hòa, dự án có kiến trúc dữ liệu mở để tiếp tục cập nhật và mở rộng sang các phường, xã khác của TP. Hồ Chí Minh theo đơn vị hành chính mới (từ 01/07/2025), tích hợp quét mã QR tại các bảng tên đường và bảo tàng thực tế.</p>
+            </div>
+          </div>
+
+          <!-- Rendered from CONNECT_DATA.project.ward_name_meaning -->
+          <section class="intro-feature-card ward-meaning-section" id="ward-name-meaning-section" aria-label="Ý nghĩa tên gọi phường Xuân Hòa"></section>
+        </div>
+      </section>
+
+      <!-- ==============================================================
+           TAB 05: BỘ NHẬN DIỆN THƯƠNG HIỆU (BRAND IDENTITY)
+           ============================================================== -->
+      <section class="tab-panel" id="tab-brand" role="tabpanel" aria-labelledby="tab-btn-brand">
+        <div class="content-page-container">
+          <div class="section-hero">
+            <span class="hero-badge">Nhận Diện Thương Hiệu</span>
+            <h2>Hệ Thống Thiết Kế CONNECT 7650</h2>
+            <p>Hòa quyện giữa giá trị di sản hào hùng và ngôn ngữ thị giác đô thị thông minh hiện đại.</p>
+          </div>
+
+          <div class="brand-showcase-box">
+            <h3 class="brand-heading-sm">Ý Nghĩa Tên Gọi CONNECT 7650</h3>
+            <p class="brand-desc-lead">
+              <strong>76</strong> đại diện cho dấu mốc lịch sử năm <strong>1976</strong> — năm thành phố Sài Gòn – Gia Định vinh dự chính thức mang tên Chủ tịch Hồ Chí Minh.<br>
+              <strong>50</strong> tượng trưng cho <strong>50 năm</strong> đồng hành và phát triển rực rỡ (1976 – 2026).<br>
+              <strong>CONNECT</strong> là sứ mệnh kết nối hai chiều: kết nối quá khứ với hiện tại, kết nối không gian địa lý đô thị với ký ức lịch sử nhân văn.
+            </p>
+
+            <h3 class="brand-heading-spaced">Bảng Màu Thương Hiệu (Brand Palette)</h3>
+            <div class="brand-palette-grid">
+              <div class="palette-item">
+                <div class="palette-swatch swatch-heritage-red"></div>
+                <div class="palette-info">
+                  <div class="palette-name">Đỏ Di Sản</div>
+                  <div class="palette-hex">#B31D1D</div>
+                  <div class="palette-role">Màu cờ Tổ quốc, mốc son 1976, các địa chỉ đỏ thiêng liêng.</div>
+                </div>
+              </div>
+
+              <div class="palette-item">
+                <div class="palette-swatch swatch-heritage-gold"></div>
+                <div class="palette-info">
+                  <div class="palette-name">Vàng Sao Sáng</div>
+                  <div class="palette-hex">#F59E0B</div>
+                  <div class="palette-role">Ánh sao vàng trên cờ Khởi nghĩa Nam Kỳ 1940 và tinh thần tương lai.</div>
+                </div>
+              </div>
+
+              <div class="palette-item">
+                <div class="palette-swatch swatch-urban-slate"></div>
+                <div class="palette-info">
+                  <div class="palette-name">Xanh Đô Thị</div>
+                  <div class="palette-hex">#0F172A</div>
+                  <div class="palette-role">Nền tảng công nghệ bản đồ số, tạo chiều sâu và độ tin cậy.</div>
+                </div>
+              </div>
+
+              <div class="palette-item">
+                <div class="palette-swatch swatch-cream-paper"></div>
+                <div class="palette-info">
+                  <div class="palette-name">Vàng Kem Di Sản</div>
+                  <div class="palette-hex">#FFFBEB</div>
+                  <div class="palette-role">Màu giấy lưu trữ của các văn bản hành chính và tư liệu lịch sử.</div>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="brand-heading-spaced">Kiểu Chữ Chuẩn Mực (Typography)</h3>
+            <p class="brand-desc-normal">
+              Sử dụng bộ font <strong>Be Vietnam Pro</strong> thiết kế chuyên biệt cho tiếng Việt hiện đại: rõ nét, thanh lịch, trang trọng và tương thích hoàn hảo trên các thiết bị số.
+            </p>
+
+            <h3 class="brand-heading-spaced">Ứng Dụng Đa Phương Tiện (Applications)</h3>
+            <div class="brand-mockups-grid">
+              <div class="mockup-card">
+                <h4>💻 Bản Đồ Số Trực Tuyến</h4>
+                <p>Website tương tác trên máy tính, máy tính bảng và điện thoại di động thông minh.</p>
+              </div>
+              <div class="mockup-card">
+                <h4>📱 Giáo Dục & Truyền Thông 50 Năm</h4>
+                <p>Infographic, mã QR tại biển tên đường phục vụ du khách và thế hệ học sinh du khảo.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================================================
+           TAB 06: NGUỒN TƯ LIỆU & KIỂM CHỨNG (SOURCES)
+           ============================================================== -->
+      <section class="tab-panel" id="tab-sources" role="tabpanel" aria-labelledby="tab-btn-sources">
+        <div class="content-page-container">
+          <div class="section-hero">
+            <span class="hero-badge">Tính Xác Thực & Minh Bạch</span>
+            <h2>Nguồn Tư Liệu & Thẩm Quyền Lưu Trữ</h2>
+            <p>Toàn bộ cơ sở dữ liệu của CONNECT 7650 được trích dẫn từ các tài liệu lưu trữ chính thống, văn bản pháp quy và công trình nghiên cứu đã được nghiệm thu.</p>
+          </div>
+
+          <div class="sources-table-container">
+            <table class="sources-table">
+              <thead>
+                <tr>
+                  <th>Tài liệu / Quyết định</th>
+                  <th>Thời gian</th>
+                  <th>Loại hình</th>
+                  <th>Đơn vị lưu trữ</th>
+                  <th>Trạng thái</th>
+                </tr>
+              </thead>
+              <tbody id="sources-table-body">
+                <!-- Rendered dynamically -->
+              </tbody>
+            </table>
+          </div>
+
+          <div class="intro-feature-card">
+            <h3>Quy Trình Biên Tập & Kiểm Định 3 Bước</h3>
+            <ol class="sources-workflow-steps">
+              <li><strong>Bước 1 (Thu thập pháp lý):</strong> Truy xuất quyết định đổi/đặt tên đường của Hội đồng Nhân dân và Ủy ban Nhân dân TP.HCM qua các thời kỳ 1975, 1985, 1995.</li>
+              <li><strong>Bước 2 (Đối chiếu nhân vật):</strong> Kiểm tra chéo với Từ điển Nhân vật Lịch sử Việt Nam, Bảo tàng Lịch sử TP.HCM và hồ sơ Viện Lịch sử Đảng.</li>
+              <li><strong>Bước 3 (Gắn nhãn dữ liệu):</strong> Chỉ các dữ liệu có văn bản gốc mới gắn nhãn 'Đã kiểm chứng'. Dữ liệu đang nghiên cứu được ghi chú rõ ràng, tuyệt đối không tự bịa đặt mốc thời gian hay tiểu sử.</li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Global Floating Trigger Button (Available across all tabs) -->
+      <button class="floating-chat-trigger" id="floating-chat-btn" aria-label="Mở Trợ lý Hỏi chuyện Sài Gòn" title="Mở Trợ lý Hỏi chuyện Sài Gòn">
+        <span class="chat-trigger-icon" aria-hidden="true">💬</span>
+        <span class="chat-trigger-text">Hỏi chuyện Sài Gòn</span>
+      </button>
+
+      <!-- Integrated Chatbot Sidebar ("Hỏi chuyện Sài Gòn" / CONNECT Guide) -->
+      <aside class="chatbot-sidebar minimized" id="chatbot-sidebar" aria-label="Trợ lý Hỏi chuyện Sài Gòn">
+        <div class="chat-header">
+          <div class="chat-title-group">
+            <div class="chat-avatar" aria-hidden="true">★</div>
+            <div class="chat-title-text">
+              <h3>Hỏi chuyện Sài Gòn</h3>
+              <p>Trợ lý số Bản đồ ký ức TP.HCM</p>
+            </div>
+          </div>
+          <button class="chat-close-btn" id="chat-close-btn" aria-label="Đóng trợ lý Hỏi chuyện Sài Gòn" title="Đóng khung chat">✕</button>
+        </div>
+
+        <!-- Chat message log -->
+        <div class="chat-messages" id="chat-messages" role="log" aria-live="polite">
+          <div class="chat-msg bot">
+            Xin chào! Mình là <strong>Hỏi chuyện Sài Gòn</strong> — trợ lý số đồng hành cùng bạn trên bản đồ ký ức TP.HCM nhân dịp kỷ niệm 50 năm ngày thành phố chính thức mang tên Bác (1976 – 2026).<br><br>
+            Bạn có thể hỏi về nguồn gốc tên đường, tiểu sử danh nhân, các sự kiện lịch sử hoặc những địa chỉ đỏ xung quanh khu vực đang xem!
+          </div>
+        </div>
+
+        <!-- Suggested quick prompt chips -->
+        <div class="chat-suggestions">
+          <span class="chat-suggestions-title">Gợi ý khám phá nhanh:</span>
+          <div class="chat-suggestion-chips" id="chat-suggestion-chips">
+            <button class="chat-chip chip-gold-quiz" data-prompt="quiz">🎯 Đố vui lịch sử</button>
+            <button class="chat-chip" data-prompt="Vì sao thành phố mang tên Hồ Chí Minh từ năm 1976?">Vì sao mang tên Bác năm 1976?</button>
+            <button class="chat-chip" data-prompt="Có những địa điểm nào đáng khám phá quanh đây?">📍 Gần tôi có gì?</button>
+            <button class="chat-chip" data-prompt="Gần Trường THPT Lê Quý Đôn có địa điểm lịch sử nào không?">Gần Trường Lê Quý Đôn</button>
+            <button class="chat-chip" data-prompt="Gần Chợ Bến Thành có bảo tàng nào không?">Bảo tàng gần Chợ Bến Thành</button>
+            <button class="chat-chip" data-prompt="Phường Xuân Hòa có những địa chỉ đỏ nào?">Địa chỉ đỏ Xuân Hòa</button>
+            <button class="chat-chip" data-prompt="Đường Võ Thị Sáu được đặt tên để tưởng nhớ ai?">Đường Võ Thị Sáu</button>
+            <button class="chat-chip" data-prompt="Gợi ý một tuyến tham quan di tích lịch sử">Gợi ý tour tham quan</button>
+            <button class="chat-chip" data-prompt="Những con đường nào mang tên danh nhân văn học, khoa học?">Danh nhân văn hóa</button>
+          </div>
+        </div>
+
+        <!-- Chat input form -->
+        <form class="chat-input-bar" id="chat-form" aria-label="Gửi tin nhắn cho Hỏi chuyện Sài Gòn">
+          <input type="text" id="chat-input" placeholder="Nhập câu hỏi về lịch sử TP.HCM..." aria-label="Nhập câu hỏi lịch sử" autocomplete="off">
+          <button type="submit" class="chat-send-btn" id="chat-send-btn" aria-label="Gửi câu hỏi" title="Gửi câu hỏi">➤</button>
+        </form>
+      </aside>
+
+    </main>
+  </div>
+
+  <!-- Modal: Tạo Mã QR & Thẻ Di Sản Biển Tên Đường -->
+  <div class="qr-modal-backdrop hidden" id="qr-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="qr-sign-name">
+    <div class="qr-modal-card">
+      <button class="qr-modal-close" id="qr-modal-close" aria-label="Đóng bảng mã QR">✕</button>
+      <div class="qr-street-sign" id="qr-street-sign">
+        <div class="sign-top-bar">
+          <span class="sign-star" aria-hidden="true">★</span>
+          <span class="sign-project-title">CONNECT 7650 • KỶ NIỆM 50 NĂM TP. HỒ CHÍ MINH (1976 – 2026)</span>
+        </div>
+        <div class="sign-main-body">
+          <div class="sign-ward-tag" id="qr-sign-ward">PHƯỜNG XUÂN HÒA • TP. HỒ CHÍ MINH</div>
+          <div class="sign-street-name" id="qr-sign-name">ĐƯỜNG VÕ THỊ SÁU</div>
+          <div class="sign-street-desc" id="qr-sign-desc">Nữ anh hùng lực lượng vũ trang nhân dân (1933 - 1952)</div>
+        </div>
+        <div class="sign-qr-section">
+          <div class="sign-qr-wrapper">
+            <img id="qr-card-img" src="" alt="Mã QR di sản tên đường" width="140" height="140">
+          </div>
+          <div class="sign-qr-note">
+            <div class="qr-note-title">📱 QUÉT MÃ QR BẰNG CAMERA ĐIỆN THOẠI</div>
+            <div class="qr-note-sub">Tra cứu tức thì hồ sơ lịch sử, tiểu sử danh nhân & địa chỉ đỏ</div>
+            <div class="qr-note-badge" id="qr-sign-decision">Quyết định đổi tên: 04/04/1985 (UBND TP.HCM)</div>
+          </div>
+        </div>
+        <div class="sign-footer">
+          <span>1976 – 2026 | BẢN ĐỒ KÝ ỨC THÀNH PHỐ HỒ CHÍ MINH</span>
+        </div>
+      </div>
+      <div class="qr-modal-actions">
+        <button class="btn-qr-download" id="btn-qr-download">🖨️ In / Tải biển tên</button>
+        <button class="btn-qr-copy-link" id="btn-qr-copy-link">🔗 Sao chép liên kết</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Leaflet Map JS -->
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  
+  <!-- Structured Historical Data -->
+  <script defer src="data/historical_data.js"></script>
+  
+  <!-- Main Application Logic -->
+  <script defer src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+[
+  {
+    "id": "fig_vo_thi_sau",
+    "name": "Võ Thị Sáu",
+    "birth_death": "1933 – 1952",
+    "role": "Nữ chiến sĩ biệt động, Anh hùng Lực lượng Vũ trang Nhân dân",
+    "summary": "Người con gái Đất Đỏ kiên cường, gia nhập Công an xung phong từ năm 14 tuổi, hy sinh oanh liệt tại Côn Đảo năm 1952, biểu tượng bất tử của lòng quả cảm thanh niên Việt Nam.",
+    "associated_street": "Võ Thị Sáu",
+    "associated_sites": [
+      "Bảo tàng Phụ nữ Nam Bộ"
+    ]
+  },
+  {
+    "id": "fig_ly_chinh_thang",
+    "name": "Lý Chính Thắng (Nguyễn Văn Trọng)",
+    "birth_death": "1917 – 1946",
+    "role": "Bí thư Tổng Công đoàn Nam Bộ, Liệt sĩ kháng chiến",
+    "summary": "Thủ lĩnh phong trào công nhân Sài Gòn, chỉ huy chiến đấu bảo vệ cửa ngõ Cầu Kiệu trong những ngày đầu Nam Bộ kháng chiến 1945–1946.",
+    "associated_street": "Lý Chính Thắng",
+    "associated_sites": [
+      "Mặt trận Cầu Kiệu",
+      "Bảo tàng Lịch sử TP.HCM"
+    ]
+  },
+  {
+    "id": "fig_vo_van_tan",
+    "name": "Võ Văn Tần",
+    "birth_death": "1891 – 1941",
+    "role": "Ủy viên Thường vụ Trung ương Đảng, Bí thư Xứ ủy Nam Kỳ",
+    "summary": "Nhà lãnh đạo tiền bối xuất sắc của Đảng Cộng sản Việt Nam, người gây dựng phong trào cách mạng Nam Kỳ quật khởi trước năm 1940.",
+    "associated_street": "Võ Văn Tần",
+    "associated_sites": [
+      "Bảo tàng Chứng tích Chiến tranh",
+      "Ngã Ba Giồng Hóc Môn"
+    ]
+  },
+  {
+    "id": "fig_tran_quoc_thao",
+    "name": "Trần Quốc Thảo (Hồ Xuân Lưu)",
+    "birth_death": "1914 – 1957",
+    "role": "Bí thư Khu ủy Sài Gòn - Chợ Lớn",
+    "summary": "Chiến sĩ cách mạng trung kiên, giữ trọn khí tiết người cộng sản dưới đòn tra tấn dã man tại bót giặc Catinat năm 1957.",
+    "associated_street": "Trần Quốc Thảo",
+    "associated_sites": [
+      "Di tích Hầm vũ khí Biệt động Sài Gòn"
+    ]
+  },
+  {
+    "id": "fig_nguyen_thi_minh_khai",
+    "name": "Nguyễn Thị Minh Khai",
+    "birth_death": "1910 – 1941",
+    "role": "Bí thư Thành ủy Sài Gòn - Chợ Lớn, Nữ anh hùng liệt sĩ",
+    "summary": "Nữ chiến sĩ cộng sản kiên cường, đại biểu Đại hội VII Quốc tế Cộng sản, lãnh đạo công tác cách mạng đô thị Sài Gòn trước khởi nghĩa 1940.",
+    "associated_street": "Nguyễn Thị Minh Khai",
+    "associated_sites": [
+      "Bảo tàng Phụ nữ Nam Bộ"
+    ]
+  },
+  {
+    "id": "fig_pham_ngoc_thach",
+    "name": "Bác sĩ Phạm Ngọc Thạch",
+    "birth_death": "1909 – 1968",
+    "role": "Bộ trưởng Bộ Y tế, Anh hùng Lao động, Thủ lĩnh Thanh niên Tiền phong",
+    "summary": "Bác sĩ tài đức vẹn toàn, nhà tổ chức phong trào quần chúng lỗi lạc tại Sài Gòn năm 1945, người cống hiến trọn đời cho y học nhân dân.",
+    "associated_street": "Phạm Ngọc Thạch",
+    "associated_sites": [
+      "Hồ Con Rùa",
+      "Viện Pasteur"
+    ]
+  },
+  {
+    "id": "fig_nguyen_dinh_chieu",
+    "name": "Nguyễn Đình Chiểu (Cụ Đồ Chiểu)",
+    "birth_death": "1822 – 1888",
+    "role": "Danh nhân Văn hóa Thế giới (UNESCO), Nhà thơ yêu nước",
+    "summary": "Ngọn cờ đầu của dòng văn học yêu nước chống Pháp tại Nam Bộ, tác giả 'Lục Vân Tiên' và 'Văn tế nghĩa sĩ Cần Giuộc'.",
+    "associated_street": "Nguyễn Đình Chiểu",
+    "associated_sites": [
+      "Bảo tàng Lịch sử TP.HCM"
+    ]
+  },
+  {
+    "id": "fig_ba_huyen_thanh_quan",
+    "name": "Bà Huyện Thanh Quan (Nguyễn Thị Hinh)",
+    "birth_death": "Thế kỷ XIX",
+    "role": "Nữ thi sĩ cổ điển Việt Nam, Cung Trung Giáo Tập",
+    "summary": "Tác giả của những áng thơ Đường luật hoài cổ đi vào lòng hàng triệu thế hệ như 'Qua Đèo Ngang', 'Thăng Long thành hoài cổ'.",
+    "associated_street": "Bà Huyện Thanh Quan",
+    "associated_sites": [
+      "Không gian văn hóa Quận 3"
+    ]
+  },
+  {
+    "id": "fig_le_quy_don",
+    "name": "Lê Quý Đôn",
+    "birth_death": "1726 – 1784",
+    "role": "Nhà bác học, Đại học sĩ, Bảng nhãn",
+    "summary": "Trí tuệ trác việt bậc nhất thời phong kiến Việt Nam, tác giả 'Phủ biên tạp lục' khẳng định cương thổ Nam Bộ và chủ quyền Hoàng Sa, Trường Sa.",
+    "associated_street": "Lê Quý Đôn",
+    "associated_sites": [
+      "Trường THPT Lê Quý Đôn"
+    ]
+  },
+  {
+    "id": "fig_truong_dinh",
+    "name": "Trương Định",
+    "birth_death": "1820 – 1864",
+    "role": "Bình Tây Đại nguyên soái, Anh hùng chống Pháp",
+    "summary": "Thủ lĩnh nghĩa binh quật cường chống giặc Pháp ở Nam Kỳ, từ chối lệnh bãi binh của triều đình để cầm gươm bảo vệ đồng bào.",
+    "associated_street": "Trương Định",
+    "associated_sites": [
+      "Công viên Tao Đàn"
+    ]
+  },
+  {
+    "id": "fig_hai_ba_trung",
+    "name": "Hai Bà Trưng (Trưng Trắc - Trưng Nhị)",
+    "birth_death": "Thế kỷ I SCN",
+    "role": "Nữ anh hùng dân tộc giải phóng Lĩnh Nam",
+    "summary": "Dấy binh khởi nghĩa mùa xuân năm 40, quét sạch quân Đông Hán, xưng vương dựng nước, mở đầu trang sử chống ngoại xâm oanh liệt của dân tộc.",
+    "associated_street": "Hai Bà Trưng",
+    "associated_sites": [
+      "Đền thờ Hai Bà Trưng",
+      "Nhà thờ Tân Định"
+    ]
+  },
+  {
+    "id": "fig_nguyen_thi_dieu",
+    "name": "Nguyễn Thị Diệu",
+    "birth_death": "1926 – 1955",
+    "role": "Liệt sĩ, Nhà giáo yêu nước bảo vệ hòa bình",
+    "summary": "Nhà giáo trẻ kiên trung trong phong trào Hòa bình Sài Gòn - Chợ Lớn những năm 1954–1955, anh dũng hy sinh vì sự nghiệp thống nhất non sông.",
+    "associated_street": "Nguyễn Thị Diệu",
+    "associated_sites": [
+      "Trường THPT Nguyễn Thị Diệu"
+    ]
+  }
+]

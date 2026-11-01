@@ -1,0 +1,6 @@
+# Raw OSM downloads used only to (re)generate data/ – not needed by the website
+osm_ways.json
+osm_expansion.json
+raw_street_elements.json
+__pycache__/
+.claude/
