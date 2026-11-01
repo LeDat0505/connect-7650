@@ -2168,15 +2168,15 @@ body {
     gap: 6px;
   }
 
-  .logo-group {
+  .brand-section {
     gap: 8px;
   }
 
-  .logo-title {
+  .brand-text h1 {
     font-size: 1.05rem;
   }
 
-  .logo-subtitle {
+  .brand-text p {
     font-size: 0.7rem;
     white-space: nowrap;
     overflow: hidden;
@@ -2184,7 +2184,7 @@ body {
     max-width: 270px;
   }
 
-  .main-nav-tabs {
+  .nav-tabs {
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -2195,7 +2195,7 @@ body {
     -webkit-overflow-scrolling: touch;
   }
 
-  .main-nav-tabs::-webkit-scrollbar {
+  .nav-tabs::-webkit-scrollbar {
     display: none;
   }
 
@@ -3575,3 +3575,258 @@ body {
 }
 
 
+
+/* ==========================================================
+   MOBILE & TABLET OPTIMISATION (phones, iPad, touch screens)
+   ========================================================== */
+/* Real visible height on mobile browsers (100vh ignores Safari/Chrome toolbars) */
+body,
+.app-container {
+  height: 100vh;
+  height: 100dvh;
+}
+
+/* Keep content clear of the notch / status bar when opened from the home screen */
+.app-container {
+  padding-top: env(safe-area-inset-top);
+}
+
+/* Main tabs scroll sideways at every width (phones, iPad portrait, small laptops) */
+.header-content > * {
+  min-width: 0;
+}
+
+.nav-tabs {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+}
+
+.nav-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-tabs > li {
+  flex-shrink: 0;
+  scroll-snap-align: start;
+}
+
+/* Right-align the tabs while they fit; auto margins collapse once the row overflows */
+.nav-tabs > li:first-child {
+  margin-left: auto;
+}
+
+/* Fade edges hint that more tabs are hidden off-screen (classes set in app.js) */
+.nav-tabs.fade-right {
+  -webkit-mask-image: linear-gradient(90deg, #000 85%, transparent);
+  mask-image: linear-gradient(90deg, #000 85%, transparent);
+}
+
+.nav-tabs.fade-left {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 15%);
+  mask-image: linear-gradient(90deg, transparent, #000 15%);
+}
+
+.nav-tabs.fade-left.fade-right {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+/* Finger-sized controls on touch screens */
+@media (pointer: coarse) {
+  /* iOS Safari zooms the page when a focused input is under 16px */
+  input,
+  select,
+  textarea {
+    font-size: 16px !important;
+  }
+
+  .nav-tab-btn {
+    min-height: 40px;
+  }
+
+  .btn-card-action {
+    min-height: 40px;
+    padding: 8px 4px;
+  }
+
+  .btn-timeline-jump {
+    min-height: 40px;
+  }
+
+  .archive-search input {
+    min-height: 44px;
+  }
+
+  .chat-action-btn {
+    min-height: 36px;
+  }
+
+  .leaflet-touch .leaflet-bar a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+  }
+
+  .layer-option {
+    min-height: 40px;
+  }
+
+  .layer-select {
+    min-height: 44px;
+  }
+}
+
+/* No sticky hover effects after a tap on touch screens */
+@media (hover: none) {
+  .custom-heritage-marker:hover {
+    transform: none;
+  }
+
+  .custom-heritage-marker.place-marker:hover {
+    background: var(--saigon-dark);
+  }
+
+  .custom-heritage-marker:not(.place-marker):hover {
+    background: #B31D1D;
+  }
+
+  .nav-tab-btn:hover:not(.active) {
+    color: var(--saigon-muted);
+    background: transparent;
+  }
+}
+
+/* Tablets (iPad portrait & landscape) */
+@media (min-width: 769px) and (max-width: 1180px) {
+  .map-detail-drawer {
+    width: min(440px, 55vw);
+  }
+
+  .floating-chat-trigger {
+    bottom: max(24px, calc(env(safe-area-inset-bottom) + 12px));
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+  /* Keep the anniversary banner on one line */
+  .top-anniversary-bar .badge-star {
+    white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.68rem;
+  }
+
+  /* Layer & legend menu becomes a bottom sheet above the chat button */
+  .map-layer-menu {
+    position: fixed;
+    left: 8px;
+    right: 8px;
+    bottom: calc(8px + env(safe-area-inset-bottom));
+    width: auto;
+    max-width: none;
+    max-height: 62vh;
+    max-height: 62dvh;
+    border-radius: 16px;
+    box-shadow: 0 -8px 30px rgba(15, 23, 42, 0.3);
+    z-index: 1100;
+  }
+
+  /* The chat button would cover the bottom of the layer sheet */
+  .main-content-area:has(.map-layer-menu.show) .floating-chat-trigger {
+    display: none;
+  }
+
+  /* Archive category buttons: one swipeable row instead of squashed wrapping boxes */
+  .archive-controls {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .archive-subtabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 -16px;
+    padding: 0 16px 2px;
+  }
+
+  .archive-subtabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .subtab-btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+    min-height: 44px;
+  }
+
+  .archive-search,
+  .archive-search input {
+    width: 100%;
+  }
+
+  /* Leave room so the floating chat button never hides the end of a page */
+  .content-page-container {
+    padding-bottom: calc(96px + env(safe-area-inset-bottom));
+  }
+
+  /* Banner: the main text already says "50 năm", so drop the year range on narrow phones */
+  .top-anniversary-bar .badge-star > span:nth-child(2),
+  .top-anniversary-bar .badge-star > span:nth-child(3) {
+    display: none;
+  }
+
+  /* Home-indicator / notch safe areas */
+  .floating-chat-trigger {
+    bottom: max(16px, calc(env(safe-area-inset-bottom) + 8px));
+    right: max(16px, calc(env(safe-area-inset-right) + 8px));
+  }
+
+  .map-left-controls {
+    left: max(10px, env(safe-area-inset-left));
+    bottom: max(74px, calc(env(safe-area-inset-bottom) + 66px));
+  }
+
+  .chat-input-bar {
+    padding-bottom: max(12px, env(safe-area-inset-bottom));
+  }
+
+  .chatbot-sidebar .chat-header {
+    padding-top: max(14px, env(safe-area-inset-top));
+  }
+
+  .map-detail-drawer .drawer-body {
+    padding-bottom: calc(16px + env(safe-area-inset-bottom));
+  }
+
+  .map-toast {
+    bottom: calc(80px + env(safe-area-inset-bottom));
+  }
+}
+
+/* Phones held sideways: very little height, so drop the banner and subtitle */
+@media (max-height: 500px) and (orientation: landscape) {
+  .top-anniversary-bar {
+    display: none;
+  }
+
+  .brand-text p {
+    display: none;
+  }
+
+  .header-content {
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+}

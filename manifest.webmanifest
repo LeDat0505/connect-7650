@@ -1,0 +1,16 @@
+{
+  "name": "CONNECT 7650 — Bản đồ ký ức TP. Hồ Chí Minh",
+  "short_name": "CONNECT 7650",
+  "description": "Bản đồ số tương tác về lịch sử tên đường, địa chỉ đỏ và di sản TP. Hồ Chí Minh (1976 – 2026).",
+  "lang": "vi",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#B31D1D",
+  "icons": [
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "assets/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

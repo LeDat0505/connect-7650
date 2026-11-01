@@ -196,6 +196,10 @@ function switchTab(tabId) {
     const isActive = btn.getAttribute('data-tab') === tabId;
     btn.classList.toggle('active', isActive);
     btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    // On narrow screens the tab row scrolls: bring the active tab into view
+    if (isActive && btn.scrollIntoView) {
+      btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
   });
 
   // Update panels
@@ -3618,6 +3622,23 @@ function setupEventListeners() {
   // 2. Navigation Tabs (Delegation on #main-nav-tabs)
   const navTabs = document.getElementById('main-nav-tabs');
   if (navTabs) {
+    // Fade the edge(s) where more tabs are hidden, so users know the row can be swiped
+    const updateNavFade = () => {
+      const maxScroll = navTabs.scrollWidth - navTabs.clientWidth;
+      navTabs.classList.toggle('fade-left', navTabs.scrollLeft > 4);
+      navTabs.classList.toggle('fade-right', maxScroll - navTabs.scrollLeft > 4);
+    };
+    navTabs.addEventListener('scroll', updateNavFade, { passive: true });
+    window.addEventListener('resize', debounce(updateNavFade, 150));
+    updateNavFade();
+    // Mouse wheel scrolls the row sideways on desktop when it overflows
+    navTabs.addEventListener('wheel', (e) => {
+      if (navTabs.scrollWidth > navTabs.clientWidth && Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+        e.preventDefault();
+        navTabs.scrollLeft += e.deltaY;
+      }
+    }, { passive: false });
+
     navTabs.addEventListener('click', (e) => {
       const btn = e.target.closest('.nav-tab-btn');
       if (btn) {
