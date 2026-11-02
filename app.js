@@ -1076,6 +1076,13 @@ function openHeritageSiteDetails(siteId) {
       </button>
     </div>
 
+    ${site.meaning_section ? `
+    <div class="detail-section">
+      <div class="detail-label">${escapeHtml(site.meaning_section.title)}</div>
+      <div class="detail-value">${escapeHtml(site.meaning_section.text)}</div>
+      <p style="font-size:12px; color:#64748B; margin-top:6px;">Nguồn: ${(site.meaning_section.sources || []).map(escapeHtml).join('; ')}</p>
+    </div>` : ''}
+
     <div class="detail-section">
       <div class="detail-label">NGUỒN TƯ LIỆU & DỮ LIỆU VỊ TRÍ</div>
       ${sourcesHtml}
@@ -2808,6 +2815,7 @@ function describeEntity(entity) {
       `• <strong>Địa chỉ</strong>: ${escapeHtml(d.address)}`,
       d.address_old ? `• <strong>Địa chỉ trước đây</strong>: ${escapeHtml(d.address_old)}` : '',
       `• <strong>Lịch sử</strong>: ${escapeHtml(d.history)}`,
+      d.meaning_section ? `• <strong>${escapeHtml(d.meaning_section.title)}</strong>: ${escapeHtml(d.meaning_section.text)}` : '',
       d.highlights ? `• <strong>Điểm nổi bật</strong>: ${escapeHtml(d.highlights)}` : '',
       d.opening_hours ? `• <strong>Giờ mở cửa</strong>: ${escapeHtml(d.opening_hours)}` : '',
       station && station.distance <= 1200 ? `• <strong>Ga Metro gần nhất</strong>: ${escapeHtml(station.station.name)} (~${formatDistance(station.distance)} đường chim bay)` : '',
@@ -3502,8 +3510,11 @@ function renderSourcesTab() {
 function renderAboutTab() {
   const project = window.CONNECT_DATA.project || {};
   const about = window.CONNECT_ABOUT || {};
-  const roles = about.roles || {};
   const team = project.team;
+  // Member cards come from data/about.js; fall back to the plain name list if it is missing
+  const members = (about.members && about.members.length)
+    ? about.members
+    : ((team && team.members) || []).map(name => ({ name, role: '', roleVi: '', tasks: [] }));
   const teamEl = document.getElementById('project-team-section');
   const photo = about.photo || {};
   const photoHtml = photo.src ? `
@@ -3515,24 +3526,26 @@ function renderAboutTab() {
       </figure>` : '';
   if (teamEl && team) {
     teamEl.innerHTML = `
-      <h3 class="team-section-title">${escapeHtml(team.title)}</h3>
-      ${photoHtml}
+      <h3 class="team-section-title">OUR TEAM <span class="team-section-subtitle">Nhóm thực hiện dự án</span></h3>
       <dl class="team-info-list">
         <div><dt>Đơn vị thực hiện</dt><dd>${escapeHtml(team.unit)}</dd></div>
         <div><dt>Tên dự án</dt><dd>${escapeHtml(team.project_name)}</dd></div>
         <div><dt>Khuôn khổ</dt><dd>${escapeHtml(team.program)}</dd></div>
       </dl>
-      <div class="team-members-label">Thành viên & phân công (${team.members.length})</div>
-      <ol class="team-members-list">
-        ${team.members.map(name => `
-          <li>
-            <div class="team-member-text">
-              <span class="team-member-name">${escapeHtml(name)}</span>
-              ${roles[name] ? `<span class="team-member-role">${escapeHtml(roles[name])}</span>` : ''}
-            </div>
-          </li>`).join('')}
-      </ol>
+      <div class="member-card-grid">
+        ${members.map((m, i) => `
+          <button type="button" class="member-card" data-member-index="${i}" aria-haspopup="dialog">
+            <span class="member-card-name">${escapeHtml(m.name)}</span>
+            ${m.role ? `<span class="member-card-role">${escapeHtml(m.role)}</span>` : ''}
+            ${m.roleVi ? `<span class="member-card-role-vi">${escapeHtml(m.roleVi)}</span>` : ''}
+            ${(m.tasks || []).length ? '<span class="member-card-hint">Nhấn để xem chi tiết nhiệm vụ</span>' : ''}
+          </button>`).join('')}
+      </div>
+      ${photoHtml}
     `;
+    teamEl.querySelectorAll('.member-card').forEach(card => {
+      card.addEventListener('click', () => openMemberModal(members[Number(card.dataset.memberIndex)], card));
+    });
   }
 
   // Each "Về chúng tôi" section is shown only once it has content in data/about.js
@@ -3550,21 +3563,15 @@ function renderAboutTab() {
   ` : '');
 
   const tools = about.tools || [];
-  const openSource = about.openSource || [];
   showSection('about-tools-section', tools.length ? `
-    <h3 class="team-section-title">CÔNG CỤ HỖ TRỢ</h3>
-    <ul class="about-tools-list">
+    <h3 class="team-section-title">${escapeHtml(about.toolsTitle || 'CÔNG CỤ HỖ TRỢ')}</h3>
+    <ol class="about-tools-list">
       ${tools.map(t => `
         <li>
           <span class="about-tool-name">${escapeHtml(t.name)}</span>
           <span class="about-tool-purpose">${escapeHtml(t.purpose)}</span>
         </li>`).join('')}
-    </ul>
-    ${about.toolsNote ? `<p class="about-tools-note">${escapeHtml(about.toolsNote)}</p>` : ''}
-    ${openSource.length ? `
-      <div class="team-members-label about-opensource-label">Thư viện & dữ liệu mở được sử dụng</div>
-      <ul class="about-opensource-list">${openSource.map(x => `<li>${escapeHtml(x)}</li>`).join('')}</ul>
-    ` : ''}
+    </ol>
   ` : '');
 
   const feedback = about.feedback || {};
@@ -3581,19 +3588,37 @@ function renderAboutTab() {
         alt="Mã QR mở biểu mẫu góp ý">
     </div>
   ` : '');
+}
 
-  const meaning = project.ward_name_meaning;
-  const meaningEl = document.getElementById('ward-name-meaning-section');
-  if (meaningEl && meaning) {
-    meaningEl.innerHTML = `
-      <h3 class="team-section-title">${escapeHtml(meaning.title)}</h3>
-      <p>${escapeHtml(meaning.text)}</p>
-      ${meaning.related_site_id && findSiteById(meaning.related_site_id)
-        ? `<button class="btn-card-action" onclick="openHeritageSiteDetails('${meaning.related_site_id}')">📍 Xem Đình Xuân Hòa trên bản đồ ➔</button>`
-        : ''}
-      <p class="ward-meaning-sources">Nguồn: ${meaning.sources.map(escapeHtml).join('; ')}</p>
-    `;
-  }
+// ----------------------------------------------------------------------------
+// Member detail dialog (Our Team)
+// ----------------------------------------------------------------------------
+let memberModalReturnFocus = null;
+
+function openMemberModal(member, triggerEl) {
+  const backdrop = document.getElementById('member-modal-backdrop');
+  if (!backdrop || !member) return;
+  document.getElementById('member-modal-name').textContent = member.name;
+  document.getElementById('member-modal-role').textContent = member.role || '';
+  document.getElementById('member-modal-role-vi').textContent = member.roleVi || '';
+  document.getElementById('member-modal-tasks').innerHTML = (member.tasks || [])
+    .map(t => `<li>${escapeHtml(t)}</li>`).join('');
+  memberModalReturnFocus = triggerEl || null;
+  backdrop.hidden = false;
+  // next frame so the opening transition runs
+  requestAnimationFrame(() => backdrop.classList.add('show'));
+  document.getElementById('member-modal-close').focus();
+}
+
+function closeMemberModal() {
+  const backdrop = document.getElementById('member-modal-backdrop');
+  if (!backdrop || backdrop.hidden) return;
+  backdrop.classList.remove('show');
+  const done = () => { backdrop.hidden = true; };
+  // wait for the closing transition (fallback if transitions are disabled)
+  backdrop.addEventListener('transitionend', done, { once: true });
+  setTimeout(done, 300);
+  if (memberModalReturnFocus) memberModalReturnFocus.focus();
 }
 
 function scrollChips(direction) {
@@ -3836,6 +3861,18 @@ function setupEventListeners() {
           openQrHeritageCard(id, 'station');
         }
       }
+    });
+  }
+
+  // Member detail dialog: close button, click outside the card, Escape key
+  const memberBackdrop = document.getElementById('member-modal-backdrop');
+  if (memberBackdrop) {
+    document.getElementById('member-modal-close').addEventListener('click', () => closeMemberModal());
+    memberBackdrop.addEventListener('click', (e) => {
+      if (e.target === memberBackdrop) closeMemberModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !memberBackdrop.hidden) closeMemberModal();
     });
   }
 

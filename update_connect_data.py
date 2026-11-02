@@ -515,14 +515,15 @@ def main():
         'title': 'NHÓM THỰC HIỆN DỰ ÁN',
         'unit': 'Nhóm học sinh lớp 11A13, Trường THPT Lê Quý Đôn, phường Xuân Hòa',
         'project_name': 'CONNECT 7650',
-        'program': 'Sản phẩm thực hiện cho dự án liên trường “5001 Khắc Dấu Rạng Đông” của Trường THPT Lê Quý Đôn',
+        'program': 'Sản phẩm thực hiện cho dự án liên trường “50:01 Khắc Dấu Rạng Đông” của Trường THPT Lê Quý Đôn',
         'members': ['Lê Thiên Đạt', 'Nguyễn Minh Trí', 'Đặng Hoàng Nguyên', 'Vũ Thành Liêm',
                     'Nguyễn Minh Khang', 'Bùi Xuân Hải', 'Hoàng Nhật Minh'],
     }
-    d['project']['ward_name_meaning'] = {
+    # Ý nghĩa tên gọi phường Xuân Hòa: hiển thị trong hồ sơ Đình Xuân Hòa (không còn ở tab Giới thiệu)
+    d['project'].pop('ward_name_meaning', None)
+    WARD_NAME_MEANING = {
         'title': 'Ý NGHĨA TÊN GỌI PHƯỜNG XUÂN HÒA',
         'text': 'Tên gọi Xuân Hòa gắn liền với lịch sử hình thành và phát triển của vùng đất Tân Định xưa. Theo tư liệu lịch sử, năm 1880, thôn Tân Định được đổi tên thành thôn Xuân Hòa; đình Tân Định cũng được đổi tên thành Đình Xuân Hòa. Ngày nay, Đình Xuân Hòa là một địa điểm văn hóa gắn với lịch sử địa phương, giúp người dân và thế hệ trẻ tìm hiểu về nguồn gốc địa danh Xuân Hòa. Qua việc lưu giữ và giới thiệu những địa điểm như Đình Xuân Hòa, CONNECT 7650 mong muốn góp phần kết nối các dấu tích lịch sử với đời sống đô thị hiện đại.',
-        'related_site_id': 'site_dinh_xuan_hoa',
         'sources': ['Báo Pháp Luật TP.HCM (07/05/2025), dẫn theo Wikipedia: Xuân Hòa, Ho Chi Minh City', SRC_NQ1685],
     }
 
@@ -537,6 +538,9 @@ def main():
             sites[rec['id']].update(rec)
         else:
             sites[rec['id']] = rec
+
+    if 'site_dinh_xuan_hoa' in sites:
+        sites['site_dinh_xuan_hoa']['meaning_section'] = WARD_NAME_MEANING
 
     mismatches = []
     for s in sites.values():

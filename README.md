@@ -10,7 +10,7 @@
 
 Dự án thử nghiệm tại **phường Xuân Hòa** (thuộc Quận 3 cũ; đơn vị hành chính mới từ 01/07/2025) — nơi lưu giữ mật độ di sản và câu chuyện lịch sử cách mạng dày đặc — và mở rộng sang khu vực trung tâm Quận 1, Quận 3 cũ (phường Sài Gòn, Bến Thành, Tân Định, Cầu Ông Lãnh, Bàn Cờ, Nhiêu Lộc).
 
-CONNECT 7650 là dự án do nhóm học sinh lớp 11A13, Trường THPT Lê Quý Đôn, phường Xuân Hòa thực hiện, thuộc khuôn khổ dự án liên trường “5001 Khắc Dấu Rạng Đông” của Trường THPT Lê Quý Đôn.
+CONNECT 7650 là dự án do nhóm học sinh lớp 11A13, Trường THPT Lê Quý Đôn, phường Xuân Hòa thực hiện, thuộc khuôn khổ dự án liên trường “50:01 Khắc Dấu Rạng Đông” của Trường THPT Lê Quý Đôn.
 
 ---
 

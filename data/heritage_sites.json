@@ -283,7 +283,15 @@
     ],
     "category": "religious",
     "ward": "Xuân Hòa",
-    "address": "129 Lý Chính Thắng, Phường Xuân Hòa, TP. Hồ Chí Minh"
+    "address": "129 Lý Chính Thắng, Phường Xuân Hòa, TP. Hồ Chí Minh",
+    "meaning_section": {
+      "title": "Ý NGHĨA TÊN GỌI PHƯỜNG XUÂN HÒA",
+      "text": "Tên gọi Xuân Hòa gắn liền với lịch sử hình thành và phát triển của vùng đất Tân Định xưa. Theo tư liệu lịch sử, năm 1880, thôn Tân Định được đổi tên thành thôn Xuân Hòa; đình Tân Định cũng được đổi tên thành Đình Xuân Hòa. Ngày nay, Đình Xuân Hòa là một địa điểm văn hóa gắn với lịch sử địa phương, giúp người dân và thế hệ trẻ tìm hiểu về nguồn gốc địa danh Xuân Hòa. Qua việc lưu giữ và giới thiệu những địa điểm như Đình Xuân Hòa, CONNECT 7650 mong muốn góp phần kết nối các dấu tích lịch sử với đời sống đô thị hiện đại.",
+      "sources": [
+        "Báo Pháp Luật TP.HCM (07/05/2025), dẫn theo Wikipedia: Xuân Hòa, Ho Chi Minh City",
+        "Nghị quyết 1685/NQ-UBTVQH15 ngày 16/06/2025 của Ủy ban Thường vụ Quốc hội"
+      ]
+    }
   },
   {
     "id": "site_chua_xa_loi",
