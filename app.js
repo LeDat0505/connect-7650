@@ -585,32 +585,127 @@ function renderStreetNamingEras(street) {
   `;
 }
 
+let audioSessionId = 0; // bumps on every start/stop so stale sentence callbacks are ignored
+
 function stopAudioGuide() {
+  audioSessionId++;
   if ('speechSynthesis' in window) {
     window.speechSynthesis.cancel();
   }
   isAudioPlaying = false;
   currentUtterance = null;
-  const btn = document.getElementById('btn-drawer-audio');
-  if (btn) {
-    btn.classList.remove('playing');
-    const icon = btn.querySelector('.audio-icon');
-    const text = btn.querySelector('.audio-text');
-    if (icon) icon.innerText = '🔊';
-    if (text) text.innerText = 'Thuyết minh';
-    btn.setAttribute('title', 'Thuyết minh âm thanh về địa danh này');
-    btn.setAttribute('aria-label', 'Nghe thuyết minh âm thanh');
-  }
+  setAudioButtonState(false);
 }
 
-function toggleAudioGuide() {
+function setAudioButtonState(playing, label) {
+  const btn = document.getElementById('btn-drawer-audio');
+  if (!btn) return;
+  btn.classList.toggle('playing', playing);
+  const icon = btn.querySelector('.audio-icon');
+  const text = btn.querySelector('.audio-text');
+  if (icon) icon.innerText = playing ? '⏹️' : '🔊';
+  if (text) text.innerText = label || (playing ? 'Dừng đọc' : 'Thuyết minh');
+  btn.setAttribute('title', playing ? 'Dừng thuyết minh âm thanh' : 'Thuyết minh âm thanh về địa danh này');
+  btn.setAttribute('aria-label', playing ? 'Dừng thuyết minh' : 'Nghe thuyết minh âm thanh');
+}
+
+// Voices load asynchronously (empty on the first call in Chrome/Android), so wait for them
+function loadSpeechVoices(timeoutMs = 2000) {
+  return new Promise(resolve => {
+    const synth = window.speechSynthesis;
+    const now = synth.getVoices();
+    if (now.length) return resolve(now);
+    let done = false;
+    const finish = () => {
+      if (done) return;
+      done = true;
+      synth.removeEventListener('voiceschanged', finish);
+      resolve(synth.getVoices());
+    };
+    synth.addEventListener('voiceschanged', finish);
+    setTimeout(finish, timeoutMs);
+  });
+}
+
+// Best Vietnamese voice on this device, or null. Natural/online voices sound far better.
+function pickVietnameseVoice(voices) {
+  const vi = voices.filter(v => (v.lang || '').replace('_', '-').toLowerCase().startsWith('vi'));
+  if (!vi.length) return null;
+  const score = v => {
+    const n = v.name.toLowerCase();
+    let s = 0;
+    if (/natural|neural|online/.test(n)) s += 4;  // Edge: HoaiMy / NamMinh Online (Natural)
+    if (n.includes('google')) s += 3;              // Android / Chrome
+    if (/linh|hoaimy|namminh/.test(n)) s += 2;    // Apple Linh, Microsoft HoaiMy / NamMinh
+    if (n.includes('compact')) s -= 1;
+    return s;
+  };
+  return vi.sort((a, b) => score(b) - score(a))[0];
+}
+
+// Long single utterances get cut off on Chrome/Android, so read sentence by sentence
+function splitSpeechText(text, maxLen = 180) {
+  // Split only at punctuation followed by a space, so "2.500" or "05/08/1956" stay whole
+  const sentences = text.split(/(?<=[.!?;:])\s+/);
+  const chunks = [];
+  sentences.forEach(sentence => {
+    let s = sentence.trim();
+    while (s.length > maxLen) {
+      const comma = s.lastIndexOf(',', maxLen);
+      const cut = comma > 40 ? comma + 1 : s.lastIndexOf(' ', maxLen);
+      const at = cut > 0 ? cut : maxLen;
+      chunks.push(s.slice(0, at).trim());
+      s = s.slice(at).trim();
+    }
+    if (s) chunks.push(s);
+  });
+  return chunks;
+}
+
+function detectDevicePlatform() {
+  const ua = navigator.userAgent || '';
+  if (/iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1)) return 'ios';
+  if (/Android/.test(ua)) return 'android';
+  if (/Windows/.test(ua)) return 'windows';
+  if (/Macintosh|Mac OS X/.test(ua)) return 'mac';
+  return 'other';
+}
+
+// Shown instead of reading Vietnamese text with an English voice
+function showVietnameseVoiceHelp() {
+  const steps = {
+    ios: 'Mở <strong>Cài đặt → Trợ năng → Nội dung được đọc → Giọng nói → Tiếng Việt</strong>, tải giọng <strong>Linh</strong>, rồi mở lại trang bằng Safari.',
+    android: 'Mở <strong>Cài đặt → Hệ thống → Ngôn ngữ → Đầu ra chuyển văn bản thành lời nói</strong>, chọn <strong>Dịch vụ của Google</strong>, vào cài đặt và tải dữ liệu giọng nói <strong>Tiếng Việt</strong> (tên mục có thể khác tùy hãng máy).',
+    windows: 'Cách nhanh nhất: mở trang bằng <strong>Microsoft Edge</strong> (có sẵn giọng tiếng Việt HoaiMy, NamMinh). Hoặc vào <strong>Settings → Time &amp; language → Speech → Add voices</strong>, thêm <strong>Vietnamese</strong>, rồi khởi động lại trình duyệt.',
+    mac: 'Mở <strong>Cài đặt hệ thống → Trợ năng → Nội dung được đọc → Giọng hệ thống → Quản lý giọng nói</strong>, tải giọng <strong>Linh (Tiếng Việt)</strong>, rồi mở lại trình duyệt.',
+    other: 'Hãy cài thêm giọng đọc Tiếng Việt trong phần cài đặt chuyển văn bản thành giọng nói của thiết bị, hoặc dùng trình duyệt Microsoft Edge / Safari.'
+  };
+  const body = document.getElementById('drawer-body-content');
+  if (!body) return;
+  const old = document.getElementById('audio-voice-help');
+  if (old) old.remove();
+  const box = document.createElement('div');
+  box.id = 'audio-voice-help';
+  box.className = 'audio-voice-help';
+  box.setAttribute('role', 'alert');
+  box.innerHTML = `
+    <div class="audio-voice-help-title">🔇 Thiết bị chưa có giọng đọc tiếng Việt</div>
+    <p>Để tránh đọc tiếng Việt bằng giọng nước ngoài, thuyết minh tạm dừng. ${steps[detectDevicePlatform()]}</p>
+    <button type="button" class="audio-voice-help-close">Đã hiểu</button>
+  `;
+  box.querySelector('.audio-voice-help-close').addEventListener('click', () => box.remove());
+  body.prepend(box);
+  body.scrollTop = 0;
+}
+
+async function toggleAudioGuide() {
   if (isAudioPlaying) {
     stopAudioGuide();
     return;
   }
 
   if (!('speechSynthesis' in window)) {
-    alert('Trình duyệt của bạn chưa hỗ trợ tính năng thuyết minh âm thanh (Web Speech API).');
+    showMapToast('Trình duyệt của bạn chưa hỗ trợ tính năng thuyết minh âm thanh.');
     return;
   }
 
@@ -619,54 +714,61 @@ function toggleAudioGuide() {
   let speechText = '';
   if (currentDetailItem.type === 'street') {
     const s = currentDetailItem.data;
-    speechText = `Tuyến đường ${s.name}. Thuộc danh mục ${s.category_name}. Ý nghĩa tên gọi: ${s.significance}. Lịch sử đặt tên: ${s.naming_history.previous_names}. Tiểu sử: ${s.biography_summary}`;
+    speechText = `Tuyến đường ${s.name}. Thuộc danh mục ${s.category_name}. Ý nghĩa tên gọi: ${s.significance}. Lịch sử đặt tên: ${s.naming_history.previous_names}. ${s.biography_summary ? `Tiểu sử: ${s.biography_summary}` : ''}`;
   } else if (currentDetailItem.type === 'site') {
     const site = currentDetailItem.data;
-    speechText = `${site.name}. Vị trí: ${site.address}. Lịch sử hình thành: ${site.history}. Điểm nổi bật: ${site.highlights}`;
+    speechText = `${site.name}. Vị trí: ${site.address}. Lịch sử hình thành: ${site.history}. ${site.meaning_section ? `${site.meaning_section.text} ` : ''}Điểm nổi bật: ${site.highlights}`;
   } else if (currentDetailItem.type === 'station') {
     const st = currentDetailItem.data;
     speechText = `${st.name}, ${getMetroLine().name}. Khu vực: ${st.area}.`;
   }
-
   if (!speechText) return;
+  // Strip emoji/symbols and expand "TP." which voices read oddly
+  speechText = speechText
+    .replace(/[*_#•✓📍🚩🕒📖★–—]/g, ' ')
+    .replace(/\bTP\.\s*/g, 'Thành phố ')
+    .replace(/\s+/g, ' ')
+    .trim();
 
-  speechText = speechText.replace(/[*_#•✓📍🚩🕒📖★]/g, '').trim();
+  const session = ++audioSessionId;
   window.speechSynthesis.cancel();
+  setAudioButtonState(true, 'Đang chuẩn bị…');
+  isAudioPlaying = true;
 
-  const utterance = new SpeechSynthesisUtterance(speechText);
-  utterance.lang = 'vi-VN';
-  utterance.rate = 0.95;
-
-  const voices = window.speechSynthesis.getVoices();
-  const viVoice = voices.find(v => v.lang.startsWith('vi') || v.name.toLowerCase().includes('vietnam'));
-  if (viVoice) {
-    utterance.voice = viVoice;
+  const voice = pickVietnameseVoice(await loadSpeechVoices());
+  if (session !== audioSessionId) return; // stopped while voices were loading
+  if (!voice) {
+    isAudioPlaying = false;
+    setAudioButtonState(false);
+    showVietnameseVoiceHelp();
+    return;
   }
 
-  utterance.onstart = () => {
-    isAudioPlaying = true;
-    const btn = document.getElementById('btn-drawer-audio');
-    if (btn) {
-      btn.classList.add('playing');
-      const icon = btn.querySelector('.audio-icon');
-      const text = btn.querySelector('.audio-text');
-      if (icon) icon.innerText = '⏹️';
-      if (text) text.innerText = 'Dừng đọc';
-      btn.setAttribute('title', 'Dừng thuyết minh âm thanh');
-      btn.setAttribute('aria-label', 'Dừng thuyết minh');
+  const chunks = splitSpeechText(speechText);
+  const speakNext = (index) => {
+    if (session !== audioSessionId) return;
+    if (index >= chunks.length) {
+      stopAudioGuide();
+      return;
     }
+    const utterance = new SpeechSynthesisUtterance(chunks[index]);
+    utterance.voice = voice;
+    utterance.lang = voice.lang;
+    utterance.rate = 0.95;
+    utterance.onstart = () => {
+      if (session === audioSessionId) setAudioButtonState(true);
+    };
+    utterance.onend = () => speakNext(index + 1);
+    utterance.onerror = (e) => {
+      // "interrupted"/"canceled" come from our own stop; anything else ends the reading
+      if (session === audioSessionId && e.error !== 'interrupted' && e.error !== 'canceled') stopAudioGuide();
+    };
+    currentUtterance = utterance;
+    window.speechSynthesis.speak(utterance);
   };
-
-  utterance.onend = () => {
-    stopAudioGuide();
-  };
-
-  utterance.onerror = () => {
-    stopAudioGuide();
-  };
-
-  currentUtterance = utterance;
-  window.speechSynthesis.speak(utterance);
+  speakNext(0);
+  // Some devices never fire onstart; reflect the playing state right away
+  setAudioButtonState(true);
 }
 
 // ============================================================================

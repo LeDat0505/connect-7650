@@ -4127,3 +4127,35 @@ body,
     transition: none;
   }
 }
+
+/* Audio guide: shown when the device has no Vietnamese voice */
+.audio-voice-help {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  background: var(--heritage-gold-light);
+  border: 1px solid #FDE68A;
+  border-left: 4px solid var(--heritage-gold-bright);
+  border-radius: var(--radius-md);
+  font-size: 0.86rem;
+  line-height: 1.55;
+  color: var(--saigon-slate);
+}
+
+.audio-voice-help-title {
+  font-weight: 800;
+  color: #92400E;
+  margin-bottom: 4px;
+}
+
+.audio-voice-help-close {
+  margin-top: 8px;
+  min-height: 36px;
+  padding: 6px 14px;
+  font-family: inherit;
+  font-weight: 700;
+  color: #92400E;
+  background: #FFFFFF;
+  border: 1px solid #FDE68A;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
