@@ -4269,3 +4269,17 @@ body,
   image-rendering: pixelated;
   image-rendering: crisp-edges;
 }
+
+/* Feedback QR inside a chatbot answer */
+.chat-feedback-qr {
+  display: block;
+  width: 120px;
+  height: 120px;
+  margin: 10px 0 4px;
+  padding: 6px;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}

@@ -3249,7 +3249,43 @@ function answerHelp() {
       '• <em>"Gần Trường THPT Lê Quý Đôn có địa điểm lịch sử nào?"</em><br>' +
       '• <em>"Gần Chợ Bến Thành có bảo tàng nào không?"</em><br>' +
       '• <em>"Từ Đình Xuân Hòa đến Chùa Xá Lợi bao xa?"</em><br>' +
-      '• <em>"Phở Bình có lịch sử gì?"</em>, <em>"Đường Lê Duẩn trước đây tên gì?"</em>, hoặc gõ <em>"đố vui"</em>.'
+      '• <em>"Phở Bình có lịch sử gì?"</em>, <em>"Đường Lê Duẩn trước đây tên gì?"</em>, hoặc gõ <em>"đố vui"</em>.<br>' +
+      '• Thấy thông tin chưa đúng? Gõ <em>"góp ý"</em> để gửi đính chính cho nhóm.'
+  };
+}
+
+// Feedback / corrections: points to the team's Google Form (data/about.js → feedback.formUrl)
+function getFeedbackFormUrl() {
+  const fb = (window.CONNECT_ABOUT && window.CONNECT_ABOUT.feedback) || {};
+  return /^https:\/\//.test(fb.formUrl || '') ? fb.formUrl : '';
+}
+
+function answerFeedback() {
+  const url = getFeedbackFormUrl();
+  const goToSection = chatButton('🏛️ Xem mục Góp ý trên trang', () => {
+    switchTab('about');
+    if (window.innerWidth < 768) closeChatbot();
+    setTimeout(() => {
+      const sec = document.getElementById('about-feedback-section');
+      if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }, 350);
+  });
+  if (!url) {
+    return {
+      html: '📝 Cảm ơn bạn! Biểu mẫu góp ý của nhóm đang được cập nhật. Bạn có thể liên hệ trực tiếp nhóm học sinh lớp 11A13, Trường THPT Lê Quý Đôn.',
+      actions: [goToSection]
+    };
+  }
+  const qr = makeQrDataUrl(url, 160);
+  return {
+    html: '📝 <strong>Góp ý & Đính chính</strong><br>' +
+      'Bạn thấy thông tin chưa chính xác, có tư liệu bổ sung hoặc muốn đề xuất địa điểm, tuyến đường mới? ' +
+      'Hãy gửi cho nhóm qua biểu mẫu (khoảng 2 phút, không cần đăng nhập). ' +
+      'Góp ý kèm <strong>nguồn tư liệu</strong> (tên sách, số trang, số văn bản, đường link) giúp nhóm kiểm chứng nhanh hơn.' +
+      (qr ? `<img class="chat-feedback-qr" src="${qr}" width="120" height="120" alt="Mã QR mở biểu mẫu góp ý">` +
+            '<span class="chat-note">Quét mã bằng camera điện thoại để mở biểu mẫu.</span><br>' : '<br>') +
+      `<a class="chat-action-btn" href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">📝 Mở biểu mẫu góp ý</a>`,
+    actions: [goToSection]
   };
 }
 
@@ -3294,6 +3330,12 @@ function processChat(rawQuery) {
   const q = normalizeChatText(raw);
   if (q.replace(/[^a-z]/g, '').length < 2 && !/\b(1[6-9]\d\d|20[0-2]\d)\b/.test(q)) {
     return { html: 'Mình chưa hiểu câu hỏi. Bạn có thể hỏi về một địa điểm, tuyến đường, ga Metro hoặc gõ <em>"hướng dẫn"</em> để xem gợi ý.' };
+  }
+
+  // Feedback / corrections
+  if (hasAny(q, ['gop y', 'dinh chinh', 'bao loi', 'bao sai', 'thong tin sai', 'sai thong tin', 'ghi sai', 'bi sai', 'chua chinh xac',
+                 'phan hoi', 'lien he nhom', 'feedback', 'bieu mau', 'google form', 'de xuat them', 'de xuat dia diem', 'de xuat tuyen'])) {
+    return answerFeedback();
   }
 
   // Quiz
