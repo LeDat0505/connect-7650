@@ -3170,10 +3170,45 @@ function answerDistance(a, b) {
   };
 }
 
+// Streets whose current name was given in `year` (naming_history.year), from data only
+function streetsNamedInYear(year) {
+  return (window.CONNECT_DATA.streets || []).filter(s => s.naming_history && String(s.naming_history.year) === String(year));
+}
+
+function renderNamedStreets(year, list) {
+  if (!list.length) return '';
+  const items = list.map(s => {
+    const nh = s.naming_history;
+    const pending = s.verification_status !== 'verified';
+    return `• Đường <strong>${escapeHtml(s.name)}</strong> — trước đây: ${escapeHtml(firstSentence(nh.previous_names || 'chưa có tư liệu', 160))}` +
+      `${pending ? ' <em>(đang đối chiếu văn bản gốc)</em>' : ''}`;
+  }).join('<br>');
+  const anyPending = list.some(s => s.verification_status !== 'verified');
+  return `📜 <strong>Tuyến đường mang tên hiện nay từ năm ${escapeHtml(year)}</strong> (theo dữ liệu dự án):<br>${items}` +
+    (anyPending ? `<div class="chat-note">Năm đặt tên dựa trên sách, báo và tài liệu tham khảo; nhóm đang đối chiếu với văn bản gốc. Xem ghi chú đối chiếu trong hồ sơ từng tuyến đường.</div>` : '');
+}
+
 function answerYear(year, q) {
+  const named = streetsNamedInYear(year);
+  const namedHtml = renderNamedStreets(year, named);
+  // "đường nào đổi tên năm 1985?" → answer only the street-naming list
+  const asksNaming = hasAny(q, ['doi ten', 'dat ten', 'ten duong', 'mang ten', 'duong nao', 'nhung duong', 'cac duong', 'tuyen duong']);
+  if (asksNaming) {
+    if (!named.length) {
+      return { html: `Trong dữ liệu dự án chưa có tuyến đường nào được ghi là mang tên hiện nay từ năm <strong>${escapeHtml(year)}</strong>.` };
+    }
+    const list = named.map(s => ({ entity: chatKnowledge.find(e => e.type === 'street' && e.data.id === s.id), distance: NaN })).filter(r => r.entity);
+    chatState.lastResults = list;
+    chatState.lastPage = list;
+    return {
+      html: namedHtml,
+      actions: list.length ? [chatButton('🗺️ Xem trên bản đồ', () => showResultsOnMap(chatState.lastPage))] : []
+    };
+  }
+
   const matches = chatKnowledge.filter(e => e.text.includes(year) && e.type !== 'event');
   const events = chatKnowledge.filter(e => e.type === 'event' && e.data.year === year);
-  if (!matches.length && !events.length) {
+  if (!matches.length && !events.length && !named.length) {
     return { html: `Mình chưa tìm thấy địa điểm, tuyến đường hay sự kiện nào gắn với năm <strong>${escapeHtml(year)}</strong> trong dữ liệu CONNECT 7650.` };
   }
   // Prefer results from the last list if the user is following up on it
@@ -3189,7 +3224,7 @@ function answerYear(year, q) {
   const eventsHtml = events.map(e => `⏳ <strong>${escapeHtml(e.data.title)}</strong>: ${escapeHtml(firstSentence(e.data.summary, 220))}`).join('<br>');
   const recentNote = fromRecent.length ? `<div class="chat-note">Trong các gợi ý vừa rồi: ${escapeHtml(fromRecent.map(e => e.name).join(', '))}.</div>` : '';
   return {
-    html: `Các nội dung gắn với năm <strong>${escapeHtml(year)}</strong> trong dữ liệu:${eventsHtml ? `<br>${eventsHtml}` : ''}${matches.length ? html : ''}${recentNote}`,
+    html: `${namedHtml ? `${namedHtml}<br><br>` : ''}Các nội dung gắn với năm <strong>${escapeHtml(year)}</strong> trong dữ liệu:${eventsHtml ? `<br>${eventsHtml}` : ''}${matches.length ? html : ''}${recentNote}`,
     actions: matches.length ? [chatButton('🗺️ Xem trên bản đồ', () => showResultsOnMap(chatState.lastPage))] : []
   };
 }
@@ -3246,7 +3281,7 @@ function processChat(rawQuery) {
   const raw = (rawQuery || '').trim();
   if (!raw) return { html: 'Bạn hãy nhập câu hỏi nhé! Ví dụ: <em>"Gần Chợ Bến Thành có bảo tàng nào?"</em>' };
   const q = normalizeChatText(raw);
-  if (q.replace(/[^a-z]/g, '').length < 2) {
+  if (q.replace(/[^a-z]/g, '').length < 2 && !/\b(1[6-9]\d\d|20[0-2]\d)\b/.test(q)) {
     return { html: 'Mình chưa hiểu câu hỏi. Bạn có thể hỏi về một địa điểm, tuyến đường, ga Metro hoặc gõ <em>"hướng dẫn"</em> để xem gợi ý.' };
   }
 
@@ -3452,14 +3487,6 @@ function processChat(rawQuery) {
 
   // Tour
   if (hasAny(q, ['goi y tour', 'tour', 'lo trinh', 'tuyen tham quan', 'du khao'])) return answerTour();
-
-  // 1985 street renaming — listed from data only
-  if (hasPhrase(q, '1985')) {
-    const list = window.CONNECT_DATA.streets.filter(s => s.naming_history && s.naming_history.year === 1985);
-    return {
-      html: `📜 Theo dữ liệu dự án, các tuyến đường được ghi đặt tên theo quyết định năm 1985:<br>${list.map(s => `• Đường <strong>${escapeHtml(s.name)}</strong> (trước đây: ${escapeHtml(s.naming_history.previous_names)})${s.verification_status === 'verified' ? '' : ' — <em>đang đối chiếu văn bản gốc</em>'}`).join('<br>')}`
-    };
-  }
 
   // Statistics
   if (hasAny(q, ['bao nhieu', 'danh sach', 'liet ke'])) {
