@@ -58,32 +58,32 @@
         <!-- 6 Main Tabs Defined in Document -->
         <ul class="nav-tabs" id="main-nav-tabs" role="tablist" aria-label="Điều hướng chính của ứng dụng">
           <li role="presentation">
-            <button class="nav-tab-btn active" id="tab-btn-map" role="tab" aria-selected="true" aria-controls="tab-map" data-tab="map">
+            <button class="nav-tab-btn active" id="tab-btn-map" role="tab" aria-selected="true" tabindex="0" aria-controls="tab-map" data-tab="map">
               <span aria-hidden="true">🗺️</span> Bản đồ lịch sử
             </button>
           </li>
           <li role="presentation">
-            <button class="nav-tab-btn" id="tab-btn-timeline" role="tab" aria-selected="false" aria-controls="tab-timeline" data-tab="timeline">
+            <button class="nav-tab-btn" id="tab-btn-timeline" role="tab" aria-selected="false" tabindex="-1" aria-controls="tab-timeline" data-tab="timeline">
               <span aria-hidden="true">⏳</span> Dòng thời gian
             </button>
           </li>
           <li role="presentation">
-            <button class="nav-tab-btn" id="tab-btn-archive" role="tab" aria-selected="false" aria-controls="tab-archive" data-tab="archive">
+            <button class="nav-tab-btn" id="tab-btn-archive" role="tab" aria-selected="false" tabindex="-1" aria-controls="tab-archive" data-tab="archive">
               <span aria-hidden="true">📚</span> Kho nội dung
             </button>
           </li>
           <li role="presentation">
-            <button class="nav-tab-btn" id="tab-btn-about" role="tab" aria-selected="false" aria-controls="tab-about" data-tab="about">
+            <button class="nav-tab-btn" id="tab-btn-about" role="tab" aria-selected="false" tabindex="-1" aria-controls="tab-about" data-tab="about">
               <span aria-hidden="true">🏛️</span> Giới thiệu dự án
             </button>
           </li>
           <li role="presentation">
-            <button class="nav-tab-btn" id="tab-btn-brand" role="tab" aria-selected="false" aria-controls="tab-brand" data-tab="brand">
+            <button class="nav-tab-btn" id="tab-btn-brand" role="tab" aria-selected="false" tabindex="-1" aria-controls="tab-brand" data-tab="brand">
               <span aria-hidden="true">🎨</span> Bộ nhận diện
             </button>
           </li>
           <li role="presentation">
-            <button class="nav-tab-btn" id="tab-btn-sources" role="tab" aria-selected="false" aria-controls="tab-sources" data-tab="sources">
+            <button class="nav-tab-btn" id="tab-btn-sources" role="tab" aria-selected="false" tabindex="-1" aria-controls="tab-sources" data-tab="sources">
               <span aria-hidden="true">📜</span> Nguồn tư liệu
             </button>
           </li>
@@ -325,17 +325,17 @@
 
           <div class="archive-controls">
             <div class="archive-subtabs" id="archive-subtabs" role="tablist" aria-label="Phân loại kho nội dung">
-              <button class="subtab-btn active" role="tab" aria-selected="true" data-subtab="streets">Tuyến đường</button>
-              <button class="subtab-btn" role="tab" aria-selected="false" data-subtab="figures">Hồ sơ nhân vật</button>
-              <button class="subtab-btn" role="tab" aria-selected="false" data-subtab="sites">Địa điểm</button>
-              <button class="subtab-btn" role="tab" aria-selected="false" data-subtab="stations">Ga Metro số 1</button>
+              <button class="subtab-btn active" id="subtab-btn-streets" role="tab" aria-selected="true" tabindex="0" aria-controls="archive-grid-container" data-subtab="streets">Tuyến đường</button>
+              <button class="subtab-btn" id="subtab-btn-figures" role="tab" aria-selected="false" tabindex="-1" aria-controls="archive-grid-container" data-subtab="figures">Hồ sơ nhân vật</button>
+              <button class="subtab-btn" id="subtab-btn-sites" role="tab" aria-selected="false" tabindex="-1" aria-controls="archive-grid-container" data-subtab="sites">Địa điểm</button>
+              <button class="subtab-btn" id="subtab-btn-stations" role="tab" aria-selected="false" tabindex="-1" aria-controls="archive-grid-container" data-subtab="stations">Ga Metro số 1</button>
             </div>
             <div class="archive-search">
               <input type="text" id="archive-search-box" placeholder="Lọc nội dung thư viện..." aria-label="Lọc nội dung thư viện">
             </div>
           </div>
 
-          <div class="archive-grid" id="archive-grid-container">
+          <div class="archive-grid" id="archive-grid-container" role="tabpanel" aria-labelledby="subtab-btn-streets" tabindex="0">
             <!-- Rendered dynamically -->
           </div>
         </div>
@@ -582,8 +582,8 @@
   </div>
 
   <!-- Modal: Tạo Mã QR & Thẻ Di Sản Biển Tên Đường -->
-  <div class="qr-modal-backdrop hidden" id="qr-modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="qr-sign-name">
-    <div class="qr-modal-card">
+  <div class="qr-modal-backdrop hidden" id="qr-modal-backdrop">
+    <div class="qr-modal-card" role="dialog" aria-modal="true" aria-labelledby="qr-sign-name">
       <button class="qr-modal-close" id="qr-modal-close" aria-label="Đóng bảng mã QR">✕</button>
       <div class="qr-street-sign" id="qr-street-sign">
         <div class="sign-top-bar">

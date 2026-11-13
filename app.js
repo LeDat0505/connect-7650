@@ -196,6 +196,7 @@ function switchTab(tabId) {
     const isActive = btn.getAttribute('data-tab') === tabId;
     btn.classList.toggle('active', isActive);
     btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    btn.tabIndex = isActive ? 0 : -1; // roving tabindex (WAI-ARIA Tabs)
     // On narrow screens the tab row scrolls: bring the active tab into view
     if (isActive && btn.scrollIntoView) {
       btn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
@@ -499,6 +500,50 @@ function makeQrDataUrl(text, targetPx = 180) {
   } catch (err) {
     console.warn('QR generation failed', err);
     return '';
+  }
+}
+
+// ============================================================================
+// KEYBOARD ACCESSIBILITY HELPERS
+// ============================================================================
+// WAI-ARIA Tabs: Left/Right move (wrapping), Home/End jump; the newly focused tab is activated.
+function setupTablistKeyboard(tablist, activate) {
+  if (!tablist) return;
+  tablist.addEventListener('keydown', (e) => {
+    const tabs = [...tablist.querySelectorAll('[role="tab"]')];
+    const index = tabs.indexOf(document.activeElement);
+    if (index < 0) return;
+    let next;
+    switch (e.key) {
+      case 'ArrowRight': next = (index + 1) % tabs.length; break;
+      case 'ArrowLeft': next = (index - 1 + tabs.length) % tabs.length; break;
+      case 'Home': next = 0; break;
+      case 'End': next = tabs.length - 1; break;
+      default: return;
+    }
+    e.preventDefault();
+    activate(tabs[next]);
+    tabs[next].focus();
+  });
+}
+
+// Keep Tab / Shift+Tab cycling inside an open dialog
+function trapFocus(e, dialog) {
+  const focusables = [...dialog.querySelectorAll(
+    'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+  )].filter(el => el.getClientRects().length > 0);
+  if (!focusables.length) { e.preventDefault(); return; }
+  const first = focusables[0];
+  const last = focusables[focusables.length - 1];
+  if (!dialog.contains(document.activeElement)) {
+    e.preventDefault();
+    first.focus();
+  } else if (e.shiftKey && document.activeElement === first) {
+    e.preventDefault();
+    last.focus();
+  } else if (!e.shiftKey && document.activeElement === last) {
+    e.preventDefault();
+    first.focus();
   }
 }
 
@@ -912,15 +957,23 @@ function openQrHeritageCard(itemId, type = 'street') {
   }
 
   if (modal) {
+    // Remember the opener only when the dialog was closed (re-opening keeps the first opener)
+    if (modal.classList.contains('hidden')) qrModalReturnFocus = document.activeElement;
     modal.classList.remove('hidden');
+    const closeBtn = document.getElementById('qr-modal-close');
+    if (closeBtn) closeBtn.focus();
   }
 }
 
+let qrModalReturnFocus = null;
+
 function closeQrHeritageCard() {
   const modal = document.getElementById('qr-modal-backdrop');
-  if (modal) {
-    modal.classList.add('hidden');
-  }
+  if (!modal || modal.classList.contains('hidden')) return;
+  modal.classList.add('hidden');
+  const target = qrModalReturnFocus;
+  qrModalReturnFocus = null;
+  if (target && document.contains(target) && typeof target.focus === 'function') target.focus();
 }
 
 function copyHeritageLink() {
@@ -3595,6 +3648,11 @@ function switchArchiveSubtab(subtab) {
     const isActive = btnSubtab === subtab;
     btn.classList.toggle('active', isActive);
     btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    btn.tabIndex = isActive ? 0 : -1;
+    if (isActive && btn.id) {
+      const panel = document.getElementById('archive-grid-container');
+      if (panel) panel.setAttribute('aria-labelledby', btn.id);
+    }
   });
   renderArchiveGrid();
 }
@@ -4118,6 +4176,27 @@ function setupEventListeners() {
       if (e.key === 'Escape' && !memberBackdrop.hidden) closeMemberModal();
     });
   }
+
+  // Keyboard: WAI-ARIA Tabs pattern for the main tabs and the archive sub-tabs
+  setupTablistKeyboard(document.getElementById('main-nav-tabs'), btn => switchTab(btn.getAttribute('data-tab')));
+  setupTablistKeyboard(document.getElementById('archive-subtabs'), btn => switchArchiveSubtab(btn.getAttribute('data-subtab')));
+
+  // Keyboard: Escape closes and Tab stays inside whichever modal dialog is open
+  document.addEventListener('keydown', (e) => {
+    const qrModal = document.getElementById('qr-modal-backdrop');
+    const qrOpen = qrModal && !qrModal.classList.contains('hidden');
+    if (e.key === 'Escape' && qrOpen) {
+      e.preventDefault();
+      closeQrHeritageCard();
+      return;
+    }
+    if (e.key !== 'Tab') return;
+    const memberModal = document.getElementById('member-modal-backdrop');
+    const dialog = qrOpen
+      ? qrModal.querySelector('[role="dialog"]')
+      : (memberModal && !memberModal.hidden ? memberModal.querySelector('[role="dialog"]') : null);
+    if (dialog) trapFocus(e, dialog);
+  });
 
   // QR Modal Event Listeners
   const qrCloseBtn = document.getElementById('qr-modal-close');
