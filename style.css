@@ -4262,3 +4262,10 @@ body,
 .map-wrapper.map-controls-compact .map-left-controls .leaflet-control-zoom {
   display: none;
 }
+
+/* QR codes are generated in the browser as small bitmaps: keep modules crisp when scaled */
+#qr-card-img,
+.about-feedback-qr {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}

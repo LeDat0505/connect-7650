@@ -481,6 +481,28 @@ function toggleFloatingPanel(event) {
 // ============================================================================
 
 // ============================================================================
+// QR CODE: generated in the browser (vendor/qrcode.js) – no external QR service,
+// so printed street signs keep working even if a third-party API disappears.
+// ============================================================================
+function makeQrDataUrl(text, targetPx = 180) {
+  if (typeof qrcode !== 'function') return '';
+  try {
+    if (qrcode.stringToBytesFuncs && qrcode.stringToBytesFuncs['UTF-8']) {
+      qrcode.stringToBytes = qrcode.stringToBytesFuncs['UTF-8'];
+    }
+    const qr = qrcode(0, 'M'); // 0 = choose the smallest version that fits
+    qr.addData(String(text));
+    qr.make();
+    const margin = 4; // quiet zone (modules) required by scanners
+    const cell = Math.max(2, Math.floor(targetPx / (qr.getModuleCount() + margin * 2)));
+    return qr.createDataURL(cell, cell * margin);
+  } catch (err) {
+    console.warn('QR generation failed', err);
+    return '';
+  }
+}
+
+// ============================================================================
 // MAP BOTTOM OFFSET: keep floating buttons above the route card / tour bar
 // ============================================================================
 // The route summary card and the guided-tour bar sit at the bottom of the map
@@ -880,11 +902,9 @@ function openQrHeritageCard(itemId, type = 'street') {
 
   const baseUrl = window.location.href.split('#')[0];
   const shareUrl = `${baseUrl}#${type}=${encodeURIComponent(item.id)}`;
-  const qrApiUrl = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(shareUrl)}`;
-
   if (qrImg) {
     qrImg.alt = `Mã QR mở trang thông tin ${item.name}`;
-    qrImg.src = qrApiUrl;
+    qrImg.src = makeQrDataUrl(shareUrl);
   }
   // A QR pointing at a file:// path cannot be opened on a phone
   if (window.location.protocol === 'file:') {
@@ -1943,6 +1963,50 @@ function applyRoutingMapFocus(destItem) {
   });
 }
 
+// ----------------------------------------------------------------------------
+// OSRM walking route. router.project-osrm.org is a public DEMO server with rate
+// limits: results are cached per point pair (rounded to ~1 m) and failures fall
+// back to a clearly labelled straight-line estimate.
+// ----------------------------------------------------------------------------
+const OSRM_DEBOUNCE_MS = 300;
+const OSRM_TIMEOUT_MS = 4500;
+const osrmRouteCache = new Map(); // key -> Promise<route|null>
+
+function fetchOsrmRoute(userLat, userLng, destLat, destLng) {
+  const r = n => Number(n).toFixed(5);
+  const key = `${r(userLat)},${r(userLng)}|${r(destLat)},${r(destLng)}`;
+  if (osrmRouteCache.has(key)) return osrmRouteCache.get(key);
+
+  const url = `https://router.project-osrm.org/route/v1/foot/${userLng},${userLat};${destLng},${destLat}?overview=full&geometries=geojson`;
+  const request = (async () => {
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), OSRM_TIMEOUT_MS);
+    try {
+      const response = await fetch(url, { signal: controller.signal });
+      if (!response.ok) return null;
+      const data = await response.json();
+      if (data.code !== 'Ok' || !data.routes || !data.routes.length) return null;
+      const route = data.routes[0];
+      return {
+        distance: route.distance || 0,
+        duration: route.duration || 0,
+        // OSRM coordinates are [lng, lat], convert to Leaflet [lat, lng]
+        latLngs: route.geometry.coordinates.map(pt => [pt[1], pt[0]])
+      };
+    } catch (err) {
+      console.warn('OSRM routing failed or timed out, using straight-line estimate:', err.name || err);
+      return null;
+    } finally {
+      clearTimeout(timeoutId);
+    }
+  })();
+
+  osrmRouteCache.set(key, request);
+  // Do not cache failures: a later attempt may succeed
+  request.then(result => { if (!result) osrmRouteCache.delete(key); });
+  return request;
+}
+
 async function drawRouteToDestination(userLatLng, destLatLng, destItem) {
   if (!mapInstance || !userLatLng || !destLatLng) return;
 
@@ -1983,34 +2047,21 @@ async function drawRouteToDestination(userLatLng, destLatLng, destItem) {
   const destLat = destLatLng[0];
   const destLng = destLatLng[1];
 
-  // Call free OSRM Foot Routing API
-  const osrmUrl = `https://router.project-osrm.org/route/v1/foot/${userLng},${userLat};${destLng},${destLat}?overview=full&geometries=geojson`;
+  // Debounce: rapid repeated taps only fire the last request
+  await new Promise(resolve => setTimeout(resolve, OSRM_DEBOUNCE_MS));
+  if (thisRequestId !== activeRouteRequestId) return;
 
   let routeSuccess = false;
   let distanceMeters = 0;
   let durationSeconds = 0;
   let routeLatLngs = [];
 
-  try {
-    const controller = new AbortController();
-    const timeoutId = setTimeout(() => controller.abort(), 4500);
-
-    const response = await fetch(osrmUrl, { signal: controller.signal });
-    clearTimeout(timeoutId);
-
-    if (response.ok) {
-      const data = await response.json();
-      if (data.code === 'Ok' && data.routes && data.routes.length > 0) {
-        const route = data.routes[0];
-        distanceMeters = route.distance || 0;
-        durationSeconds = route.duration || 0;
-        // OSRM coordinates are [lng, lat], convert to Leaflet [lat, lng]
-        routeLatLngs = route.geometry.coordinates.map(pt => [pt[1], pt[0]]);
-        routeSuccess = true;
-      }
-    }
-  } catch (err) {
-    console.warn('OSRM routing fetch failed or timed out, falling back to direct polyline:', err);
+  const route = await fetchOsrmRoute(userLat, userLng, destLat, destLng);
+  if (route) {
+    distanceMeters = route.distance;
+    durationSeconds = route.duration;
+    routeLatLngs = route.latLngs;
+    routeSuccess = true;
   }
 
   // Discard older in-flight request if another route was triggered while fetch was pending
@@ -2096,7 +2147,11 @@ function updateRouteSummaryUI(destItem, distanceMeters, durationSeconds, userLat
   } else {
     walkTimeStr = `${walkingMinutes} phút`;
   }
-  if (walkValEl) walkValEl.innerText = `${distStr} (${walkTimeStr})`;
+  if (walkValEl) {
+    walkValEl.innerText = routeSuccess
+      ? `${distStr} (${walkTimeStr})`
+      : `${distStr} đường chim bay – ước tính (${walkTimeStr})`;
+  }
 
   // Motorbike time (Saigon urban traffic with stoplights: ~25 km/h = ~420 meters/min + 1 min buffer)
   const motoMinutes = Math.max(1, Math.round(distanceMeters / 420) + (distanceMeters > 400 ? 1 : 0));
@@ -2112,7 +2167,7 @@ function updateRouteSummaryUI(destItem, distanceMeters, durationSeconds, userLat
 
   // Google Maps link with destination coordinates
   if (gmapsBtn) {
-    gmapsBtn.href = `https://www.google.com/maps/dir/?api=1&destination=${destLatLng[0]},${destLatLng[1]}`;
+    gmapsBtn.href = `https://www.google.com/maps/dir/?api=1&destination=${destLatLng[0]},${destLatLng[1]}&travelmode=walking`;
   }
 
   // Render Top 3 nearest destinations
@@ -3772,7 +3827,7 @@ function renderAboutTab() {
         <a class="btn-feedback-form" href="${escapeHtml(formUrl)}" target="_blank" rel="noopener noreferrer">📝 Mở biểu mẫu góp ý</a>
       </div>
       <img class="about-feedback-qr" width="140" height="140" loading="lazy"
-        src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(formUrl)}"
+        src="${makeQrDataUrl(formUrl)}"
         alt="Mã QR mở biểu mẫu góp ý">
     </div>
   ` : '');

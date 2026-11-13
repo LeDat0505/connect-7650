@@ -78,6 +78,9 @@ Website được xây dựng đúng theo quy chuẩn tài liệu hướng dẫn 
 - Mỗi nguồn trong `sources_catalog` có `source_type`: `primary` (văn bản pháp quy, hồ sơ lưu trữ gốc), `secondary` (sách, báo, nghiên cứu), `reference` (Wikipedia, blog, OSM). Chỉ nguồn `primary` có số hiệu và ngày rõ ràng mới được gắn `status: "verified"`. Trường `url` để trống cho tới khi có đường dẫn thật.
 - Tuyến đường chưa có văn bản gốc để `verification_status: "pending"`, lý do ghi trong `naming_history.verification_note`.
 - Mã QR dẫn tới `#site=…`, `#street=…`, `#station=…`; chỉ quét được khi website được đưa lên máy chủ (http/https).
+- Mã QR được tạo ngay trên trình duyệt bằng `vendor/qrcode.js` (qrcode-generator 1.4.4, MIT) – không phụ thuộc dịch vụ QR bên ngoài, biển tên đã in vẫn dùng được lâu dài.
+- Leaflet 1.9.4 được tự host trong `vendor/leaflet/` (BSD-2-Clause), không phụ thuộc CDN.
+- ⚠️ Chỉ đường đi bộ dùng `router.project-osrm.org` – đây là **máy chủ demo** của OSRM, có giới hạn lượt gọi và không cam kết hoạt động liên tục. Website lưu tạm kết quả cho cùng cặp điểm và chống bấm liên tục; khi máy chủ lỗi hoặc quá 4,5 giây, website hiển thị khoảng cách **đường chim bay (ước tính)** kèm nút mở Google Maps chỉ đường đi bộ. Nếu cần ổn định, hãy tự dựng máy chủ OSRM hoặc dùng dịch vụ định tuyến có hợp đồng.
 
 ---
 

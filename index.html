@@ -23,7 +23,8 @@
   <link rel="preconnect" href="https://server.arcgisonline.com" crossorigin>
   
   <!-- Leaflet Map CSS -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+  <!-- Leaflet 1.9.4 tự host (vendor/leaflet, BSD-2-Clause) -->
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
   
   <!-- Main CSS -->
   <link rel="stylesheet" href="style.css">
@@ -263,7 +264,7 @@
                   <strong class="metric-val" id="route-moto-val">~2 phút</strong>
                 </div>
               </div>
-              <a class="btn-open-gmaps" id="btn-open-gmaps" href="#" target="_blank" rel="noopener noreferrer" title="Mở dẫn đường bằng giọng nói trên Google Maps">
+              <a class="btn-open-gmaps" id="btn-open-gmaps" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=walking" target="_blank" rel="noopener noreferrer" title="Mở dẫn đường bằng giọng nói trên Google Maps">
                 <span aria-hidden="true">🔗</span> Google Maps
               </a>
             </div>
@@ -615,8 +616,10 @@
     </div>
   </div>
 
-  <!-- Leaflet Map JS -->
-  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <!-- Leaflet Map JS (tự host, bản 1.9.4) -->
+  <script defer src="vendor/leaflet/leaflet.js"></script>
+  <!-- Tạo mã QR ngay trên trình duyệt (qrcode-generator, MIT) -->
+  <script defer src="vendor/qrcode.js"></script>
   
   <!-- Structured Historical Data -->
   <script defer src="data/historical_data.js"></script>
