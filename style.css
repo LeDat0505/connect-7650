@@ -4200,3 +4200,65 @@ body,
   border-radius: var(--radius-sm);
   cursor: pointer;
 }
+
+/* ===================================================
+   MAP BOTTOM CONTROLS (stacked column, no overlap)
+   The Leaflet zoom control is moved into .map-left-controls by app.js, so the
+   locate / layer / zoom buttons stack vertically with an 8px gap.
+   --map-bottom-offset (set by app.js) = height of the visible route card or
+   tour bar, so the column and the chat button always stay above them.
+   =================================================== */
+.map-left-controls {
+  bottom: calc(var(--map-bottom-offset, 0px) + 24px);
+  transition: bottom 0.25s ease;
+}
+
+.map-left-controls .leaflet-control-zoom {
+  margin: 0;
+  float: none;
+  clear: none;
+  align-self: flex-start;
+}
+
+.map-left-controls .leaflet-control-zoom.leaflet-bar a {
+  width: 38px;
+  height: 34px;
+  line-height: 34px;
+}
+
+.floating-chat-trigger {
+  bottom: max(calc(var(--map-bottom-offset, 0px) + 12px), 24px);
+}
+
+@media (max-width: 768px) {
+  .map-left-controls,
+  .map-wrapper:has(.route-summary-card:not(.hidden)) .map-left-controls {
+    bottom: max(calc(var(--map-bottom-offset, 0px) + 12px), calc(env(safe-area-inset-bottom) + 16px));
+  }
+
+  .map-left-controls .leaflet-control-zoom.leaflet-bar a {
+    width: 44px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+  }
+
+  /* Route card / tour bar never take more than ~half the map; their content scrolls */
+  .route-summary-card,
+  .guided-tour-bar {
+    max-height: 45%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  /* Leaflet's attribution (~18px) sits at the bottom right: keep the chat button above it */
+  .floating-chat-trigger {
+    bottom: max(calc(var(--map-bottom-offset, 0px) + 12px), calc(env(safe-area-inset-bottom) + 26px));
+  }
+}
+
+/* Not enough room above the route card / tour bar (short screens): drop the zoom
+   buttons rather than overlap the search box – pinch-zoom still works. */
+.map-wrapper.map-controls-compact .map-left-controls .leaflet-control-zoom {
+  display: none;
+}

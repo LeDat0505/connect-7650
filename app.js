@@ -233,8 +233,12 @@ function initMap() {
     maxZoom: 18
   });
 
-  // Add Zoom Control to Bottom Left (keeping bottom right for floating chat button)
-  L.control.zoom({ position: 'bottomleft' }).addTo(mapInstance);
+  // Zoom control lives in the same vertical column as the locate / layer buttons
+  // (.map-left-controls) so the buttons stack with an 8px gap and can never overlap.
+  const zoomControl = L.control.zoom({ position: 'bottomleft' }).addTo(mapInstance);
+  const leftControls = document.getElementById('map-left-controls');
+  if (leftControls) leftControls.appendChild(zoomControl.getContainer());
+  setupMapBottomOffset();
 
   // Load default tile layer (Esri World Street Map - 100% Free, No Referer Blocks, No API Key)
   changeTileLayer('esri_street');
@@ -475,6 +479,64 @@ function toggleFloatingPanel(event) {
 }
 
 // ============================================================================
+
+// ============================================================================
+// MAP BOTTOM OFFSET: keep floating buttons above the route card / tour bar
+// ============================================================================
+// The route summary card and the guided-tour bar sit at the bottom of the map
+// (full width on phones). Their real height varies with content and screen size,
+// so we measure it and expose it as --map-bottom-offset; CSS lifts the left
+// control column and the chat button by that amount.
+function setupMapBottomOffset() {
+  const root = document.documentElement;
+  const wrapper = document.querySelector('.map-wrapper');
+  const panels = ['route-summary-card', 'guided-tour-bar'].map(id => document.getElementById(id)).filter(Boolean);
+  if (!wrapper || !panels.length) return;
+
+  const update = () => {
+    const wrapRect = wrapper.getBoundingClientRect();
+    let offset = 0;
+    panels.forEach(el => {
+      if (el.classList.contains('hidden')) return;
+      const cs = getComputedStyle(el);
+      // (opacity is not checked: the slide-in animation starts at opacity 0)
+      if (cs.display === 'none' || cs.visibility === 'hidden') return;
+      const r = el.getBoundingClientRect();
+      if (!r.height) return;
+      offset = Math.max(offset, Math.round(wrapRect.bottom - r.top));
+    });
+    root.style.setProperty('--map-bottom-offset', `${offset}px`);
+
+    // Short screens: if the lifted column would run into the search box, hide the
+    // zoom buttons (touch users can pinch-zoom) instead of overlapping anything.
+    const column = document.getElementById('map-left-controls');
+    const search = document.getElementById('map-search-container');
+    if (column) {
+      const zoomEl = column.querySelector('.leaflet-control-zoom');
+      if (zoomEl && zoomEl.offsetHeight) lastZoomHeight = zoomEl.offsetHeight;
+      const gap = 8;
+      const others = [...column.children].filter(c => c !== zoomEl);
+      const needed = others.reduce((sum, c) => sum + c.offsetHeight + gap, 0) + lastZoomHeight;
+      const topLimit = (search ? search.getBoundingClientRect().bottom : wrapRect.top) + gap;
+      const columnBottom = wrapRect.bottom - parseFloat(getComputedStyle(column).bottom || '0');
+      wrapper.classList.toggle('map-controls-compact', offset > 0 && columnBottom - needed < topLimit);
+    }
+  };
+  let lastZoomHeight = 0;
+  // Run now and once more after CSS transitions (drawer open/close fades the panels)
+  const schedule = () => { update(); setTimeout(update, 320); };
+
+  const watched = [...panels, document.getElementById('map-detail-drawer'), document.getElementById('tab-map')].filter(Boolean);
+  const mo = new MutationObserver(schedule);
+  watched.forEach(el => mo.observe(el, { attributes: true, attributeFilter: ['class', 'style'] }));
+  if ('ResizeObserver' in window) {
+    const ro = new ResizeObserver(schedule);
+    panels.forEach(el => ro.observe(el));
+    ro.observe(wrapper);
+  }
+  window.addEventListener('resize', schedule);
+  schedule();
+}
 
 // ============================================================================
 // FEATURE 1 & 2: STREET NAMING ERAS & AUDIO GUIDE HELPERS
