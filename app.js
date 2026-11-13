@@ -613,7 +613,7 @@ const STREET_NAMING_ERAS = {
   street_vo_thi_sau: [
     { era: 'Thời Pháp thuộc', name: 'Rue Mayer', note: 'Đặt theo tên một bác sĩ người Pháp' },
     { era: 'Giai đoạn 1955 – 1975', name: 'Đường Hiền Vương', note: 'Tên hiệu chúa Nguyễn Phúc Chu' },
-    { era: 'Sau 1975 – Nay', name: 'Đường Võ Thị Sáu', note: 'Thời điểm đổi tên (1975 hay 04/04/1985) đang đối chiếu văn bản gốc' }
+    { era: 'Từ 1975 – Nay', name: 'Đường Võ Thị Sáu', note: 'Ủy ban Quân quản đổi tên ngày 14/08/1975 (theo nhóm) – đang đối chiếu văn bản' }
   ],
   street_nam_ky_khoi_nghia: [
     { era: 'Thời Pháp thuộc', name: 'Rue Mac-Mahon', note: 'Tên Thống chế Pháp Patrice de Mac-Mahon' },
@@ -632,8 +632,8 @@ const STREET_NAMING_ERAS = {
   ],
   street_ly_chinh_thang: [
     { era: 'Thời Pháp thuộc', name: 'Rue Champagne', note: 'Đặt thời chính quyền thuộc địa' },
-    { era: 'Giai đoạn 1955 – 1975', name: 'Đường Yên Đổ', note: 'Bút hiệu của cụ Nguyễn Khuyến' },
-    { era: 'Từ 1975 – Nay', name: 'Đường Lý Chính Thắng', note: 'Đổi tên năm 1975 – đang đối chiếu số văn bản' }
+    { era: 'Giai đoạn 1955 – 1975', name: 'Đường Yên Đổ', note: 'Đặt ngày 22/03/1955 – bút hiệu của cụ Nguyễn Khuyến' },
+    { era: 'Từ 1975 – Nay', name: 'Đường Lý Chính Thắng', note: 'Đổi tên ngày 14/08/1975 – đang đối chiếu số văn bản' }
   ],
   street_vo_van_tan: [
     { era: 'Thời Pháp thuộc', name: 'Rue Testard', note: 'Đặt ngày 24/02/1897' },
@@ -655,17 +655,16 @@ const STREET_NAMING_ERAS = {
   street_pham_ngoc_thach: [
     { era: 'Thời Pháp thuộc', name: 'Rue Blancsubé', note: 'Đặt thời chính quyền thuộc địa' },
     { era: 'Trước 1975', name: 'Đường Duy Tân', note: 'Vị vua yêu nước (vòng xoay Hồ Con Rùa)' },
-    { era: 'Sau 1975 – Nay', name: 'Đường Phạm Ngọc Thạch', note: 'Dữ liệu ghi 04/04/1985 – đang đối chiếu văn bản gốc' }
+    { era: 'Từ 1985 – Nay', name: 'Đường Phạm Ngọc Thạch', note: 'UBND TP.HCM đổi tên ngày 04/04/1985 – đang đối chiếu văn bản' }
   ],
   street_nguyen_dinh_chieu: [
     { era: 'Thời Pháp thuộc', name: 'Rue Richaud', note: 'Đặt thời chính quyền thuộc địa' },
     { era: 'Trước 1975', name: 'Đường Phan Đình Phùng', note: 'Lãnh tụ khởi nghĩa Hương Khê' },
-    { era: 'Sau 1975 – Nay', name: 'Đường Nguyễn Đình Chiểu', note: 'Chưa xác minh thời điểm đổi tên' }
+    { era: 'Từ 1975 – Nay', name: 'Đường Nguyễn Đình Chiểu', note: 'Ủy ban Quân quản đổi tên ngày 14/08/1975 (theo nhóm) – đang đối chiếu văn bản' }
   ],
   street_le_quy_don: [
     { era: 'Thời Pháp thuộc', name: 'Rue Barbé', note: 'Đại úy quân viễn chinh Pháp' },
-    { era: 'Trước 1975', name: 'Đường Lê Quý Đôn', note: 'Khuôn viên trường Trung học Lê Quý Đôn' },
-    { era: 'Hiện nay', name: 'Đường Lê Quý Đôn', note: 'Giữ tên nhà bác học – chưa xác minh năm đặt tên' }
+    { era: 'Từ 1955 – Nay', name: 'Đường Lê Quý Đôn', note: 'Đặt ngày 22/03/1955 (theo nhóm), giữ tên sau 1975 – đang đối chiếu văn bản' }
   ],
   street_truong_dinh: [
     { era: 'Thời Pháp thuộc', name: 'Rue Amiral Roze và Rue Larégnère', note: 'Hai đường riêng' },
@@ -683,9 +682,8 @@ const STREET_NAMING_ERAS = {
     { era: 'Từ 1975 – Nay', name: 'Đường Điện Biên Phủ', note: 'Nhập với đoạn xa lộ ngày 14/08/1975 – đang đối chiếu số văn bản' }
   ],
   street_nguyen_thi_dieu: [
-    { era: 'Thời Pháp thuộc', name: 'Đường quy hoạch khu Tây', note: 'Khu biệt thự cổ điển Quận 3' },
-    { era: 'Trước 1985', name: 'Đường Trần Trung Lập', note: 'Chưa tìm thấy nguồn xác nhận' },
-    { era: 'Hiện nay', name: 'Đường Nguyễn Thị Diệu', note: 'Dữ liệu ghi 04/04/1985 – đang đối chiếu văn bản gốc' }
+    { era: 'Trước 1975', name: 'Đường Trương Minh Ký', note: 'Theo nhóm đối chiếu – còn mâu thuẫn với sách 2001' },
+    { era: 'Từ 1975 – Nay', name: 'Đường Nguyễn Thị Diệu', note: 'Đổi tên ngày 14/08/1975 (theo nhóm) – đang đối chiếu văn bản' }
   ]
 };
 

@@ -5,11 +5,11 @@
     "date": "14/08/1975",
     "type": "Văn bản hành chính nhà nước",
     "archive": "Trung tâm Lưu trữ Quốc gia II & Văn phòng UBND TP.HCM",
-    "notes": "Văn bản được dự án dẫn cho đợt đổi tên đường năm 1975. Hiện chỉ đường Nam Kỳ Khởi Nghĩa có trích dẫn trực tiếp; các tuyến khác (Cách Mạng Tháng Tám, Võ Văn Tần, Điện Biên Phủ…) đang đối chiếu với văn bản gốc.",
+    "notes": "Văn bản đổi tên đường đợt 14/08/1975. Số hiệu chưa thống nhất: dữ liệu cũ ghi 142/QĐ-UB, nhóm đối chiếu (13/11/2026) ghi 04/QĐ-UBQQ (58 đường), tin Reuters ghi 51 đường. Nhóm xác định các đường Hiền Vương → Võ Thị Sáu, Phan Đình Phùng → Nguyễn Đình Chiểu, Yên Đổ → Lý Chính Thắng, Trương Minh Ký → Nguyễn Thị Diệu thuộc đợt này.",
     "status": "pending",
     "source_type": "primary",
     "url": "",
-    "verification_note": "Đối chiếu 13/11/2026: chưa tìm thấy nguồn nào nêu số hiệu văn bản này; các nguồn chỉ xác nhận có đợt đổi tên đường ngày 14/08/1975. Cần bản gốc (Trung tâm Lưu trữ Quốc gia II / Chi cục Văn thư – Lưu trữ TP.HCM)."
+    "verification_note": "Đối chiếu 13/11/2026: Giác Ngộ (31/10/2025) xác nhận ngày 14/08/1975 Ủy ban Quân quản thành phố đổi tên đường; sách \"Đường phố Thành phố Hồ Chí Minh\" (2001) xác nhận ngày đổi tên của Võ Văn Tần, Trương Định, Lý Chính Thắng. Chưa nguồn nào nêu số hiệu (142/QĐ-UB hay 04/QĐ-UBQQ) – cần bản gốc (Trung tâm Lưu trữ Quốc gia II / Chi cục Văn thư – Lưu trữ TP.HCM)."
   },
   {
     "id": "src_ubnd_1985",
@@ -17,7 +17,7 @@
     "date": "04/04/1985",
     "type": "Văn bản hành chính nhà nước",
     "archive": "Văn phòng UBND TP.HCM",
-    "notes": "Dữ liệu dự án gắn văn bản này với các đường Võ Thị Sáu, Phạm Ngọc Thạch, Bà Huyện Thanh Quan, Trần Quốc Thảo, Nguyễn Thị Diệu; danh sách này đang đối chiếu với văn bản gốc.",
+    "notes": "Đợt đổi tên đường ngày 04/04/1985 nhân kỷ niệm 10 năm giải phóng (gần 100 đường theo iWater). Nhóm xác định Duy Tân → Phạm Ngọc Thạch thuộc đợt này; Võ Thị Sáu không thuộc đợt này (đổi năm 1975). Số hiệu \"75/QĐ-UB\" chưa được nguồn nào xác nhận.",
     "status": "pending",
     "source_type": "primary",
     "url": "",
@@ -190,5 +190,72 @@
     "status": "secondary",
     "source_type": "secondary",
     "url": "https://1975.luatkhoa.com/2025/09/07/1975-tuan-36-chinh-quyen-doi-ten-duong-o-sai-gon-de-mung-quoc-khanh-viet-nam-de-doa-cam-pu-chia-tren-vinh-thai-lan/"
+  },
+  {
+    "id": "src_nguyen_dinh_tu_noi_thanh",
+    "title": "Nguyễn Đình Tư – Đường phố nội thành Thành phố Hồ Chí Minh",
+    "date": "1993 (theo thư mục virtual-saigon.net)",
+    "type": "Sách nghiên cứu địa danh",
+    "archive": "TP. Hồ Chí Minh; có phần song ngữ Anh – Pháp",
+    "notes": "Nhóm dẫn cho các đợt đổi tên 1955, 1975. Nhóm ghi năm 2020, NXB Tổng hợp TP.HCM – cần kiểm lại ấn bản và số trang.",
+    "status": "secondary",
+    "source_type": "secondary",
+    "url": "https://virtual-saigon.net/References/Bibliography?ID=3040"
+  },
+  {
+    "id": "src_le_trung_hoa_so_tay",
+    "title": "Lê Trung Hoa – Sổ tay tên đường Thành phố Hồ Chí Minh",
+    "date": "Chưa rõ",
+    "type": "Sách tra cứu",
+    "archive": "Chưa rõ nhà xuất bản",
+    "notes": "Nhóm dẫn cho đường Phạm Ngọc Thạch (1985). Cần ghi rõ năm, nhà xuất bản, số trang.",
+    "status": "secondary",
+    "source_type": "secondary",
+    "url": ""
+  },
+  {
+    "id": "src_vuong_hong_sen_sgnx",
+    "title": "Vương Hồng Sển – Sài Gòn năm xưa",
+    "date": "1969 (Nhà sách Khai Trí)",
+    "type": "Sách khảo cứu",
+    "archive": "Nhà sách Khai Trí (dẫn theo Wikipedia: Đường Hai Bà Trưng)",
+    "notes": "Nhóm dẫn cho việc đại lộ Charner (đường Kinh Lấp) đổi thành Nguyễn Huệ. Cần ghi số trang.",
+    "status": "secondary",
+    "source_type": "secondary",
+    "url": ""
+  },
+  {
+    "id": "src_doi_ten_1955",
+    "title": "Đợt đổi tên đường phố Sài Gòn ngày 22/03/1955 (chính quyền Ngô Đình Diệm)",
+    "date": "22/03/1955",
+    "type": "Văn bản hành chính (chưa xác định loại và số hiệu)",
+    "archive": "Chưa xác định",
+    "notes": "Nhóm xác định: Charner → Nguyễn Huệ, Barbé → Lê Quý Đôn, Lucien Mossard + Taberd → Nguyễn Du. Sách \"Đường phố Thành phố Hồ Chí Minh\" (2001) cũng ghi nhiều đường đổi tên ngày 22/03/1955.",
+    "status": "pending",
+    "source_type": "primary",
+    "url": "",
+    "verification_note": "Chưa tìm thấy bản văn bản; chưa rõ là sắc lệnh hay nghị định và số hiệu."
+  },
+  {
+    "id": "src_giacngo_2025",
+    "title": "Giác Ngộ – Các bậc danh tăng, chư tôn đức tiêu biểu của Phật giáo được đặt tên đường tại TP.HCM",
+    "date": "31/10/2025",
+    "type": "Báo chí",
+    "archive": "giacngo.vn",
+    "notes": "Ghi \"Ngày 14-8-1975, Ủy ban Quân quản thành phố đổi tên đường thành Thích Quảng Đức\" và \"Ngày 22-3-1955, chính quyền Sài Gòn đổi tên đường là Huyền Quang\" – xác nhận hai đợt đổi tên, không nêu số văn bản.",
+    "status": "secondary",
+    "source_type": "secondary",
+    "url": "https://giacngo.vn/cac-bac-danh-tang-chu-ton-duc-tieu-bieu-cua-phat-giao-duoc-dat-ten-duong-tai-tphcm-post77659.html"
+  },
+  {
+    "id": "src_vnexpress_2017",
+    "title": "VnExpress – Những con đường Sài Gòn thay đổi sau gần nửa thế kỷ",
+    "date": "12/03/2017",
+    "type": "Báo chí",
+    "archive": "vnexpress.net",
+    "notes": "Ảnh xưa – nay một số đường; ghi Blan Sube → Duy Tân (nay Phạm Ngọc Thạch) và ghi Nguyễn Huệ đổi tên năm 1956 (Wikipedia ghi 1955).",
+    "status": "secondary",
+    "source_type": "secondary",
+    "url": "https://vnexpress.net/nhung-con-duong-sai-gon-thay-doi-sau-gan-nua-the-ky-3553903.html"
   }
 ]

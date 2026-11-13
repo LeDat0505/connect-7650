@@ -411,6 +411,10 @@ PENDING_NOTE = 'Chưa xác minh thời điểm và số văn bản đặt tên.'
 SRC_AIHUU = 'Ái Hữu Biên Hòa (Nguyên Trần, 2017) – bảng đối chiếu tên đường Sài Gòn xưa & nay'
 WIKI = 'Wikipedia tiếng Việt: '
 CHK2 = 'Đối chiếu bổ sung 13/11/2026: '
+TEAM = 'Nhóm đối chiếu 13/11/2026: '
+SRC_NDT_1993 = 'Nguyễn Đình Tư – Đường phố nội thành Thành phố Hồ Chí Minh (1993, theo thư mục virtual-saigon.net) – nhóm dẫn, chưa đối chiếu trang'
+SRC_VHS = 'Vương Hồng Sển – Sài Gòn năm xưa (Nhà sách Khai Trí, 1969) – nhóm dẫn'
+SRC_SAC_LENH_1955 = 'Đợt đổi tên đường phố Sài Gòn ngày 22/03/1955 (chính quyền Ngô Đình Diệm) – nhóm dẫn, chưa có bản văn bản'
 SRC_LUATKHOA = 'Luật Khoa – 1975 tuần 36 (dẫn tin Reuters ngày 02/09/1975 về đợt đổi tên 51 con đường)'
 NEW_STREETS = [
     dict(id='street_dong_khoi', name='Đồng Khởi', category='historic_event', category_name='Sự kiện lịch sử',
@@ -424,10 +428,13 @@ NEW_STREETS = [
     dict(id='street_nguyen_hue', name='Nguyễn Huệ', category='national_hero', category_name='Anh hùng dân tộc',
          significance='Tôn vinh Quang Trung – Nguyễn Huệ, người lãnh đạo phong trào Tây Sơn.',
          biography_summary='Nguyễn Huệ (Hoàng đế Quang Trung) là nhà quân sự kiệt xuất của phong trào Tây Sơn thế kỷ XVIII.',
-         previous_names='Kênh Lớn / kênh Charner, sau khi lấp kênh năm 1877 là đại lộ Charner (thời Pháp thuộc)', decision='Năm 1955 chính quyền Việt Nam Cộng hòa đổi đại lộ Charner thành đại lộ Nguyễn Huệ (đang đối chiếu văn bản)',
+         previous_names='Kênh Lớn / kênh Charner, sau khi lấp kênh năm 1877 là đại lộ Charner (thời Pháp thuộc), dân gian gọi là đường Kinh Lấp', decision='Ngày 22/03/1955 chính quyền Ngô Đình Diệm đổi đại lộ Charner thành đại lộ Nguyễn Huệ (đang đối chiếu văn bản)',
          year=1955, eras=[('Trước 1877', 'Kênh Charner', 'Kênh đào được lấp năm 1877'), ('Thời Pháp thuộc', 'Boulevard Charner', ''), ('Từ 1955 – Nay', 'Đường Nguyễn Huệ', 'Phố đi bộ khánh thành 29/04/2015')],
-         axis=['commercial', 'cultural'], sources=['PLO – Đường Nguyễn Huệ, dòng kênh thành quảng trường đi bộ đầu tiên', WIKI + 'Đường Nguyễn Huệ, Thành phố Hồ Chí Minh', 'Wikipedia: Nguyễn Huệ Boulevard'], status='pending',
-         note=CHK2 + 'tên cũ Charner khớp. Năm: dữ liệu cũ (theo PLO) ghi 1956, Wikipedia tiếng Việt và tiếng Anh đều ghi 1955 – nhóm chọn 1955 (13/11/2026). Chưa có văn bản gốc xác nhận.'),
+         axis=['commercial', 'cultural'], sources=['PLO – Đường Nguyễn Huệ, dòng kênh thành quảng trường đi bộ đầu tiên', WIKI + 'Đường Nguyễn Huệ, Thành phố Hồ Chí Minh', 'Wikipedia: Nguyễn Huệ Boulevard', SRC_SAC_LENH_1955, SRC_NDT_1993, SRC_VHS], status='pending',
+         note=CHK2 + 'tên cũ Charner khớp. Năm: dữ liệu cũ (theo PLO) ghi 1956, Wikipedia tiếng Việt và tiếng Anh đều ghi 1955 – nhóm chọn 1955. '
+              + TEAM + 'nhóm xác định ngày 22/03/1955, cùng đợt Việt hóa tên đường của chính quyền Ngô Đình Diệm (nhóm dẫn sách của Nguyễn Đình Tư và Vương Hồng Sển). '
+              'Ngày 22/03/1955 khớp với các lần đổi tên khác ghi trong sách "Đường phố Thành phố Hồ Chí Minh" (2001). '
+              'Lưu ý: VnExpress (12/3/2017) cũng ghi năm 1956 như PLO – hai báo ghi 1956, Wikipedia ghi 1955. Chưa có bản văn bản gốc.'),
     dict(id='street_le_loi', name='Lê Lợi', category='national_hero', category_name='Anh hùng dân tộc',
          significance='Tôn vinh Lê Lợi, người lãnh đạo khởi nghĩa Lam Sơn và sáng lập nhà Hậu Lê.',
          biography_summary='Lê Lợi (1385–1433) lãnh đạo khởi nghĩa Lam Sơn đánh đuổi quân Minh, lên ngôi năm 1428.',
@@ -467,8 +474,13 @@ NEW_STREETS = [
     dict(id='street_nguyen_du', name='Nguyễn Du', category='cultural_scholar', category_name='Danh nhân văn hóa',
          significance='Tôn vinh đại thi hào Nguyễn Du (1766–1820), tác giả Truyện Kiều.',
          biography_summary='Nguyễn Du là đại thi hào dân tộc, tác giả Truyện Kiều.',
-         previous_names='', decision='', year=None, eras=None, axis=[], sources=[], status='pending',
-         note='Chưa có nguồn. Đối chiếu 13/11/2026: bảng Ái Hữu Biên Hòa ghi đường Nguyễn Du trước 1975 (Rue Taberd) nay thuộc đường Lý Tự Trọng, nên cần xác định đường Nguyễn Du hiện nay vốn là tuyến nào. Tìm thêm trên Wikipedia: chưa có bài về tuyến này.'),
+         previous_names='Rue Lucien Mossard (đoạn Thảo Cầm Viên – Đồng Khởi) và Rue Taberd (đoạn Đồng Khởi – Cách Mạng Tháng Tám) thời Pháp thuộc',
+         decision='Năm 1955 nhập Rue Lucien Mossard và Rue Taberd thành đường Nguyễn Du, giữ tên đến nay (theo nhóm đối chiếu; đang đối chiếu văn bản)',
+         year=1955, eras=[('Thời Pháp thuộc', 'Rue Lucien Mossard và Rue Taberd', 'Hai đường riêng'), ('Từ 1955 – Nay', 'Đường Nguyễn Du', 'Nhập hai đường; giữ tên sau 1975')],
+         axis=[], sources=[SRC_SAC_LENH_1955, SRC_NDT_1993, 'Saigoneer / Historic Vietnam – Institution Taberd (nay Trường Trần Đại Nghĩa, 53 Nguyễn Du)'], status='pending',
+         note=TEAM + 'nhóm xác định Nguyễn Du được lập năm 1955 từ Rue Lucien Mossard và Rue Taberd. Nguồn tra thêm: Rue Taberd nay là đường Nguyễn Du (Saigoneer, Historic Vietnam) – khớp. '
+              'Cần kiểm: bản đồ Plan Saigon 1952 đã ghi tên "Nguyễn Du" và "Lucien Mossard" là hai đường riêng, nên tên Nguyễn Du có thể có trước 1955; '
+              'bảng Ái Hữu Biên Hòa lại ghi đoạn Taberd – Nguyễn Du nay thuộc Lý Tự Trọng (mâu thuẫn). Chưa có bản văn bản gốc.'),
     dict(id='street_ly_tu_trong', name='Lý Tự Trọng', category='revolutionary_figure', category_name='Nhân vật cách mạng & Liệt sĩ',
          significance='Tưởng nhớ người thanh niên cách mạng Lý Tự Trọng (1914–1931).',
          biography_summary='Lý Tự Trọng là đoàn viên Thanh niên Cách mạng, hy sinh năm 1931 tại Sài Gòn khi chưa tròn 18 tuổi.',
