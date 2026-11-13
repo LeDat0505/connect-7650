@@ -5,8 +5,10 @@
     "date": "14/08/1975",
     "type": "Văn bản hành chính nhà nước",
     "archive": "Trung tâm Lưu trữ Quốc gia II & Văn phòng UBND TP.HCM",
-    "notes": "Quyết định đặt và đổi tên hàng loạt tuyến đường huyết mạch như Nam Kỳ Khởi Nghĩa, Cách Mạng Tháng Tám, Võ Văn Tần, Điện Biên Phủ...",
-    "status": "verified"
+    "notes": "Văn bản được dự án dẫn cho đợt đổi tên đường năm 1975. Hiện chỉ đường Nam Kỳ Khởi Nghĩa có trích dẫn trực tiếp; các tuyến khác (Cách Mạng Tháng Tám, Võ Văn Tần, Điện Biên Phủ…) đang đối chiếu với văn bản gốc.",
+    "status": "verified",
+    "source_type": "primary",
+    "url": ""
   },
   {
     "id": "src_ubnd_1985",
@@ -14,8 +16,10 @@
     "date": "04/04/1985",
     "type": "Văn bản hành chính nhà nước",
     "archive": "Văn phòng UBND TP.HCM",
-    "notes": "Quyết định đặt tên đường Võ Thị Sáu, Phạm Ngọc Thạch, Bà Huyện Thanh Quan, Trần Quốc Thảo, Nguyễn Thị Diệu nhân kỷ niệm 10 năm giải phóng.",
-    "status": "verified"
+    "notes": "Dữ liệu dự án gắn văn bản này với các đường Võ Thị Sáu, Phạm Ngọc Thạch, Bà Huyện Thanh Quan, Trần Quốc Thảo, Nguyễn Thị Diệu; danh sách này đang đối chiếu với văn bản gốc.",
+    "status": "verified",
+    "source_type": "primary",
+    "url": ""
   },
   {
     "id": "src_qh_1976",
@@ -24,7 +28,10 @@
     "type": "Nghị quyết Quốc hội",
     "archive": "Cổng thông tin Quốc hội Việt Nam & Bảo tàng Lịch sử Quốc gia",
     "notes": "Chính thức đổi tên thành phố Sài Gòn - Gia Định thành Thành phố Hồ Chí Minh.",
-    "status": "verified"
+    "status": "pending",
+    "source_type": "primary",
+    "url": "",
+    "verification_note": "Cần bổ sung số hiệu văn bản trước khi gắn \"Đã kiểm chứng\"."
   },
   {
     "id": "src_dia_chi_tphcm",
@@ -33,7 +40,9 @@
     "type": "Công trình nghiên cứu lịch sử chuyên khảo",
     "archive": "Nhà xuất bản TP.HCM & Thư viện Khoa học Tổng hợp TP.HCM",
     "notes": "Bộ chuyên khảo đồ sộ 4 tập về lịch sử địa lý, văn hóa, phong trào đấu tranh và quá trình hình thành mạng lưới đường phố Sài Gòn.",
-    "status": "verified"
+    "status": "secondary",
+    "source_type": "secondary",
+    "url": ""
   },
   {
     "id": "src_bao_tang_pnnb",
@@ -42,7 +51,9 @@
     "type": "Tư liệu bảo tàng",
     "archive": "Bảo tàng Phụ nữ Nam Bộ (202 Võ Thị Sáu, Q.3)",
     "notes": "Lưu trữ tài liệu nhân chứng, bản án thực dân Pháp và hình ảnh di vật gốc.",
-    "status": "verified"
+    "status": "secondary",
+    "source_type": "secondary",
+    "url": ""
   },
   {
     "id": "src_unesco_ndc",
@@ -51,7 +62,10 @@
     "type": "Hồ sơ quốc tế",
     "archive": "UNESCO Paris & Bộ Ngoại giao Việt Nam",
     "notes": "Công nhận Danh nhân Văn hóa Thế giới đối với nhà thơ, nhà văn hóa yêu nước Nguyễn Đình Chiểu.",
-    "status": "verified"
+    "status": "pending",
+    "source_type": "primary",
+    "url": "",
+    "verification_note": "Cần đối chiếu số hiệu nghị quyết và ngày thông qua trên hệ thống tài liệu UNESCO."
   },
   {
     "id": "src_nq_1685_2025",
@@ -60,7 +74,9 @@
     "type": "Nghị quyết Ủy ban Thường vụ Quốc hội",
     "archive": "Cổng thông tin Quốc hội / Thư viện Pháp luật",
     "notes": "Phường Xuân Hòa = toàn bộ phường Võ Thị Sáu + một phần Phường 4 (Quận 3 cũ); phường Bàn Cờ = Phường 1, 2, 3, 5 và một phần Phường 4; phường Sài Gòn = Bến Nghé + một phần Đa Kao, Nguyễn Thái Bình; phường Bến Thành = Bến Thành, Phạm Ngũ Lão + một phần Cầu Ông Lãnh, Nguyễn Thái Bình. Các đơn vị mới hoạt động từ 01/07/2025.",
-    "status": "verified"
+    "status": "verified",
+    "source_type": "primary",
+    "url": ""
   },
   {
     "id": "src_nq_1111_2020",
@@ -69,7 +85,10 @@
     "type": "Nghị quyết Ủy ban Thường vụ Quốc hội",
     "archive": "Cổng thông tin Quốc hội",
     "notes": "Thành lập phường Võ Thị Sáu (Quận 3) trên cơ sở nhập các Phường 6, 7, 8.",
-    "status": "verified"
+    "status": "pending",
+    "source_type": "primary",
+    "url": "",
+    "verification_note": "Cần bổ sung ngày ban hành đầy đủ."
   },
   {
     "id": "src_plo_xuan_hoa",
@@ -78,7 +97,9 @@
     "type": "Báo chí",
     "archive": "plo.vn (dẫn theo Wikipedia: Xuân Hòa, Ho Chi Minh City)",
     "notes": "Năm 1880 thôn Tân Định đổi tên thành thôn Xuân Hòa, đình Tân Định đổi tên thành Đình Xuân Hòa; đình được xếp hạng di tích cấp Thành phố ngày 05/08/2003.",
-    "status": "verified"
+    "status": "secondary",
+    "source_type": "secondary",
+    "url": ""
   },
   {
     "id": "src_pho_binh",
@@ -87,7 +108,9 @@
     "type": "Báo chí",
     "archive": "vnexpress.net, vov.vn, nhandan.vn",
     "notes": "Số 7 Lý Chính Thắng (7 Yên Đổ cũ); chủ quán ông Ngô Toại; nơi tập kết, truyền đạt mệnh lệnh trước Tết Mậu Thân 1968.",
-    "status": "verified"
+    "status": "secondary",
+    "source_type": "secondary",
+    "url": ""
   },
   {
     "id": "src_street_names",
@@ -96,7 +119,9 @@
     "type": "Nghiên cứu lịch sử đô thị",
     "archive": "en.wikipedia.org, saigoneer.com",
     "notes": "Lê Duẩn (Norodom → Thống Nhứt 1955 → 30 Tháng 4 năm 1975 → Lê Duẩn 1986), Tôn Đức Thắng (1980), Hàm Nghi (Canton, de la Somme → Hàm Nghi sau 1955), Pasteur (Pellerin → Pasteur 1955), Lê Lợi (Bonard 1865 → Lê Lợi 1955). Năm và văn bản đổi tên của Đồng Khởi, Lý Tự Trọng, Lê Thánh Tôn, Cao Thắng, Nguyễn Du chưa có trong nguồn này – xem trạng thái từng tuyến đường.",
-    "status": "verified"
+    "status": "reference",
+    "source_type": "reference",
+    "url": ""
   },
   {
     "id": "src_osm",
@@ -105,7 +130,9 @@
     "type": "Dữ liệu bản đồ mở (ODbL)",
     "archive": "openstreetmap.org (Overpass API)",
     "notes": "Mỗi địa điểm ghi rõ mã đối tượng OSM trong trường coord_source để kiểm tra lại.",
-    "status": "verified"
+    "status": "reference",
+    "source_type": "reference",
+    "url": ""
   },
   {
     "id": "src_verification_2026_11",
@@ -114,6 +141,8 @@
     "type": "Đối chiếu tư liệu",
     "archive": "vi.wikipedia.org, voh.com.vn, plo.vn, tuoitre.vn, baovanhoa.vn, nhandan.vn",
     "notes": "Xác minh năm xây dựng, kiến trúc sư, mốc lịch sử của các địa điểm trung tâm và tên phường mới của các địa chỉ. Đã sửa: Nhà hát dùng làm trụ sở Quốc hội VNCH từ 1955 (không phải 1956); tượng Quách Thị Trang đã di dời khi xây ga Metro Bến Thành; bỏ thông tin chưa có căn cứ về ga Metro tại công viên Lê Văn Tám.",
-    "status": "verified"
+    "status": "reference",
+    "source_type": "reference",
+    "url": ""
   }
 ]

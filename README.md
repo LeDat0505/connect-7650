@@ -74,6 +74,9 @@ Website được xây dựng đúng theo quy chuẩn tài liệu hướng dẫn 
 - `fetch_osm_expansion.py` tải ranh giới phường, hình học đường và tuyến Metro từ OpenStreetMap → `osm_expansion.json`.
 - `update_connect_data.py` áp dụng địa chỉ mới, địa điểm, tuyến đường, Metro vào `data/historical_data.js` (chạy lại không tạo bản ghi trùng).
 - ⚠️ Không chạy lại `generate_data.py` (script khởi tạo cũ) vì sẽ ghi đè dữ liệu đã cập nhật.
+- ✅ Sau mỗi lần sửa dữ liệu, chạy `node scripts/check_data.js` (không cần cài thêm gì). Script in số liệu hiện tại và báo lỗi khi: quyết định ghi "UBND TP.HCM" kèm năm trước 1976; mục gắn "đã xác minh" mà không có nguồn; nguồn gắn `status: "verified"` mà không phải nguồn gốc (`source_type: "primary"`); trùng `id`.
+- Mỗi nguồn trong `sources_catalog` có `source_type`: `primary` (văn bản pháp quy, hồ sơ lưu trữ gốc), `secondary` (sách, báo, nghiên cứu), `reference` (Wikipedia, blog, OSM). Chỉ nguồn `primary` có số hiệu và ngày rõ ràng mới được gắn `status: "verified"`. Trường `url` để trống cho tới khi có đường dẫn thật.
+- Tuyến đường chưa có văn bản gốc để `verification_status: "pending"`, lý do ghi trong `naming_history.verification_note`.
 - Mã QR dẫn tới `#site=…`, `#street=…`, `#station=…`; chỉ quét được khi website được đưa lên máy chủ (http/https).
 
 ---

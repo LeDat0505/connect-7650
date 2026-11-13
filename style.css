@@ -1645,6 +1645,47 @@ body {
   font-weight: 700;
 }
 
+/* Secondary (books, press) and reference (Wikipedia, blogs, map data) sources */
+.badge-status-secondary,
+.badge-status-reference {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.badge-status-secondary {
+  background: #DBEAFE;
+  color: #1E3A8A;
+}
+
+.badge-status-reference {
+  background: #E2E8F0;
+  color: #334155;
+}
+
+.verification-note {
+  margin-top: 6px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #78350F;
+  background: #FFFBEB;
+  border-left: 3px solid #D97706;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+
+.source-link {
+  font-size: 12px;
+  font-weight: 600;
+  color: #1D4ED8;
+  text-decoration: underline;
+}
+
 /* Animations */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(6px); }

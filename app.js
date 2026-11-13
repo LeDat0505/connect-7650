@@ -483,52 +483,52 @@ const STREET_NAMING_ERAS = {
   street_vo_thi_sau: [
     { era: 'Thời Pháp thuộc', name: 'Rue Mayer', note: 'Đặt theo tên một bác sĩ người Pháp' },
     { era: 'Giai đoạn 1955 – 1975', name: 'Đường Hiền Vương', note: 'Tên hiệu chúa Nguyễn Phúc Chu' },
-    { era: 'Từ 1985 – Nay', name: 'Đường Võ Thị Sáu', note: 'UBND TP.HCM đổi tên ngày 04/04/1985' }
+    { era: 'Sau 1975 – Nay', name: 'Đường Võ Thị Sáu', note: 'Thời điểm đổi tên (1975 hay 04/04/1985) đang đối chiếu văn bản gốc' }
   ],
   street_nam_ky_khoi_nghia: [
     { era: 'Thời Pháp thuộc', name: 'Rue Mac-Mahon', note: 'Tên Thống chế Pháp Patrice de Mac-Mahon' },
     { era: 'Giai đoạn 1955 – 1975', name: 'Đường Công Lý', note: 'Đại lộ ngoại giao từ sân bay Tân Sơn Nhất' },
-    { era: 'Từ 1975 – Nay', name: 'Đường Nam Kỳ Khởi Nghĩa', note: 'Quyết định 142/QĐ-UB ngày 14/08/1975' }
+    { era: 'Từ 1975 – Nay', name: 'Đường Nam Kỳ Khởi Nghĩa', note: 'Quyết định 142/QĐ-UB ngày 14/08/1975 (Ủy ban Quân quản Thành phố Sài Gòn - Gia Định)' }
   ],
   street_cach_mang_thang_tam: [
     { era: 'Thời Pháp thuộc', name: 'Rue de Verdun', note: 'Kỷ niệm địa danh chiến trận Verdun' },
     { era: 'Giai đoạn 1955 – 1975', name: 'Đường Lê Văn Duyệt', note: 'Tên Tả quân Lê Văn Duyệt' },
-    { era: 'Từ 1975 – Nay', name: 'Đường Cách Mạng Tháng Tám', note: 'Quyết định UBND ngày 14/08/1975' }
+    { era: 'Từ 1975 – Nay', name: 'Đường Cách Mạng Tháng Tám', note: 'Đổi tên năm 1975 – đang đối chiếu số văn bản' }
   ],
   street_ba_huyen_thanh_quan: [
     { era: 'Thời Pháp thuộc', name: 'Rue Rousseau', note: 'Tên nhà triết học Jean-Jacques Rousseau' },
     { era: 'Giai đoạn 1955 – 1985', name: 'Đường Trần Quý Cáp', note: 'Chí sĩ phong trào Duy Tân' },
-    { era: 'Từ 1985 – Nay', name: 'Đường Bà Huyện Thanh Quan', note: 'UBND TP.HCM đổi tên ngày 04/04/1985' }
+    { era: 'Từ 1985 – Nay', name: 'Đường Bà Huyện Thanh Quan', note: 'Dữ liệu ghi 04/04/1985 – đang đối chiếu văn bản gốc' }
   ],
   street_ly_chinh_thang: [
     { era: 'Thời Pháp thuộc', name: 'Rue Paul Blanchy', note: 'Thị trưởng đầu tiên của Sài Gòn' },
     { era: 'Giai đoạn 1955 – 1975', name: 'Đường Yên Đổ', note: 'Bút hiệu của cụ Nguyễn Khuyến' },
-    { era: 'Từ 1975 – Nay', name: 'Đường Lý Chính Thắng', note: 'Quyết định 142/QĐ-UB ngày 14/08/1975' }
+    { era: 'Từ 1975 – Nay', name: 'Đường Lý Chính Thắng', note: 'Đổi tên năm 1975 – đang đối chiếu số văn bản' }
   ],
   street_vo_van_tan: [
     { era: 'Thời Pháp thuộc', name: 'Rue Testard', note: 'Sĩ quan hải quân Pháp' },
     { era: 'Giai đoạn 1955 – 1975', name: 'Đường Trần Quý Cáp', note: 'Đoạn trung tâm Đô thành Sài Gòn' },
-    { era: 'Từ 1975 – Nay', name: 'Đường Võ Văn Tần', note: 'Quyết định UBND ngày 14/08/1975' }
+    { era: 'Từ 1975 – Nay', name: 'Đường Võ Văn Tần', note: 'Đổi tên năm 1975 – đang đối chiếu số văn bản' }
   ],
   street_tran_quoc_thao: [
     { era: 'Thời Pháp thuộc', name: 'Rue Larclauze', note: 'Đặt thời chính quyền thuộc địa' },
     { era: 'Giai đoạn 1955 – 1985', name: 'Đường Trương Minh Ký', note: 'Học giả, nhà báo thời kỳ đầu' },
-    { era: 'Từ 1985 – Nay', name: 'Đường Trần Quốc Thảo', note: 'UBND TP.HCM đổi tên ngày 04/04/1985' }
+    { era: 'Từ 1985 – Nay', name: 'Đường Trần Quốc Thảo', note: 'Dữ liệu ghi 04/04/1985 – đang đối chiếu văn bản gốc' }
   ],
   street_nguyen_thi_minh_khai: [
     { era: 'Thời Pháp thuộc', name: 'Rue Chasseloup-Laubat', note: 'Bộ trưởng Thuộc địa Pháp' },
     { era: 'Giai đoạn 1955 – 1975', name: 'Đường Hồng Thập Tự', note: 'Tên Hội Chữ thập đỏ' },
-    { era: 'Từ 1975 – Nay', name: 'Đường Nguyễn Thị Minh Khai', note: 'Đổi từ đường Xô Viết Nghệ Tĩnh' }
+    { era: 'Từ 1975 – Nay', name: 'Đường Nguyễn Thị Minh Khai', note: 'Đổi tên năm 1975 – đang đối chiếu số văn bản' }
   ],
   street_pham_ngoc_thach: [
     { era: 'Thời Pháp thuộc', name: 'Rue Catinat kéo dài', note: 'Trục nối từ Nhà thờ Đức Bà' },
     { era: 'Giai đoạn 1955 – 1985', name: 'Đường Duy Tân', note: 'Vị vua yêu nước (vòng xoay Hồ Con Rùa)' },
-    { era: 'Từ 1985 – Nay', name: 'Đường Phạm Ngọc Thạch', note: 'UBND TP.HCM đổi tên ngày 04/04/1985' }
+    { era: 'Từ 1985 – Nay', name: 'Đường Phạm Ngọc Thạch', note: 'Dữ liệu ghi 04/04/1985 – đang đối chiếu văn bản gốc' }
   ],
   street_nguyen_dinh_chieu: [
     { era: 'Thời Pháp thuộc', name: 'Rue Legrand-de-la-Liraye', note: 'Học giả, nhà truyền giáo' },
     { era: 'Giai đoạn 1955 – 1975', name: 'Đường Phan Thanh Giản', note: 'Đại thần triều Nguyễn' },
-    { era: 'Từ 1975 – Nay', name: 'Đường Nguyễn Đình Chiểu', note: 'Quyết định UBND ngày 14/08/1975' }
+    { era: 'Từ 1975 – Nay', name: 'Đường Nguyễn Đình Chiểu', note: 'Đổi tên năm 1975 – đang đối chiếu số văn bản' }
   ],
   street_le_quy_don: [
     { era: 'Thời Pháp thuộc', name: 'Rue Barbé', note: 'Đại úy quân viễn chinh Pháp' },
@@ -538,7 +538,7 @@ const STREET_NAMING_ERAS = {
   street_truong_dinh: [
     { era: 'Thời Pháp thuộc', name: 'Rue Larégnère', note: 'Tên sĩ quan Pháp' },
     { era: 'Giai đoạn 1955 – 1975', name: 'Đường Trương Công Định', note: 'Thủ lĩnh kháng Pháp Nam Kỳ' },
-    { era: 'Từ 1975 – Nay', name: 'Đường Trương Định', note: 'Chuẩn hóa tên gọi danh tướng' }
+    { era: 'Từ 1975 – Nay', name: 'Đường Trương Định', note: 'Đổi tên năm 1975 – đang đối chiếu số văn bản' }
   ],
   street_hai_ba_trung: [
     { era: 'Thời Pháp thuộc', name: 'Rue Paul Blanchy', note: 'Khu vực chợ Tân Định' },
@@ -553,7 +553,7 @@ const STREET_NAMING_ERAS = {
   street_nguyen_thi_dieu: [
     { era: 'Thời Pháp thuộc', name: 'Đường quy hoạch khu Tây', note: 'Khu biệt thự cổ điển Quận 3' },
     { era: 'Giai đoạn 1955 – 1985', name: 'Đường Trần Trung Lập', note: 'Tên thời Đô thành Sài Gòn' },
-    { era: 'Từ 1985 – Nay', name: 'Đường Nguyễn Thị Diệu', note: 'UBND TP.HCM đổi tên ngày 04/04/1985' }
+    { era: 'Từ 1985 – Nay', name: 'Đường Nguyễn Thị Diệu', note: 'Dữ liệu ghi 04/04/1985 – đang đối chiếu văn bản gốc' }
   ]
 };
 
@@ -799,8 +799,9 @@ function openQrHeritageCard(itemId, type = 'street') {
     if (signWard) signWard.innerText = `${wards || 'TP. HỒ CHÍ MINH'} • TP.HCM`;
     if (signName) signName.innerText = `ĐƯỜNG ${item.name.toUpperCase()}`;
     if (signDesc) signDesc.innerText = item.significance || 'Tuyến đường lịch sử văn hóa tiêu biểu TP.HCM';
-    if (signDecision) signDecision.innerText = item.naming_history && item.naming_history.year
-      ? `Đặt tên: năm ${item.naming_history.year}`
+    const nh = item.naming_history || {};
+    if (signDecision) signDecision.innerText = nh.year
+      ? `Đặt tên: năm ${nh.year}${item.verification_status === 'verified' ? '' : ' (đang đối chiếu văn bản)'}`
       : 'Thời điểm đặt tên: đang đối chiếu tư liệu';
   } else if (type === 'station') {
     if (signWard) signWard.innerText = `${getMetroLine().short_name.toUpperCase()} • ${String(item.area || '').toUpperCase()}`;
@@ -973,6 +974,7 @@ function selectStreet(streetId, shouldFlyTo = true) {
         <p style="margin-bottom:6px;"><strong>Tên gọi trước đây:</strong> ${street.naming_history.previous_names}</p>
         <p style="margin-bottom:6px;"><strong>Quyết định đặt tên:</strong> ${street.naming_history.decision}</p>
         <div style="margin-top:6px;">${verifiedBadge}</div>
+        ${street.naming_history.verification_note ? `<p class="verification-note">${escapeHtml(street.naming_history.verification_note)}</p>` : ''}
       </div>
       
       <!-- Sơ đồ quá khứ tên đường qua các thời kỳ -->
@@ -2205,7 +2207,7 @@ const QUIZ_QUESTIONS = [
       { key: 'C', text: 'Đường Công Lý' }
     ],
     correct: 'A',
-    explanation: 'Chính xác! Trước năm 1975, đường mang tên Hiền Vương. Đến ngày 04/04/1985, UBND TP.HCM chính thức đổi tên thành đường Võ Thị Sáu để tưởng nhớ người nữ anh hùng Đất Đỏ kiên trung.'
+    explanation: 'Chính xác! Trước năm 1975, đường mang tên Hiền Vương; sau đó được đổi tên thành đường Võ Thị Sáu để tưởng nhớ người nữ anh hùng Đất Đỏ kiên trung. Thời điểm đổi tên (đợt 1975 hay ngày 04/04/1985) đang được đối chiếu với văn bản gốc.'
   },
   {
     question: 'Ngày nào Quốc hội chính thức quyết định đổi tên Sài Gòn – Gia Định thành Thành phố Hồ Chí Minh?',
@@ -2939,7 +2941,8 @@ function describeEntity(entity) {
       d.biography_summary ? `• <strong>Nhân vật / sự kiện</strong>: ${escapeHtml(d.biography_summary)}` : '',
       milestones.length ? `• <strong>Mốc tiêu biểu</strong>:<br>${milestones.join('<br>')}` : '',
       along.length ? `• <strong>Địa điểm dọc tuyến</strong>: ${escapeHtml(along.join(', '))}` : '',
-      `• <strong>Tình trạng tư liệu</strong>: ${d.verification_status === 'verified' ? 'đã đối chiếu nguồn' : 'đang đối chiếu tài liệu'}${(d.sources || []).length ? ` — nguồn: ${escapeHtml(d.sources.join('; '))}` : ''}`
+      `• <strong>Tình trạng tư liệu</strong>: ${d.verification_status === 'verified' ? 'đã đối chiếu nguồn' : 'đang đối chiếu tài liệu'}${(d.sources || []).length ? ` — nguồn: ${escapeHtml(d.sources.join('; '))}` : ''}`,
+      nh.verification_note ? `• <strong>Ghi chú đối chiếu</strong>: ${escapeHtml(nh.verification_note)}` : ''
     ];
     return { html: lines.filter(Boolean).join('<br>'), actions: [viewBtn, nearbyBtn] };
   }
@@ -3281,7 +3284,7 @@ function processChat(rawQuery) {
   if (hasPhrase(q, '1985')) {
     const list = window.CONNECT_DATA.streets.filter(s => s.naming_history && s.naming_history.year === 1985);
     return {
-      html: `📜 Theo dữ liệu dự án, các tuyến đường được đặt tên theo quyết định năm 1985:<br>${list.map(s => `• Đường <strong>${escapeHtml(s.name)}</strong> (trước đây: ${escapeHtml(s.naming_history.previous_names)})`).join('<br>')}`
+      html: `📜 Theo dữ liệu dự án, các tuyến đường được ghi đặt tên theo quyết định năm 1985:<br>${list.map(s => `• Đường <strong>${escapeHtml(s.name)}</strong> (trước đây: ${escapeHtml(s.naming_history.previous_names)})${s.verification_status === 'verified' ? '' : ' — <em>đang đối chiếu văn bản gốc</em>'}`).join('<br>')}`
     };
   }
 
@@ -3507,7 +3510,7 @@ function renderArchiveGrid(filterText = '') {
           <div class="archive-card-body">${s.significance}</div>
         </div>
         <div class="archive-card-actions">
-          <span style="font-size:12px; color:#64748B;">Năm đặt tên: ${s.naming_history.year}</span>
+          <span style="font-size:12px; color:#64748B;">Năm đặt tên: ${s.naming_history.year || 'đang đối chiếu'}${s.naming_history.year && s.verification_status !== 'verified' ? ' (đang đối chiếu)' : ''}</span>
           <button class="btn-card-action" onclick="switchTab('map'); selectStreet('${s.id}', true)">
             Xem trên bản đồ ➔
           </button>
@@ -3590,20 +3593,41 @@ function renderSourcesTab() {
   const tbody = document.getElementById('sources-table-body');
   const sources = window.CONNECT_DATA.sources_catalog;
 
-  tbody.innerHTML = sources.map(src => `
+  tbody.innerHTML = sources.map(src => {
+    const badge = sourceStatusBadge(src);
+    const link = /^https?:\/\//i.test(src.url || '')
+      ? `<div style="margin-top:4px;"><a class="source-link" href="${escapeHtml(src.url)}" target="_blank" rel="noopener noreferrer">Mở nguồn ↗</a></div>`
+      : '';
+    const note = src.verification_note
+      ? `<div class="verification-note">${escapeHtml(src.verification_note)}</div>`
+      : '';
+    return `
     <tr>
       <td>
-        <strong style="color:#0F172A;">${src.title}</strong>
-        <div style="font-size:12px; color:#64748B; margin-top:4px;">${src.notes}</div>
+        <strong style="color:#0F172A;">${escapeHtml(src.title)}</strong>
+        <div style="font-size:12px; color:#64748B; margin-top:4px;">${escapeHtml(src.notes)}</div>
+        ${note}${link}
       </td>
-      <td>${src.date}</td>
-      <td>${src.type}</td>
-      <td>${src.archive}</td>
-      <td>${src.status === 'verified'
-        ? '<span class="badge-status-verified">✓ Đã kiểm chứng</span>'
-        : '<span class="badge-status-pending">⚠ Đang đối chiếu</span>'}</td>
-    </tr>
-  `).join('');
+      <td>${escapeHtml(src.date)}</td>
+      <td>${escapeHtml(src.type)}</td>
+      <td>${escapeHtml(src.archive)}</td>
+      <td>${badge}</td>
+    </tr>`;
+  }).join('');
+}
+
+// Only a primary document with number + date may carry "Đã kiểm chứng"
+function sourceStatusBadge(src) {
+  if (src.status === 'verified' && src.source_type === 'primary') {
+    return '<span class="badge-status-verified">✓ Đã kiểm chứng</span>';
+  }
+  if (src.source_type === 'secondary') {
+    return '<span class="badge-status-secondary">Nguồn thứ cấp</span>';
+  }
+  if (src.source_type === 'reference') {
+    return '<span class="badge-status-reference">Nguồn tham khảo</span>';
+  }
+  return '<span class="badge-status-pending">⚠ Đang đối chiếu</span>';
 }
 
 // ============================================================================
