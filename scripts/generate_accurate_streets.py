@@ -3,9 +3,10 @@ import json
 import math
 import os
 
-OSM_FILE = r'C:\Users\Ken\.gemini\antigravity\scratch\connect-7650\osm_ways.json'
-STREETS_JSON = r'C:\Users\Ken\.gemini\antigravity\scratch\connect-7650\data\streets.json'
-HIST_JS = r'C:\Users\Ken\.gemini\antigravity\scratch\connect-7650\data\historical_data.js'
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # thư mục gốc repo (scripts/..)
+OSM_FILE = os.path.join(ROOT, 'osm_ways.json')
+STREETS_JSON = os.path.join(ROOT, 'data', 'streets.json')
+HIST_JS = os.path.join(ROOT, 'data', 'historical_data.js')
 
 with open(OSM_FILE, 'r', encoding='utf-8') as f:
     osm_ways = json.load(f)

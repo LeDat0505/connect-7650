@@ -4,7 +4,7 @@ Tải dữ liệu địa lý gốc từ OpenStreetMap (Overpass API) phục vụ
   - Ranh giới 7 phường thuộc Quận 1 & Quận 3 cũ (sau sắp xếp 01/07/2025) để cắt đúng phạm vi tuyến đường
   - Hình học các tuyến đường trung tâm
   - Tuyến Metro số 1 Bến Thành – Suối Tiên (relation OSM 11919223) và 14 nhà ga
-Kết quả lưu vào osm_expansion.json, sau đó chạy update_connect_data.py để cập nhật data/historical_data.js.
+Kết quả lưu vào osm_expansion.json, sau đó chạy scripts/update_connect_data.py để cập nhật data/historical_data.js.
 """
 import json
 import os
@@ -12,7 +12,7 @@ import time
 import urllib.parse
 import urllib.request
 
-ROOT = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # thư mục gốc repo (scripts/..)
 OUT_FILE = os.path.join(ROOT, 'osm_expansion.json')
 ENDPOINTS = ['https://overpass-api.de/api/interpreter', 'https://overpass.private.coffee/api/interpreter']
 

@@ -41,7 +41,7 @@ Website được xây dựng đúng theo quy chuẩn tài liệu hướng dẫn 
    - Nút liên kết trực tiếp sang vị trí tuyến đường trên bản đồ.
 
 3. **TAB 03 — KHO NỘI DUNG LỊCH SỬ**
-   - Thư viện số hóa phân loại: *15 Tuyến đường tiêu biểu*, *12 Hồ sơ nhân vật*, *8 Địa chỉ đỏ di sản*.
+   - Thư viện số hóa phân loại: tuyến đường, hồ sơ nhân vật, địa điểm, ga Metro số 1 (số lượng hiển thị trên từng tab, lấy trực tiếp từ dữ liệu; chạy `node scripts/check_data.js` để in số liệu hiện tại).
    - Tìm kiếm nhanh tức thì và liên kết hai chiều với bản đồ.
 
 4. **TAB 04 — GIỚI THIỆU DỰ ÁN**
@@ -53,8 +53,8 @@ Website được xây dựng đúng theo quy chuẩn tài liệu hướng dẫn 
    - Ứng dụng trên web và tài liệu giáo dục, truyền thông (infographic, mã QR).
 
 6. **TAB 06 — NGUỒN TƯ LIỆU & KIỂM CHỨNG**
-   - Danh mục trích dẫn văn bản quy phạm pháp luật (Quyết định 142/QĐ-UB năm 1975, Quyết định năm 1985 của UBND TP.HCM, Nghị quyết Quốc hội khóa VI...).
-   - Nguyên tắc gắn nhãn minh bạch: *Đã xác minh* và *Đang đối chiếu tài liệu*.
+   - Danh mục nguồn: văn bản pháp quy và hồ sơ lưu trữ, sách báo nghiên cứu, nguồn tham khảo (Wikipedia, OpenStreetMap...).
+   - Nhãn minh bạch theo mức kiểm chứng: *Đã kiểm chứng* (chỉ văn bản gốc có số hiệu và ngày), *Nguồn thứ cấp*, *Nguồn tham khảo*, *Đang đối chiếu*.
 
 7. **TRỢ LÝ CHATBOT LỊCH SỬ ("HỎI CHUYỆN SÀI GÒN")**
    - Chạy hoàn toàn trên trình duyệt, chỉ trả lời từ `data/historical_data.js` (không gọi API AI bên ngoài, không có API key).
@@ -68,12 +68,24 @@ Website được xây dựng đúng theo quy chuẩn tài liệu hướng dẫn 
    - Tuyến đường: hình học OpenStreetMap, chỉ giữ đoạn trong 7 phường thuộc Quận 1 & Quận 3 cũ; lọc theo nhóm trục.
    - Metro số 1 Bến Thành – Suối Tiên (đang khai thác) với 14 nhà ga; bật/tắt từng lớp và chú giải trong nút 🗺️.
 
+## 🗂️ Cấu trúc thư mục
+
+| Đường dẫn | Nội dung |
+|---|---|
+| `index.html`, `app.js`, `style.css` | Website (HTML/CSS/JS thuần, không có bước build) |
+| `data/historical_data.js` | **Nguồn dữ liệu duy nhất website nạp** (`window.CONNECT_DATA`) |
+| `data/about.js` | Nội dung tab Giới thiệu (`window.CONNECT_ABOUT`) |
+| `data/*.json` (`streets`, `heritage_sites`, `figures`, `timeline`, `sources`, `metro`) | **Bản xuất phụ** do `scripts/update_connect_data.py` ghi ra để tra cứu; website **không** nạp các file này – muốn sửa dữ liệu hãy sửa `historical_data.js` |
+| `vendor/` | Thư viện tự host: Leaflet 1.9.4, qrcode-generator 1.4.4 |
+| `scripts/` | Script kiểm tra và cập nhật dữ liệu (Node / Python) |
+
 ## 🗂️ Cập nhật dữ liệu
 
-- Danh sách thành viên nhóm: sửa `project.team.members` trong `data/historical_data.js` (hoặc trong `update_connect_data.py` rồi chạy lại).
-- `fetch_osm_expansion.py` tải ranh giới phường, hình học đường và tuyến Metro từ OpenStreetMap → `osm_expansion.json`.
-- `update_connect_data.py` áp dụng địa chỉ mới, địa điểm, tuyến đường, Metro vào `data/historical_data.js` (chạy lại không tạo bản ghi trùng).
-- ⚠️ Không chạy lại `generate_data.py` (script khởi tạo cũ) vì sẽ ghi đè dữ liệu đã cập nhật.
+- Danh sách thành viên nhóm: sửa `project.team.members` trong `data/historical_data.js` (hoặc trong `scripts/update_connect_data.py` rồi chạy lại).
+- `python scripts/fetch_osm_expansion.py` tải ranh giới phường, hình học đường và tuyến Metro từ OpenStreetMap → `osm_expansion.json` (ở thư mục gốc, không đưa lên git).
+- `python scripts/update_connect_data.py` áp dụng địa chỉ mới, địa điểm, tuyến đường, Metro vào `data/historical_data.js` (chạy lại không tạo bản ghi trùng và giữ nguyên trạng thái kiểm chứng đã sửa).
+- ⚠️ Không chạy lại `scripts/generate_data.py` (script khởi tạo cũ) vì sẽ ghi đè dữ liệu đã cập nhật. `scripts/fetch_all_streets.py`, `scripts/fetch_real_streets.py`, `scripts/generate_accurate_streets.py` cũng là script cũ, chỉ giữ để tham khảo.
+- Trường `image_url` của địa điểm chỉ dùng ảnh đúng đối tượng (Wikimedia); hiện website chưa hiển thị ảnh. Khi hiển thị cần bổ sung `image_credit` (tác giả + giấy phép).
 - ✅ Sau mỗi lần sửa dữ liệu, chạy `node scripts/check_data.js` (không cần cài thêm gì). Script in số liệu hiện tại và báo lỗi khi: quyết định ghi "UBND TP.HCM" kèm năm trước 1976; mục gắn "đã xác minh" mà không có nguồn; nguồn gắn `status: "verified"` mà không phải nguồn gốc (`source_type: "primary"`); trùng `id`.
 - Mỗi nguồn trong `sources_catalog` có `source_type`: `primary` (văn bản pháp quy, hồ sơ lưu trữ gốc), `secondary` (sách, báo, nghiên cứu), `reference` (Wikipedia, blog, OSM). Chỉ nguồn `primary` có số hiệu và ngày rõ ràng mới được gắn `status: "verified"`. Trường `url` để trống cho tới khi có đường dẫn thật.
 - Tuyến đường chưa có văn bản gốc để `verification_status: "pending"`, lý do ghi trong `naming_history.verification_note`.
@@ -91,10 +103,9 @@ Website được thiết kế hoàn toàn tĩnh, không phụ thuộc backend ph
 ### Cách 1: Chạy bằng Python (Khuyến nghị)
 Mở terminal trong thư mục dự án và chạy:
 ```bash
-cd "C:\Users\Ken\.gemini\antigravity\scratch\connect-7650"
 python -m http.server 3000
 ```
 Sau đó truy cập trình duyệt tại địa chỉ: `http://localhost:3000`
 
 ### Cách 2: Mở trực tiếp
-Bạn có thể nhấp đúp trực tiếp vào tệp `index.html` trong thư mục dự án để mở ngay trên trình duyệt (Chrome, Edge, Firefox...).
+Bạn có thể nhấp đúp trực tiếp vào tệp `index.html` để xem nhanh; khi mở kiểu này mã QR không quét được trên điện thoại (cần http/https).

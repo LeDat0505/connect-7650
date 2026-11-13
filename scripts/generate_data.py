@@ -9,7 +9,7 @@ Use update_connect_data.py instead.
 import json
 import os
 
-PROJECT_DIR = r"C:\Users\Ken\.gemini\antigravity\scratch\connect-7650"
+PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # thư mục gốc repo (scripts/..)
 DATA_DIR = os.path.join(PROJECT_DIR, "data")
 os.makedirs(DATA_DIR, exist_ok=True)
 
@@ -507,7 +507,7 @@ heritage_sites = [
         "category": "monument",
         "address": "185 Cách Mạng Tháng Tám (ngã tư Nguyễn Đình Chiểu), Q.3, TP.HCM",
         "coordinates": [10.7758, 106.6865],
-        "image_url": "https://images.unsplash.com/photo-1548625361-125032598822?w=600&auto=format&fit=crop",
+        "image_url": "",
         "history": "Được xây dựng ngay tại vị trí Hòa thượng Thích Quảng Đức thực hiện cuộc tự thiêu lịch sử vào ngày 11/06/1963 nhằm phản đối chính sách đàn áp Phật giáo của chính quyền Ngô Đình Diệm, làm chấn động lương tri toàn cầu.",
         "highlights": "Tượng đài Bồ tát bằng đồng nguyên khối cao 6m và cụm phù điêu khắc họa ngọn lửa từ bi bất diệt cùng quả tim bất diệt.",
         "opening_hours": "Mở cửa tự do toàn thời gian",
@@ -533,7 +533,7 @@ heritage_sites = [
         "category": "relic",
         "address": "287/70 Nguyễn Đình Chiểu, Phường 5, Quận 3, TP.HCM",
         "coordinates": [10.7750, 106.6828],
-        "image_url": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&auto=format&fit=crop",
+        "image_url": "",
         "history": "Di tích lịch sử - văn hóa quốc gia. Nơi chiến sĩ biệt động Trần Văn Lai (Năm Lai) đào hầm bí mật ngay giữa trung tâm đô thị Sài Gòn, cất giấu gần 3 tấn vũ khí các loại phục vụ trực tiếp trận đánh cảm tử vào Dinh Độc Lập Tết Mậu Thân 1968.",
         "highlights": "Căn hầm nguyên bản dưới sàn nhà, nắp hầm tinh xảo bằng gỗ, hệ thống tủ giấu lối thoát hiểm và các phương tiện vũ khí còn nguyên vẹn.",
         "opening_hours": "08:00 - 16:30 (Thứ Ba đến Chủ Nhật)",
@@ -572,7 +572,7 @@ heritage_sites = [
         "category": "relic",
         "address": "110 Nguyễn Thị Minh Khai (góc Lê Quý Đôn), Quận 3, TP.HCM",
         "coordinates": [10.7780, 106.6935],
-        "image_url": "https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?w=600&auto=format&fit=crop",
+        "image_url": "",
         "history": "Được thành lập từ năm 1874 (tên thời Pháp là Collège Chasseloup-Laubat), là trường trung học đầu tiên và cổ kính nhất của Sài Gòn. Nơi đào tạo nhiều thế hệ danh nhân yêu nước lỗi lạc.",
         "highlights": "Quần thể kiến trúc cổ điển Pháp với các dãy nhà ngói đỏ, hành lang vòm và vườn cây cổ thụ di sản.",
         "opening_hours": "Giờ hành chính & tham quan theo quy định trường",

@@ -25,7 +25,8 @@ res_json = json.loads(resp.read().decode("utf-8"))
 elements = res_json.get("elements", [])
 print(f"Received {len(elements)} way elements from Overpass!")
 
-out_path = r"C:\Users\Ken\.gemini\antigravity\scratch\connect-7650\osm_ways.json"
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # thư mục gốc repo (scripts/..)
+out_path = os.path.join(ROOT, "osm_ways.json")
 with open(out_path, "w", encoding="utf-8") as f:
     json.dump(elements, f, ensure_ascii=False, indent=2)
 

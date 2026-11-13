@@ -8,14 +8,14 @@ Cập nhật data/historical_data.js theo yêu cầu chỉnh sửa CONNECT 7650 
   5. Lớp đường phố: cắt theo ranh giới 7 phường thuộc Quận 1 & Quận 3 cũ, bổ sung 11 tuyến trung tâm
   6. Lớp Metro số 1 Bến Thành – Suối Tiên với 14 nhà ga
 
-Chạy fetch_osm_expansion.py trước để có osm_expansion.json. Script chạy lại nhiều lần không tạo bản ghi trùng.
-LƯU Ý: generate_data.py là script khởi tạo cũ, KHÔNG chạy lại vì sẽ ghi đè dữ liệu đã cập nhật.
+Chạy scripts/fetch_osm_expansion.py trước để có osm_expansion.json. Script chạy lại nhiều lần không tạo bản ghi trùng.
+LƯU Ý: scripts/generate_data.py là script khởi tạo cũ, KHÔNG chạy lại vì sẽ ghi đè dữ liệu đã cập nhật.
 """
 import json
 import math
 import os
 
-ROOT = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # thư mục gốc repo (scripts/..)
 DATA_DIR = os.path.join(ROOT, 'data')
 HIST_JS = os.path.join(DATA_DIR, 'historical_data.js')
 OSM_FILE = os.path.join(ROOT, 'osm_expansion.json')

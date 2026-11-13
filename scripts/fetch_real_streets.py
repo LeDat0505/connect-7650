@@ -2,6 +2,7 @@
 import urllib.request
 import urllib.parse
 import json
+import os
 import time
 
 # District 3 & central Saigon bounding box: [min_lat, min_lon, max_lat, max_lon]
@@ -56,6 +57,7 @@ if __name__ == "__main__":
         results[sid] = elems
         time.sleep(1) # respectful pause
     
-    with open("raw_street_elements.json", "w", encoding="utf-8") as f:
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))  # thư mục gốc repo (scripts/..)
+    with open(os.path.join(root, "raw_street_elements.json"), "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
     print("Done!")
