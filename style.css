@@ -198,38 +198,6 @@ body {
   gap: 10px;
 }
 
-.btn-header-action {
-  background: #F1F5F9;
-  border: 1px solid var(--saigon-border);
-  padding: 8px 14px;
-  border-radius: var(--radius-md);
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--saigon-slate);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  transition: all 0.2s;
-}
-
-.btn-header-action:hover {
-  background: #E2E8F0;
-  border-color: #CBD5E1;
-}
-
-.btn-header-action.btn-chatbot-toggle {
-  background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
-  color: #FEF08A;
-  border-color: #334155;
-  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.25);
-}
-
-.btn-header-action.btn-chatbot-toggle:hover {
-  background: linear-gradient(135deg, #334155 0%, #1E293B 100%);
-  color: #FFFFFF;
-}
-
 /* Main Viewport Container */
 .main-content-area {
   flex: 1;
@@ -710,10 +678,6 @@ body {
   white-space: nowrap;
 }
 
-.drawer-badge.badge-verified {
-  background: #059669;
-}
-
 .drawer-title {
   font-size: 1.18rem;
   font-weight: 800;
@@ -905,21 +869,6 @@ body {
   0% { box-shadow: 0 0 0 0 rgba(179, 29, 29, 0.6); }
   70% { box-shadow: 0 0 0 12px rgba(179, 29, 29, 0); }
   100% { box-shadow: 0 0 0 0 rgba(179, 29, 29, 0); }
-}
-
-/* API-free reassurance badge on map */
-.map-api-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  font-size: 0.72rem;
-  color: #065F46;
-  background: #D1FAE5;
-  border: 1px solid #A7F3D0;
-  padding: 3px 8px;
-  border-radius: 999px;
-  font-weight: 600;
-  margin-top: 6px;
 }
 
 .chat-header {
@@ -3545,27 +3494,6 @@ body {
   font-size: 0.9rem;
 }
 
-.team-members-label {
-  font-weight: 700;
-  font-size: 0.85rem;
-  color: var(--saigon-muted);
-  margin-bottom: 8px;
-}
-
-
-
-
-
-
-
-
-
-.ward-meaning-sources {
-  font-size: 0.78rem;
-  color: var(--saigon-muted);
-  margin-top: 12px;
-}
-
 @media (max-width: 768px) {
   .team-info-list div {
     grid-template-columns: 1fr;
@@ -3576,8 +3504,6 @@ body {
     max-height: 55vh;
   }
 }
-
-
 
 /* ==========================================================
    MOBILE & TABLET OPTIMISATION (phones, iPad, touch screens)
@@ -3843,12 +3769,6 @@ body,
    ABOUT TAB: "Về chúng tôi" (idea, team, tools, feedback)
    ========================================================== */
 
-
-
-
-
-
-
 .about-idea-section,
 .about-tools-section,
 .about-feedback-section {
@@ -3952,14 +3872,6 @@ body,
   text-align: center;
   font-style: italic;
 }
-
-
-
-
-
-
-
-
 
 /* Our Team – member cards */
 .team-section-subtitle {

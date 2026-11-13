@@ -18,12 +18,9 @@ let currentArchiveSubtab = 'streets';
 let currentDetailTarget = '';
 let currentDetailItem = null; // { type: 'street'|'site', data: ... }
 let isAudioPlaying = false;
-let currentUtterance = null;
 let currentTourIndex = 0;
-let isTourActive = false;
 let tourPolylineLayer = null;
 let currentQuizIndex = 0;
-let isQuizActive = false;
 let currentQrItem = null;
 
 // Tile Providers - 100% Free, NO API Key Required & Works on file:/// protocol
@@ -69,14 +66,6 @@ const PLACE_TYPES = {
   religious: { label: 'Công trình tôn giáo – tín ngưỡng', short: 'Tôn giáo', glyph: '🔔', group: 'landmark' },
   education: { label: 'Trường học lịch sử', short: 'Trường học', glyph: '🎓', group: 'landmark' },
   public_space: { label: 'Không gian công cộng', short: 'Công cộng', glyph: '🌳', group: 'public_space' }
-};
-
-const STREET_AXIS_LABELS = {
-  historic: 'Đường mang tên sự kiện lịch sử',
-  person: 'Đường mang tên danh nhân',
-  commercial: 'Trục thương mại',
-  cultural: 'Trục văn hóa',
-  transport: 'Trục giao thông'
 };
 
 function escapeHtml(str) {
@@ -464,20 +453,6 @@ function resetMapToXuanHoa() {
   });
 }
 
-// Toggle Floating Search & Filter Panel (Expand / Collapse)
-function toggleFloatingPanel(event) {
-  if (event && event.stopPropagation) {
-    event.stopPropagation();
-  }
-  const panel = document.getElementById('map-floating-panel');
-  const icon = document.getElementById('floating-panel-toggle-icon');
-  if (!panel) return;
-
-  const isCollapsed = panel.classList.toggle('collapsed');
-  if (icon) {
-    icon.innerHTML = isCollapsed ? 'Mở rộng ▼' : '▲ Thu gọn';
-  }
-}
 
 // ============================================================================
 
@@ -723,7 +698,6 @@ function stopAudioGuide() {
     window.speechSynthesis.cancel();
   }
   isAudioPlaying = false;
-  currentUtterance = null;
   setAudioButtonState(false);
 }
 
@@ -906,7 +880,6 @@ async function toggleAudioGuide() {
         showMapToast('Không phát được giọng đọc tiếng Việt trên thiết bị này. Thuyết minh đã dừng.', 5000);
       }
     };
-    currentUtterance = utterance;
     window.speechSynthesis.speak(utterance);
   };
   speakNext(0);
@@ -1750,7 +1723,6 @@ const GUIDED_TOUR_STATIONS = GUIDED_TOUR_PLAN.map(step => {
 function startGuidedTour() {
   clearActiveRoute();
   switchTab('map');
-  isTourActive = true;
   currentTourIndex = 0;
 
   if (tourPolylineLayer && mapInstance) {
@@ -1824,7 +1796,6 @@ function prevTourStation() {
 }
 
 function closeGuidedTour() {
-  isTourActive = false;
   if (tourPolylineLayer && mapInstance) {
     mapInstance.removeLayer(tourPolylineLayer);
     tourPolylineLayer = null;
@@ -1839,11 +1810,9 @@ function closeGuidedTour() {
 // ============================================================================
 // FEATURE: GEOLOCATION & REAL STREET ROUTING (OSRM FOOT API)
 // ============================================================================
-let userLocationCoords = null; // [lat, lng]
 let cachedUserLatLng = null; // Cached GPS coordinates to prevent repeated permission prompts
 let userLocationMarker = null;
 let routingLayerGroup = null; // Dedicated LayerGroup for all route polylines
-let currentRouteDestination = null;
 let activeRouteRequestId = 0; // Guard against race conditions in async routing
 
 // User Location Pin with radar ripple
@@ -1904,7 +1873,6 @@ function getUserLocation(callback, forceRefresh = false, onError = null) {
 }
 
 function setUserLocation(coords) {
-  userLocationCoords = coords;
   if (!mapInstance) return;
 
   if (userLocationMarker) {
@@ -2101,7 +2069,6 @@ async function drawRouteToDestination(userLatLng, destLatLng, destItem) {
   routingLayerGroup.clearLayers();
 
   const thisRequestId = ++activeRouteRequestId;
-  currentRouteDestination = destItem;
 
   // Apply map focus: highlight destination, dim out unrelated items
   applyRoutingMapFocus(destItem);
@@ -2304,7 +2271,6 @@ function clearActiveRoute() {
   if (routingLayerGroup) {
     routingLayerGroup.clearLayers();
   }
-  currentRouteDestination = null;
   const card = document.getElementById('route-summary-card');
   if (card) card.classList.add('hidden');
 
@@ -2447,7 +2413,6 @@ const QUIZ_QUESTIONS = [
 
 function startQuizMode() {
   openChatbot();
-  isQuizActive = true;
   currentQuizIndex = 0;
   
   const introMsg = 'Chào mừng bạn đến với <strong>Đố Vui Ký Ức Sài Gòn</strong>! 🎯<br>Hãy thử tài hiểu biết của mình về lịch sử tên đường, các mốc son 50 năm và địa chỉ đỏ thành phố qua các câu hỏi trắc nghiệm dưới đây:';
@@ -2539,7 +2504,6 @@ function nextQuizQuestion(index) {
 }
 
 function stopQuizMode() {
-  isQuizActive = false;
   appendChatMessage('Cảm ơn bạn đã tham gia <strong>Đố Vui Ký Ức Sài Gòn</strong>! Bạn có thể hỏi thêm bất cứ thông tin nào về các tuyến đường và di tích của thành phố.', 'bot');
 }
 
@@ -2611,11 +2575,6 @@ function toggleChatbot() {
   } else {
     closeChatbot();
   }
-}
-
-function openChatWithPrompt(promptText) {
-  openChatbot();
-  sendChatPrompt(promptText);
 }
 
 // ============================================================================
