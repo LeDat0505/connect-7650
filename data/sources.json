@@ -25,15 +25,15 @@
   },
   {
     "id": "src_qh_1976",
-    "title": "Nghị quyết Kỳ họp thứ nhất Quốc hội khóa VI nước Cộng hòa Xã hội Chủ nghĩa Việt Nam",
+    "title": "Nghị quyết về việc chính thức đặt tên thành phố Sài Gòn - Gia Định là thành phố Hồ Chí Minh (Quốc hội khóa VI, kỳ họp thứ nhất)",
     "date": "02/07/1976",
     "type": "Nghị quyết Quốc hội",
     "archive": "Cổng thông tin Quốc hội Việt Nam & Bảo tàng Lịch sử Quốc gia",
-    "notes": "Chính thức đổi tên thành phố Sài Gòn - Gia Định thành Thành phố Hồ Chí Minh.",
-    "status": "pending",
+    "notes": "Văn bản không số, Quốc hội ban hành ngày 02/07/1976, Chủ tịch Ủy ban Thường vụ Quốc hội Trường Chinh ký. Nội dung: \"Chính thức đặt tên thành phố Sài Gòn - Gia Định là thành phố Hồ Chí Minh.\"",
+    "status": "verified",
     "source_type": "primary",
-    "url": "",
-    "verification_note": "Cần bổ sung số hiệu văn bản trước khi gắn \"Đã kiểm chứng\"."
+    "url": "https://hethongphapluat.com/nghi-quyet-ve-chinh-thuc-dat-ten-thanh-pho-sai-gon-gia-dinh-la-thanh-pho-ho-chi-minh-do-quoc-hoi-ban-hanh.html",
+    "verification_note": "Đối chiếu 13/11/2026 qua cơ sở dữ liệu văn bản pháp luật (hethongphapluat.com): xác nhận tên, ngày và người ký; văn bản không có số hiệu."
   },
   {
     "id": "src_dia_chi_tphcm",
@@ -60,14 +60,14 @@
   {
     "id": "src_unesco_ndc",
     "title": "Nghị quyết 41 C/Resolution 15 của Đại hội đồng UNESCO vinh danh Nguyễn Đình Chiểu",
-    "date": "11/2021",
+    "date": "23/11/2021",
     "type": "Hồ sơ quốc tế",
     "archive": "UNESCO Paris & Bộ Ngoại giao Việt Nam",
-    "notes": "Công nhận Danh nhân Văn hóa Thế giới đối với nhà thơ, nhà văn hóa yêu nước Nguyễn Đình Chiểu.",
+    "notes": "Kỳ họp thứ 41 Đại hội đồng UNESCO (Paris) ngày 23/11/2021 thông qua việc cùng Việt Nam kỷ niệm 200 năm ngày sinh Nguyễn Đình Chiểu và 250 năm ngày sinh Hồ Xuân Hương (giai đoạn 2022–2023).",
     "status": "pending",
     "source_type": "primary",
-    "url": "",
-    "verification_note": "Cần đối chiếu số hiệu nghị quyết và ngày thông qua trên hệ thống tài liệu UNESCO."
+    "url": "https://en.vietnamplus.vn/unesco-honouring-of-poets-shows-recognition-of-vietnams-cultural-values-post216100.vnp",
+    "verification_note": "Đối chiếu 13/11/2026 (TTXVN – VietnamPlus, 26/11/2021): xác nhận kỳ họp 41 và ngày 23/11/2021. Chưa tìm thấy nguồn xác nhận số hiệu \"41 C/Resolution 15\"."
   },
   {
     "id": "src_nq_1685_2025",
@@ -90,7 +90,7 @@
     "status": "pending",
     "source_type": "primary",
     "url": "",
-    "verification_note": "Cần bổ sung ngày ban hành đầy đủ."
+    "verification_note": "Cần bổ sung ngày ban hành đầy đủ. Đối chiếu 13/11/2026: không truy cập được trang văn bản (thuvienphapluat.vn chặn truy cập tự động) – cần tra thủ công."
   },
   {
     "id": "src_plo_xuan_hoa",

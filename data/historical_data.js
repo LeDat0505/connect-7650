@@ -40,7 +40,7 @@ var CONNECT_DATA = {
         "decision": "Theo dữ liệu dự án: Quyết định 75/QĐ-UB của UBND TP. Hồ Chí Minh ngày 04/04/1985; có nguồn ghi đổi tên sau 1975 (đang đối chiếu)",
         "year": 1985,
         "verified": false,
-        "verification_note": "Đối chiếu 13/11/2026: bảng Ái Hữu Biên Hòa xác nhận tên cũ Mayer → Hiền Vương → Võ Thị Sáu (khớp), nhưng không nêu năm. Có nguồn ghi đổi tên sau 1975; cần đối chiếu văn bản gốc giữa đợt 1975 và Quyết định 75/QĐ-UB ngày 04/04/1985 (chưa tìm thấy nguồn nêu số hiệu này)."
+        "verification_note": "Đối chiếu 13/11/2026: bảng Ái Hữu Biên Hòa xác nhận tên cũ Mayer → Hiền Vương → Võ Thị Sáu (khớp), nhưng không nêu năm. Có nguồn ghi đổi tên sau 1975; cần đối chiếu văn bản gốc giữa đợt 1975 và Quyết định 75/QĐ-UB ngày 04/04/1985 (chưa tìm thấy nguồn nêu số hiệu này). Đối chiếu bổ sung 13/11/2026: đã tìm thêm (báo Tuổi Trẻ, Pháp Luật TP.HCM, Kinh tế Sài Gòn, Wikipedia) nhưng chưa có nguồn nêu năm đặt tên."
       },
       "biography_summary": "Võ Thị Sáu sinh năm 1933 tại Đất Đỏ (Bà Rịa). Tham gia cách mạng từ năm 14 tuổi trong Đội Công an xung phong Đất Đỏ. Bị thực dân Pháp bắt năm 1950 và xử bắn tại Côn Đảo vào sáng ngày 23/01/1952 khi chưa tròn 19 tuổi. Bà là người tử tù nữ đầu tiên tại Côn Đảo.",
       "milestones": [
@@ -1175,7 +1175,7 @@ var CONNECT_DATA = {
         "decision": "Đổi tên năm 1975 (đang đối chiếu số văn bản)",
         "year": 1975,
         "verified": false,
-        "verification_note": "Đối chiếu 13/11/2026: bảng Ái Hữu Biên Hòa ghi Champagne → Yên Đổ → Lý Chính Thắng: tên Yên Đổ khớp, tên Pháp trong dữ liệu cũ (Rue Paul Blanchy) không khớp – Paul Blanchy là tên cũ của đường Hai Bà Trưng. Chưa tìm thấy nguồn xác nhận năm 1975. Chưa có nguồn nêu số hiệu văn bản."
+        "verification_note": "Đối chiếu 13/11/2026: bảng Ái Hữu Biên Hòa ghi Champagne → Yên Đổ → Lý Chính Thắng: tên Yên Đổ khớp, tên Pháp trong dữ liệu cũ (Rue Paul Blanchy) không khớp – Paul Blanchy là tên cũ của đường Hai Bà Trưng. Chưa tìm thấy nguồn xác nhận năm 1975. Chưa có nguồn nêu số hiệu văn bản. Đối chiếu bổ sung 13/11/2026: đã tìm thêm (báo Tuổi Trẻ, Pháp Luật TP.HCM, Kinh tế Sài Gòn, Wikipedia) nhưng chưa có nguồn nêu năm đặt tên."
       },
       "biography_summary": "Lý Chính Thắng tên thật là Nguyễn Văn Trọng, sinh năm 1917 tại Hà Tĩnh, vào Sài Gòn hoạt động công nhân từ sớm. Năm 1945, ông được bầu làm Bí thư Tổng Công đoàn Nam Bộ. Khi thực dân Pháp quay lại gây hấn ngày 23/9/1945, ông trực tiếp chỉ huy mặt trận Cầu Kiệu và hy sinh anh dũng ngày 30/10/1946.",
       "milestones": [
@@ -2231,7 +2231,7 @@ var CONNECT_DATA = {
         "decision": "Theo dữ liệu dự án: Quyết định 75/QĐ-UB của UBND TP. Hồ Chí Minh ngày 04/04/1985 (đang đối chiếu văn bản gốc)",
         "year": 1985,
         "verified": false,
-        "verification_note": "Đối chiếu 13/11/2026: bảng Ái Hữu Biên Hòa ghi Blancsubé (viết \"Blan Subé\") → Duy Tân → Phạm Ngọc Thạch: tên Duy Tân khớp, tên Pháp trong dữ liệu cũ (\"Rue Catinat kéo dài\") không khớp. Chưa tìm thấy nguồn xác nhận năm 1985 và Quyết định 75/QĐ-UB."
+        "verification_note": "Đối chiếu 13/11/2026: bảng Ái Hữu Biên Hòa ghi Blancsubé (viết \"Blan Subé\") → Duy Tân → Phạm Ngọc Thạch: tên Duy Tân khớp, tên Pháp trong dữ liệu cũ (\"Rue Catinat kéo dài\") không khớp. Chưa tìm thấy nguồn xác nhận năm 1985 và Quyết định 75/QĐ-UB. Đối chiếu bổ sung 13/11/2026: năm 1985 có thêm căn cứ – Wikipedia tiếng Việt (bài Đường Đồng Khởi) ghi năm 1985 UBND TP. Hồ Chí Minh đổi tên thành đường Phạm Ngọc Thạch; Tuổi Trẻ (03/02/2023) viết \"con đường Duy Tân (sau 1985 đổi thành Phạm Ngọc Thạch)\". Vẫn chưa có số văn bản."
       },
       "biography_summary": "Bác sĩ Phạm Ngọc Thạch (1909 – 1968), quê Bình Định, tốt nghiệp thủ khoa bác sĩ chuyên khoa lao tại Đại học Paris. Năm 1945, ông khởi xướng phong trào Thanh niên Tiền phong quy tụ hàng triệu thanh niên Nam Bộ đứng lên cướp chính quyền. Trong kháng chiến chống Mỹ, ông xung phong vào chiến trường miền Nam và hy sinh trên cương vị Bộ trưởng Bộ Y tế năm 1968.",
       "milestones": [
@@ -2259,7 +2259,9 @@ var CONNECT_DATA = {
         "Viện Pasteur TP.HCM",
         "Bộ Y tế Việt Nam",
         "Bảo tàng Lịch sử TP.HCM",
-        "Ái Hữu Biên Hòa (Nguyên Trần, 2017) – bảng đối chiếu tên đường Sài Gòn xưa & nay"
+        "Ái Hữu Biên Hòa (Nguyên Trần, 2017) – bảng đối chiếu tên đường Sài Gòn xưa & nay",
+        "Wikipedia tiếng Việt: Đường Đồng Khởi, Thành phố Hồ Chí Minh (ghi chú về đường Phạm Ngọc Thạch)",
+        "Tuổi Trẻ (03/02/2023) – Đường phố Sài Gòn, những ký ức thân thương – Kỳ 1: Con đường Duy Tân"
       ],
       "verification_status": "pending",
       "coordinates": [
@@ -2432,7 +2434,7 @@ var CONNECT_DATA = {
         "decision": "Đổi tên thành Nguyễn Đình Chiểu sau năm 1975 (đang đối chiếu thời điểm và số văn bản)",
         "year": null,
         "verified": false,
-        "verification_note": "Đối chiếu 13/11/2026: bảng Ái Hữu Biên Hòa ghi Richaud → Phan Đình Phùng → Nguyễn Đình Chiểu, khớp với hồ sơ Tượng đài Thích Quảng Đức (ngã tư Phan Đình Phùng – Lê Văn Duyệt). Dữ liệu cũ (Phan Thanh Giản, Legrand de la Liraye) là lịch sử của đường Điện Biên Phủ. Bảng này còn ghi một đường d'Arfeuille mang tên Nguyễn Đình Chiểu trước 1975 – cần làm rõ. Chưa tìm thấy năm đổi tên."
+        "verification_note": "Đối chiếu 13/11/2026: bảng Ái Hữu Biên Hòa ghi Richaud → Phan Đình Phùng → Nguyễn Đình Chiểu, khớp với hồ sơ Tượng đài Thích Quảng Đức (ngã tư Phan Đình Phùng – Lê Văn Duyệt). Dữ liệu cũ (Phan Thanh Giản, Legrand de la Liraye) là lịch sử của đường Điện Biên Phủ. Bảng này còn ghi một đường d'Arfeuille mang tên Nguyễn Đình Chiểu trước 1975 – cần làm rõ. Chưa tìm thấy năm đổi tên. Đối chiếu bổ sung 13/11/2026: đã tìm thêm (báo Tuổi Trẻ, Pháp Luật TP.HCM, Kinh tế Sài Gòn, Wikipedia) nhưng chưa có nguồn nêu năm đặt tên."
       },
       "biography_summary": "Nguyễn Đình Chiểu (1822 – 1888) sinh tại làng Tân Thới, Gia Định. Dù bị mù hai mắt từ tuổi thanh xuân, ông vừa làm thầy thuốc chữa bệnh cho dân, vừa dạy học và dùng ngòi bút làm vũ khí kháng chiến kiên cường chống thực dân Pháp. Năm 2021, Đại hội đồng UNESCO thông qua nghị quyết cùng kỷ niệm 200 năm ngày sinh của ông.",
       "milestones": [
@@ -2446,7 +2448,7 @@ var CONNECT_DATA = {
         },
         {
           "year": "2021",
-          "content": "UNESCO chính thức vinh danh Nguyễn Đình Chiểu là Danh nhân Văn hóa Thế giới."
+          "content": "Ngày 23/11/2021, kỳ họp thứ 41 Đại hội đồng UNESCO thông qua việc cùng Việt Nam kỷ niệm 200 năm ngày sinh Nguyễn Đình Chiểu (giai đoạn 2022–2023)."
         }
       ],
       "nearby_sites": [
@@ -2939,7 +2941,7 @@ var CONNECT_DATA = {
         "decision": "Giữ tên sau năm 1975 (đang đối chiếu thời điểm đặt tên và số văn bản)",
         "year": null,
         "verified": false,
-        "verification_note": "Đối chiếu 13/11/2026: bảng Ái Hữu Biên Hòa ghi Barbé → Lê Quý Đôn là tên trước 1975, rồi lại nối tiếp sang Hồng Thập Tự / Nguyễn Thị Minh Khai – chưa rõ, cần đối chiếu. Chưa tìm thấy năm đặt tên."
+        "verification_note": "Đối chiếu 13/11/2026: bảng Ái Hữu Biên Hòa ghi Barbé → Lê Quý Đôn là tên trước 1975, rồi lại nối tiếp sang Hồng Thập Tự / Nguyễn Thị Minh Khai – chưa rõ, cần đối chiếu. Chưa tìm thấy năm đặt tên. Đối chiếu bổ sung 13/11/2026: đã tìm thêm (báo Tuổi Trẻ, Pháp Luật TP.HCM, Kinh tế Sài Gòn, Wikipedia) nhưng chưa có nguồn nêu năm đặt tên."
       },
       "biography_summary": "Lê Quý Đôn sinh năm 1726 tại Duyên Hà (Thái Bình). Đỗ Bảng nhãn năm 1752, ông là học giả uyên bác trên hầu khắp các lĩnh vực: triết học, lịch sử, văn hóa, thiên văn, nông học. Bộ sách Phủ biên tạp lục của ông là nguồn sử liệu căn bản khẳng định quá trình khai phá vùng đất phương Nam và chủ quyền biển đảo Việt Nam.",
       "milestones": [
@@ -3973,7 +3975,7 @@ var CONNECT_DATA = {
         "decision": "Theo dữ liệu dự án: Quyết định 75/QĐ-UB của UBND TP. Hồ Chí Minh ngày 04/04/1985 (đang đối chiếu văn bản gốc)",
         "year": 1985,
         "verified": false,
-        "verification_note": "Đối chiếu 13/11/2026: không tìm thấy nguồn nào về lịch sử tên đường này. Năm 1985 và tên cũ Trần Trung Lập chưa được xác nhận."
+        "verification_note": "Đối chiếu 13/11/2026: không tìm thấy nguồn nào về lịch sử tên đường này. Năm 1985 và tên cũ Trần Trung Lập chưa được xác nhận. Đối chiếu bổ sung 13/11/2026: đã tìm thêm (báo Tuổi Trẻ, Pháp Luật TP.HCM, Kinh tế Sài Gòn, Wikipedia) nhưng chưa có nguồn nêu năm đặt tên."
       },
       "biography_summary": "Nguyễn Thị Diệu sinh năm 1926 tại Đại Lộc (Quảng Nam), là nhà giáo tận tụy dạy học tại Sài Gòn. Sau năm 1954, cô tham gia tích cực trong Ban Chấp hành Phong trào Bảo vệ Hòa bình Sài Gòn - Chợ Lớn. Bị chính quyền Ngô Đình Diệm bắt giam bí mật và sát hại dã man năm 1955 khi mới 29 tuổi.",
       "milestones": [
@@ -4040,10 +4042,10 @@ var CONNECT_DATA = {
       "figure_id": null,
       "naming_history": {
         "previous_names": "Rue N°6, sau đó Rue Catinat (thời Pháp thuộc, theo tên chiến hạm Catinat); đường Tự Do (sau khi người Pháp rút đi đến 1975)",
-        "decision": "Đổi tên thành Đồng Khởi sau năm 1975 (chưa xác minh thời điểm và số văn bản)",
-        "year": null,
+        "decision": "Năm 1975 chính quyền Cộng hòa Miền Nam Việt Nam đổi tên thành Đồng Khởi (đang đối chiếu số văn bản)",
+        "year": 1975,
         "verified": false,
-        "verification_note": "Đối chiếu 13/11/2026: tên cũ Catinat → Tự Do → Đồng Khởi khớp với bảng đối chiếu Ái Hữu Biên Hòa; tin Reuters (dẫn trên Luật Khoa) cho biết tên Đồng Khởi được công bố khoảng 02/09/1975. Chưa có số văn bản."
+        "verification_note": "Đối chiếu 13/11/2026: tên cũ Catinat → Tự Do → Đồng Khởi khớp với bảng đối chiếu Ái Hữu Biên Hòa; tin Reuters (dẫn trên Luật Khoa) cho biết tên Đồng Khởi được công bố khoảng 02/09/1975. Wikipedia tiếng Việt ghi Catinat từ 01/02/1865, Tự Do từ 1955 (phần mở đầu lại ghi 1954), Đồng Khởi năm 1975 do chính quyền Cộng hòa Miền Nam Việt Nam đổi. Chưa có số văn bản."
       },
       "biography_summary": "Phong trào Đồng Khởi bùng nổ năm 1960, khởi đầu tại Bến Tre, đánh dấu bước chuyển của cách mạng miền Nam.",
       "milestones": [],
@@ -4052,7 +4054,8 @@ var CONNECT_DATA = {
         "Wikipedia: Đồng Khởi Street",
         "Báo Pháp Luật TP.HCM – Đường Nguyễn Huệ, Đồng Khởi qua các thời kỳ",
         "Ái Hữu Biên Hòa (Nguyên Trần, 2017) – bảng đối chiếu tên đường Sài Gòn xưa & nay",
-        "Luật Khoa – 1975 tuần 36 (dẫn tin Reuters ngày 02/09/1975 về đợt đổi tên 51 con đường)"
+        "Luật Khoa – 1975 tuần 36 (dẫn tin Reuters ngày 02/09/1975 về đợt đổi tên 51 con đường)",
+        "Wikipedia tiếng Việt: Đường Đồng Khởi, Thành phố Hồ Chí Minh"
       ],
       "verification_status": "pending",
       "description": "Tuyến đường trung tâm thuộc khu vực Quận 1 và Quận 3 cũ.",
@@ -4069,19 +4072,19 @@ var CONNECT_DATA = {
       "geometry_source": "OpenStreetMap (ODbL), cắt theo ranh giới phường",
       "naming_eras": [
         {
-          "era": "Thời Pháp thuộc",
+          "era": "1865 – 1955",
           "name": "Rue Catinat",
-          "note": "Ban đầu là Rue N°6"
+          "note": "Ban đầu là đường số 16 (Rue N°6 theo một số nguồn)"
         },
         {
-          "era": "Trước 1975",
+          "era": "1955 – 1975",
           "name": "Đường Tự Do",
           "note": ""
         },
         {
-          "era": "Sau 1975 – Nay",
+          "era": "Từ 1975 – Nay",
           "name": "Đường Đồng Khởi",
-          "note": "Chưa xác minh văn bản đổi tên"
+          "note": "Đang đối chiếu số văn bản"
         }
       ],
       "axis_groups": [
@@ -4109,13 +4112,15 @@ var CONNECT_DATA = {
         "decision": "Mang tên Nguyễn Huệ từ năm 1956",
         "year": 1956,
         "verified": false,
-        "verification_note": "Thông tin đổi tên dựa trên nguồn tham khảo/thứ cấp (báo chí, Wikipedia, Saigoneer); chưa có văn bản gốc."
+        "verification_note": "Đối chiếu bổ sung 13/11/2026: tên cũ Charner khớp, nhưng năm KHÔNG khớp: dữ liệu (theo PLO) ghi 1956, còn Wikipedia tiếng Việt và tiếng Anh đều ghi năm 1955 chính quyền Việt Nam Cộng hòa đổi đại lộ Charner thành Nguyễn Huệ. Cần đối chiếu văn bản để chọn năm đúng."
       },
       "biography_summary": "Nguyễn Huệ (Hoàng đế Quang Trung) là nhà quân sự kiệt xuất của phong trào Tây Sơn thế kỷ XVIII.",
       "milestones": [],
       "nearby_sites": [],
       "sources": [
-        "PLO – Đường Nguyễn Huệ, dòng kênh thành quảng trường đi bộ đầu tiên"
+        "PLO – Đường Nguyễn Huệ, dòng kênh thành quảng trường đi bộ đầu tiên",
+        "Wikipedia tiếng Việt: Đường Nguyễn Huệ, Thành phố Hồ Chí Minh",
+        "Wikipedia: Nguyễn Huệ Boulevard"
       ],
       "verification_status": "pending",
       "description": "Tuyến đường trung tâm thuộc khu vực Quận 1 và Quận 3 cũ.",
@@ -4209,7 +4214,7 @@ var CONNECT_DATA = {
         "decision": "Năm 1955 chính quyền Việt Nam Cộng hòa đổi tên thành đại lộ Lê Lợi; tên được giữ đến nay",
         "year": 1955,
         "verified": false,
-        "verification_note": "Thông tin đổi tên dựa trên nguồn tham khảo/thứ cấp (báo chí, Wikipedia, Saigoneer); chưa có văn bản gốc."
+        "verification_note": "Đối chiếu bổ sung 13/11/2026: Wikipedia tiếng Việt ghi năm 1955 chính quyền Việt Nam Cộng hòa đổi đại lộ Bonard thành Lê Lợi – khớp. Thông tin đổi tên dựa trên nguồn tham khảo/thứ cấp (báo chí, Wikipedia, Saigoneer); chưa có văn bản gốc."
       },
       "biography_summary": "Lê Lợi (1385–1433) lãnh đạo khởi nghĩa Lam Sơn đánh đuổi quân Minh, lên ngôi năm 1428.",
       "milestones": [],
@@ -4318,18 +4323,19 @@ var CONNECT_DATA = {
       "significance": "Tôn vinh vua Hàm Nghi, người ban chiếu Cần Vương chống thực dân Pháp.",
       "figure_id": null,
       "naming_history": {
-        "previous_names": "Boulevard de Canton, Boulevard de la Somme (thời Pháp thuộc)",
-        "decision": "Đổi tên thành Hàm Nghi sau năm 1955",
-        "year": null,
+        "previous_names": "Boulevard de Canton (1877), Boulevard de la Somme (1920) (thời Pháp thuộc)",
+        "decision": "Năm 1955 chính quyền Việt Nam Cộng hòa đổi tên thành đại lộ Hàm Nghi (đang đối chiếu văn bản)",
+        "year": 1955,
         "verified": false,
-        "verification_note": "Thông tin đổi tên dựa trên nguồn tham khảo/thứ cấp (báo chí, Wikipedia, Saigoneer); chưa có văn bản gốc."
+        "verification_note": "Đối chiếu bổ sung 13/11/2026: Wikipedia tiếng Việt và tiếng Anh cùng ghi năm 1955 – khớp, bổ sung năm cụ thể (dữ liệu cũ ghi \"sau năm 1955\"). Thông tin đổi tên dựa trên nguồn tham khảo/thứ cấp (báo chí, Wikipedia, Saigoneer); chưa có văn bản gốc."
       },
       "biography_summary": "Vua Hàm Nghi (1871–1943) cùng Tôn Thất Thuyết phát động phong trào Cần Vương năm 1885.",
       "milestones": [],
       "nearby_sites": [],
       "sources": [
         "Wikipedia: Hàm Nghi Boulevard",
-        "Saigoneer (Tim Doling) – Hàm Nghi Boulevard"
+        "Saigoneer (Tim Doling) – Hàm Nghi Boulevard",
+        "Wikipedia tiếng Việt: Đường Hàm Nghi, Thành phố Hồ Chí Minh"
       ],
       "verification_status": "pending",
       "description": "Tuyến đường trung tâm thuộc khu vực Quận 1 và Quận 3 cũ.",
@@ -4392,15 +4398,15 @@ var CONNECT_DATA = {
         {
           "era": "Thời Pháp thuộc",
           "name": "Boulevard de Canton",
-          "note": ""
+          "note": "Từ 1877"
         },
         {
-          "era": "Thời Pháp thuộc",
+          "era": "1920 – 1955",
           "name": "Boulevard de la Somme",
           "note": ""
         },
         {
-          "era": "Sau 1955 – Nay",
+          "era": "Từ 1955 – Nay",
           "name": "Đại lộ Hàm Nghi",
           "note": ""
         }
@@ -4425,17 +4431,18 @@ var CONNECT_DATA = {
       "significance": "Tưởng nhớ Chủ tịch nước Tôn Đức Thắng (1888–1980).",
       "figure_id": null,
       "naming_history": {
-        "previous_names": "Bến Bạch Đằng và một đoạn đường Cường Để (trước 1975)",
-        "decision": "Đặt tên Tôn Đức Thắng năm 1980",
+        "previous_names": "Bến Bạch Đằng và một đoạn đường Cường Để (trước 1975); từ 1975 đoạn Cường Để thuộc đường Đinh Tiên Hoàng",
+        "decision": "Năm 1980 UBND TP. Hồ Chí Minh nhập đường Bến Bạch Đằng với một đoạn đường Đinh Tiên Hoàng thành đường Tôn Đức Thắng (đang đối chiếu số văn bản)",
         "year": 1980,
         "verified": false,
-        "verification_note": "Thông tin đổi tên dựa trên nguồn tham khảo/thứ cấp (báo chí, Wikipedia, Saigoneer); chưa có văn bản gốc."
+        "verification_note": "Đối chiếu bổ sung 13/11/2026: Wikipedia tiếng Việt ghi năm 1980 UBND TP. Hồ Chí Minh nhập Bến Bạch Đằng với một đoạn Đinh Tiên Hoàng (năm 1975 đã nhập Cường Để) thành Tôn Đức Thắng – năm khớp. Thông tin đổi tên dựa trên nguồn tham khảo/thứ cấp (báo chí, Wikipedia, Saigoneer); chưa có văn bản gốc."
       },
       "biography_summary": "Tôn Đức Thắng là Chủ tịch nước Việt Nam Dân chủ Cộng hòa và CHXHCN Việt Nam, qua đời năm 1980.",
       "milestones": [],
       "nearby_sites": [],
       "sources": [
-        "Wikipedia: Tôn Đức Thắng Boulevard"
+        "Wikipedia: Tôn Đức Thắng Boulevard",
+        "Wikipedia tiếng Việt: Đường Tôn Đức Thắng, Thành phố Hồ Chí Minh"
       ],
       "verification_status": "pending",
       "description": "Tuyến đường trung tâm thuộc khu vực Quận 1 và Quận 3 cũ.",
@@ -4682,13 +4689,14 @@ var CONNECT_DATA = {
         "decision": "Đổi tên thành Lê Duẩn năm 1986",
         "year": 1986,
         "verified": false,
-        "verification_note": "Thông tin đổi tên dựa trên nguồn tham khảo/thứ cấp (báo chí, Wikipedia, Saigoneer); chưa có văn bản gốc."
+        "verification_note": "Đối chiếu bổ sung 13/11/2026: Wikipedia tiếng Việt ghi Norodom → Thống Nhứt (1955) → 30 Tháng 4 (1975) → Lê Duẩn (1986, UBND TP. Hồ Chí Minh) – khớp. Thông tin đổi tên dựa trên nguồn tham khảo/thứ cấp (báo chí, Wikipedia, Saigoneer); chưa có văn bản gốc."
       },
       "biography_summary": "Lê Duẩn là Bí thư thứ nhất, Tổng Bí thư Ban Chấp hành Trung ương Đảng Cộng sản Việt Nam, qua đời năm 1986.",
       "milestones": [],
       "nearby_sites": [],
       "sources": [
-        "Wikipedia: Lê Duẩn Boulevard"
+        "Wikipedia: Lê Duẩn Boulevard",
+        "Wikipedia tiếng Việt: Đường Lê Duẩn, Thành phố Hồ Chí Minh"
       ],
       "verification_status": "pending",
       "description": "Tuyến đường trung tâm thuộc khu vực Quận 1 và Quận 3 cũ.",
@@ -4900,7 +4908,7 @@ var CONNECT_DATA = {
         "decision": "Chưa có tư liệu xác minh về thời điểm và văn bản đặt tên",
         "year": null,
         "verified": false,
-        "verification_note": "Chưa có nguồn. Đối chiếu 13/11/2026: bảng Ái Hữu Biên Hòa ghi đường Nguyễn Du trước 1975 (Rue Taberd) nay thuộc đường Lý Tự Trọng, nên cần xác định đường Nguyễn Du hiện nay vốn là tuyến nào."
+        "verification_note": "Chưa có nguồn. Đối chiếu 13/11/2026: bảng Ái Hữu Biên Hòa ghi đường Nguyễn Du trước 1975 (Rue Taberd) nay thuộc đường Lý Tự Trọng, nên cần xác định đường Nguyễn Du hiện nay vốn là tuyến nào. Tìm thêm trên Wikipedia: chưa có bài về tuyến này."
       },
       "biography_summary": "Nguyễn Du là đại thi hào dân tộc, tác giả Truyện Kiều.",
       "milestones": [],
@@ -4966,10 +4974,10 @@ var CONNECT_DATA = {
       "figure_id": null,
       "naming_history": {
         "previous_names": "Rue du Gouverneur (mở năm 1863), Rue De La Grandière (từ 1870), đường Gia Long (trước 1975)",
-        "decision": "Đổi tên thành Lý Tự Trọng sau năm 1975 (chưa xác minh thời điểm và số văn bản)",
-        "year": null,
+        "decision": "Năm 1975 chính quyền Cộng hòa Miền Nam Việt Nam đổi tên đường Gia Long thành Lý Tự Trọng (đang đối chiếu số văn bản)",
+        "year": 1975,
         "verified": false,
-        "verification_note": "Đối chiếu 13/11/2026: bảng Ái Hữu Biên Hòa ghi hai đoạn cùng thành Lý Tự Trọng – De Lagrandière → Gia Long và Taberd → Nguyễn Du. Chưa xác minh thời điểm và số văn bản."
+        "verification_note": "Đối chiếu 13/11/2026: bảng Ái Hữu Biên Hòa ghi hai đoạn cùng thành Lý Tự Trọng – De Lagrandière → Gia Long và Taberd → Nguyễn Du. Wikipedia tiếng Việt ghi đường Gouverneur (01/02/1865), De La Grandière (01/07/1870), Gia Long (1950–1955), Lý Tự Trọng năm 1975 – năm khớp với dữ liệu. Chưa có số văn bản."
       },
       "biography_summary": "Lý Tự Trọng là đoàn viên Thanh niên Cách mạng, hy sinh năm 1931 tại Sài Gòn khi chưa tròn 18 tuổi.",
       "milestones": [],
@@ -4977,7 +4985,8 @@ var CONNECT_DATA = {
       "sources": [
         "Báo Tuổi Trẻ – Lý Tự Trọng, con đường có lá me bay",
         "Saigoneer (Tim Doling) – giao lộ Đồn Đất – Gia Long (Thái Văn Lung – Lý Tự Trọng)",
-        "Ái Hữu Biên Hòa (Nguyên Trần, 2017) – bảng đối chiếu tên đường Sài Gòn xưa & nay"
+        "Ái Hữu Biên Hòa (Nguyên Trần, 2017) – bảng đối chiếu tên đường Sài Gòn xưa & nay",
+        "Wikipedia tiếng Việt: Đường Lý Tự Trọng, Thành phố Hồ Chí Minh"
       ],
       "verification_status": "pending",
       "description": "Tuyến đường trung tâm thuộc khu vực Quận 1 và Quận 3 cũ.",
@@ -5026,22 +5035,22 @@ var CONNECT_DATA = {
       "geometry_source": "OpenStreetMap (ODbL), cắt theo ranh giới phường",
       "naming_eras": [
         {
-          "era": "1863 – 1870",
+          "era": "1865 – 1870",
           "name": "Rue du Gouverneur",
           "note": ""
         },
         {
-          "era": "Từ 1870",
+          "era": "1870 – 1950/1955",
           "name": "Rue De La Grandière",
           "note": ""
         },
         {
-          "era": "Trước 1975",
+          "era": "1950/1955 – 1975",
           "name": "Đường Gia Long",
-          "note": ""
+          "note": "Đoạn đầu đổi năm 1950, phần còn lại năm 1955"
         },
         {
-          "era": "Sau 1975 – Nay",
+          "era": "Từ 1975 – Nay",
           "name": "Đường Lý Tự Trọng",
           "note": ""
         }
@@ -6355,15 +6364,15 @@ var CONNECT_DATA = {
     },
     {
       "id": "src_qh_1976",
-      "title": "Nghị quyết Kỳ họp thứ nhất Quốc hội khóa VI nước Cộng hòa Xã hội Chủ nghĩa Việt Nam",
+      "title": "Nghị quyết về việc chính thức đặt tên thành phố Sài Gòn - Gia Định là thành phố Hồ Chí Minh (Quốc hội khóa VI, kỳ họp thứ nhất)",
       "date": "02/07/1976",
       "type": "Nghị quyết Quốc hội",
       "archive": "Cổng thông tin Quốc hội Việt Nam & Bảo tàng Lịch sử Quốc gia",
-      "notes": "Chính thức đổi tên thành phố Sài Gòn - Gia Định thành Thành phố Hồ Chí Minh.",
-      "status": "pending",
+      "notes": "Văn bản không số, Quốc hội ban hành ngày 02/07/1976, Chủ tịch Ủy ban Thường vụ Quốc hội Trường Chinh ký. Nội dung: \"Chính thức đặt tên thành phố Sài Gòn - Gia Định là thành phố Hồ Chí Minh.\"",
+      "status": "verified",
       "source_type": "primary",
-      "url": "",
-      "verification_note": "Cần bổ sung số hiệu văn bản trước khi gắn \"Đã kiểm chứng\"."
+      "url": "https://hethongphapluat.com/nghi-quyet-ve-chinh-thuc-dat-ten-thanh-pho-sai-gon-gia-dinh-la-thanh-pho-ho-chi-minh-do-quoc-hoi-ban-hanh.html",
+      "verification_note": "Đối chiếu 13/11/2026 qua cơ sở dữ liệu văn bản pháp luật (hethongphapluat.com): xác nhận tên, ngày và người ký; văn bản không có số hiệu."
     },
     {
       "id": "src_dia_chi_tphcm",
@@ -6390,14 +6399,14 @@ var CONNECT_DATA = {
     {
       "id": "src_unesco_ndc",
       "title": "Nghị quyết 41 C/Resolution 15 của Đại hội đồng UNESCO vinh danh Nguyễn Đình Chiểu",
-      "date": "11/2021",
+      "date": "23/11/2021",
       "type": "Hồ sơ quốc tế",
       "archive": "UNESCO Paris & Bộ Ngoại giao Việt Nam",
-      "notes": "Công nhận Danh nhân Văn hóa Thế giới đối với nhà thơ, nhà văn hóa yêu nước Nguyễn Đình Chiểu.",
+      "notes": "Kỳ họp thứ 41 Đại hội đồng UNESCO (Paris) ngày 23/11/2021 thông qua việc cùng Việt Nam kỷ niệm 200 năm ngày sinh Nguyễn Đình Chiểu và 250 năm ngày sinh Hồ Xuân Hương (giai đoạn 2022–2023).",
       "status": "pending",
       "source_type": "primary",
-      "url": "",
-      "verification_note": "Cần đối chiếu số hiệu nghị quyết và ngày thông qua trên hệ thống tài liệu UNESCO."
+      "url": "https://en.vietnamplus.vn/unesco-honouring-of-poets-shows-recognition-of-vietnams-cultural-values-post216100.vnp",
+      "verification_note": "Đối chiếu 13/11/2026 (TTXVN – VietnamPlus, 26/11/2021): xác nhận kỳ họp 41 và ngày 23/11/2021. Chưa tìm thấy nguồn xác nhận số hiệu \"41 C/Resolution 15\"."
     },
     {
       "id": "src_nq_1685_2025",
@@ -6420,7 +6429,7 @@ var CONNECT_DATA = {
       "status": "pending",
       "source_type": "primary",
       "url": "",
-      "verification_note": "Cần bổ sung ngày ban hành đầy đủ."
+      "verification_note": "Cần bổ sung ngày ban hành đầy đủ. Đối chiếu 13/11/2026: không truy cập được trang văn bản (thuvienphapluat.vn chặn truy cập tự động) – cần tra thủ công."
     },
     {
       "id": "src_plo_xuan_hoa",
