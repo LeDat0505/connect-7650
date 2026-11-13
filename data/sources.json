@@ -6,9 +6,10 @@
     "type": "Văn bản hành chính nhà nước",
     "archive": "Trung tâm Lưu trữ Quốc gia II & Văn phòng UBND TP.HCM",
     "notes": "Văn bản được dự án dẫn cho đợt đổi tên đường năm 1975. Hiện chỉ đường Nam Kỳ Khởi Nghĩa có trích dẫn trực tiếp; các tuyến khác (Cách Mạng Tháng Tám, Võ Văn Tần, Điện Biên Phủ…) đang đối chiếu với văn bản gốc.",
-    "status": "verified",
+    "status": "pending",
     "source_type": "primary",
-    "url": ""
+    "url": "",
+    "verification_note": "Đối chiếu 13/11/2026: chưa tìm thấy nguồn nào nêu số hiệu văn bản này; các nguồn chỉ xác nhận có đợt đổi tên đường ngày 14/08/1975. Cần bản gốc (Trung tâm Lưu trữ Quốc gia II / Chi cục Văn thư – Lưu trữ TP.HCM)."
   },
   {
     "id": "src_ubnd_1985",
@@ -17,9 +18,10 @@
     "type": "Văn bản hành chính nhà nước",
     "archive": "Văn phòng UBND TP.HCM",
     "notes": "Dữ liệu dự án gắn văn bản này với các đường Võ Thị Sáu, Phạm Ngọc Thạch, Bà Huyện Thanh Quan, Trần Quốc Thảo, Nguyễn Thị Diệu; danh sách này đang đối chiếu với văn bản gốc.",
-    "status": "verified",
+    "status": "pending",
     "source_type": "primary",
-    "url": ""
+    "url": "",
+    "verification_note": "Đối chiếu 13/11/2026: chưa tìm thấy nguồn nào nêu số hiệu văn bản này; các nguồn chỉ xác nhận có đợt đổi tên đường ngày 04/04/1985. Cần bản gốc (Trung tâm Lưu trữ Quốc gia II / Chi cục Văn thư – Lưu trữ TP.HCM)."
   },
   {
     "id": "src_qh_1976",
@@ -144,5 +146,49 @@
     "status": "reference",
     "source_type": "reference",
     "url": ""
+  },
+  {
+    "id": "src_sach_duong_pho_2001",
+    "title": "Nguyễn Q. Thắng, Nguyễn Đình Tư – Đường phố Thành phố Hồ Chí Minh (NXB Văn hóa – Thông tin, 2001)",
+    "date": "2001",
+    "type": "Sách tra cứu địa danh",
+    "archive": "NXB Văn hóa – Thông tin (đọc qua các trang trích dẫn trên inkdtex.com)",
+    "notes": "Ghi lịch sử tên đường kèm ngày đổi tên: Võ Văn Tần (14/08/1975, Ủy ban Quân quản Sài Gòn), Trương Định (14/08/1975), Trần Quốc Thảo (04/04/1985), Bà Huyện Thanh Quan (từ 1955). Không nêu số hiệu văn bản.",
+    "status": "secondary",
+    "source_type": "secondary",
+    "url": ""
+  },
+  {
+    "id": "src_q3_dia_danh",
+    "title": "UBND Quận 3 – Thông tin tiểu sử các nhân vật lịch sử, địa danh các tuyến đường trên địa bàn Quận 3",
+    "date": "Chưa rõ",
+    "type": "Tài liệu thông tin của cơ quan nhà nước",
+    "archive": "UBND Quận 3 (dẫn theo Wikipedia tiếng Việt: Đường Điện Biên Phủ)",
+    "notes": "Ghi đường Phan Thanh Giản và đoạn xa lộ nhập thành đường Điện Biên Phủ ngày 14/08/1975. Không phải văn bản quyết định.",
+    "status": "secondary",
+    "source_type": "secondary",
+    "url": ""
+  },
+  {
+    "id": "src_aihuu_doi_chieu",
+    "title": "Ái Hữu Biên Hòa (Nguyên Trần, 2017) – bảng đối chiếu tên đường Sài Gòn xưa & nay",
+    "date": "28/02/2017",
+    "type": "Bảng đối chiếu tên đường (bài viết)",
+    "archive": "aihuubienhoa.com",
+    "notes": "Bảng tên đường thời Pháp – thời Việt Nam Cộng hòa – sau 1975. Không ghi ngày đổi tên.",
+    "status": "reference",
+    "source_type": "reference",
+    "url": "https://aihuubienhoa.com/a7262/doi-chieu-ten-duong-sai-gon-xua-nay-nguyen-tran"
+  },
+  {
+    "id": "src_luatkhoa_1975",
+    "title": "Luật Khoa – 1975 tuần 36 (dẫn tin Reuters ngày 02/09/1975 về đợt đổi tên 51 con đường)",
+    "date": "07/09/2025",
+    "type": "Tổng hợp báo chí",
+    "archive": "1975.luatkhoa.com",
+    "notes": "Dẫn tin Reuters: chính quyền đổi tên 51 con đường, 4 cây cầu và 1 quảng trường ở Sài Gòn, công bố khoảng 02/09/1975 (Tự Do → Đồng Khởi, Công Lý → Nam Kỳ Khởi Nghĩa).",
+    "status": "secondary",
+    "source_type": "secondary",
+    "url": "https://1975.luatkhoa.com/2025/09/07/1975-tuan-36-chinh-quyen-doi-ten-duong-o-sai-gon-de-mung-quoc-khanh-viet-nam-de-doa-cam-pu-chia-tren-vinh-thai-lan/"
   }
 ]

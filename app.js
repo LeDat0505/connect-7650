@@ -609,6 +609,7 @@ function setupMapBottomOffset() {
 // FEATURE 1 & 2: STREET NAMING ERAS & AUDIO GUIDE HELPERS
 // ============================================================================
 const STREET_NAMING_ERAS = {
+  // Đối chiếu 13/11/2026 – xem naming_history.verification_note trong data/historical_data.js
   street_vo_thi_sau: [
     { era: 'Thời Pháp thuộc', name: 'Rue Mayer', note: 'Đặt theo tên một bác sĩ người Pháp' },
     { era: 'Giai đoạn 1955 – 1975', name: 'Đường Hiền Vương', note: 'Tên hiệu chúa Nguyễn Phúc Chu' },
@@ -617,7 +618,7 @@ const STREET_NAMING_ERAS = {
   street_nam_ky_khoi_nghia: [
     { era: 'Thời Pháp thuộc', name: 'Rue Mac-Mahon', note: 'Tên Thống chế Pháp Patrice de Mac-Mahon' },
     { era: 'Giai đoạn 1955 – 1975', name: 'Đường Công Lý', note: 'Đại lộ ngoại giao từ sân bay Tân Sơn Nhất' },
-    { era: 'Từ 1975 – Nay', name: 'Đường Nam Kỳ Khởi Nghĩa', note: 'Quyết định 142/QĐ-UB ngày 14/08/1975 (Ủy ban Quân quản Thành phố Sài Gòn - Gia Định)' }
+    { era: 'Từ 1975 – Nay', name: 'Đường Nam Kỳ Khởi Nghĩa', note: 'Đổi tên năm 1975 – đang đối chiếu số văn bản' }
   ],
   street_cach_mang_thang_tam: [
     { era: 'Thời Pháp thuộc', name: 'Rue de Verdun', note: 'Kỷ niệm địa danh chiến trận Verdun' },
@@ -625,64 +626,66 @@ const STREET_NAMING_ERAS = {
     { era: 'Từ 1975 – Nay', name: 'Đường Cách Mạng Tháng Tám', note: 'Đổi tên năm 1975 – đang đối chiếu số văn bản' }
   ],
   street_ba_huyen_thanh_quan: [
-    { era: 'Thời Pháp thuộc', name: 'Rue Rousseau', note: 'Tên nhà triết học Jean-Jacques Rousseau' },
-    { era: 'Giai đoạn 1955 – 1985', name: 'Đường Trần Quý Cáp', note: 'Chí sĩ phong trào Duy Tân' },
-    { era: 'Từ 1985 – Nay', name: 'Đường Bà Huyện Thanh Quan', note: 'Dữ liệu ghi 04/04/1985 – đang đối chiếu văn bản gốc' }
+    { era: 'Thời Pháp thuộc', name: 'Rue Nouvelle', note: 'Đoạn Nguyễn Thị Minh Khai – Hồ Xuân Hương' },
+    { era: '1920 – 1955', name: 'Đường Pierre Flandin', note: 'Đặt ngày 26/04/1920' },
+    { era: 'Từ 1955 – Nay', name: 'Đường Bà Huyện Thanh Quan', note: 'Theo sách "Đường phố TP.HCM" (2001) – đang đối chiếu văn bản' }
   ],
   street_ly_chinh_thang: [
-    { era: 'Thời Pháp thuộc', name: 'Rue Paul Blanchy', note: 'Thị trưởng đầu tiên của Sài Gòn' },
+    { era: 'Thời Pháp thuộc', name: 'Rue Champagne', note: 'Đặt thời chính quyền thuộc địa' },
     { era: 'Giai đoạn 1955 – 1975', name: 'Đường Yên Đổ', note: 'Bút hiệu của cụ Nguyễn Khuyến' },
     { era: 'Từ 1975 – Nay', name: 'Đường Lý Chính Thắng', note: 'Đổi tên năm 1975 – đang đối chiếu số văn bản' }
   ],
   street_vo_van_tan: [
-    { era: 'Thời Pháp thuộc', name: 'Rue Testard', note: 'Sĩ quan hải quân Pháp' },
-    { era: 'Giai đoạn 1955 – 1975', name: 'Đường Trần Quý Cáp', note: 'Đoạn trung tâm Đô thành Sài Gòn' },
-    { era: 'Từ 1975 – Nay', name: 'Đường Võ Văn Tần', note: 'Đổi tên năm 1975 – đang đối chiếu số văn bản' }
+    { era: 'Thời Pháp thuộc', name: 'Rue Testard', note: 'Đặt ngày 24/02/1897' },
+    { era: 'Giai đoạn 1955 – 1975', name: 'Đường Trần Quý Cáp', note: 'Đặt ngày 22/03/1955' },
+    { era: 'Từ 1975 – Nay', name: 'Đường Võ Văn Tần', note: 'Ủy ban Quân quản Sài Gòn đổi tên ngày 14/08/1975 – đang đối chiếu số văn bản' }
   ],
   street_tran_quoc_thao: [
-    { era: 'Thời Pháp thuộc', name: 'Rue Larclauze', note: 'Đặt thời chính quyền thuộc địa' },
-    { era: 'Giai đoạn 1955 – 1985', name: 'Đường Trương Minh Ký', note: 'Học giả, nhà báo thời kỳ đầu' },
-    { era: 'Từ 1985 – Nay', name: 'Đường Trần Quốc Thảo', note: 'Dữ liệu ghi 04/04/1985 – đang đối chiếu văn bản gốc' }
+    { era: 'Thời Pháp thuộc', name: 'Rue Eyriaud des Vergnes', note: 'Đặt ngày 30/03/1906' },
+    { era: 'Giai đoạn 1955 – 1975', name: 'Đường Trương Minh Giảng', note: 'Đặt ngày 22/03/1955' },
+    { era: '1975 – 1985', name: 'Đường Nguyễn Văn Trỗi', note: 'Nhập với đường Trương Minh Ký ngày 14/08/1975' },
+    { era: 'Từ 1985 – Nay', name: 'Đường Trần Quốc Thảo', note: 'Tách ra ngày 04/04/1985 – đang đối chiếu số văn bản' }
   ],
   street_nguyen_thi_minh_khai: [
     { era: 'Thời Pháp thuộc', name: 'Rue Chasseloup-Laubat', note: 'Bộ trưởng Thuộc địa Pháp' },
     { era: 'Giai đoạn 1955 – 1975', name: 'Đường Hồng Thập Tự', note: 'Tên Hội Chữ thập đỏ' },
-    { era: 'Từ 1975 – Nay', name: 'Đường Nguyễn Thị Minh Khai', note: 'Đổi tên năm 1975 – đang đối chiếu số văn bản' }
+    { era: '1975 – 1991', name: 'Đường Xô Viết Nghệ Tĩnh', note: 'Nhập với đường Hùng Vương' },
+    { era: 'Từ 1991 – Nay', name: 'Đường Nguyễn Thị Minh Khai', note: 'UBND TP.HCM đặt tên năm 1991 – đang đối chiếu số văn bản' }
   ],
   street_pham_ngoc_thach: [
-    { era: 'Thời Pháp thuộc', name: 'Rue Catinat kéo dài', note: 'Trục nối từ Nhà thờ Đức Bà' },
-    { era: 'Giai đoạn 1955 – 1985', name: 'Đường Duy Tân', note: 'Vị vua yêu nước (vòng xoay Hồ Con Rùa)' },
-    { era: 'Từ 1985 – Nay', name: 'Đường Phạm Ngọc Thạch', note: 'Dữ liệu ghi 04/04/1985 – đang đối chiếu văn bản gốc' }
+    { era: 'Thời Pháp thuộc', name: 'Rue Blancsubé', note: 'Đặt thời chính quyền thuộc địa' },
+    { era: 'Trước 1975', name: 'Đường Duy Tân', note: 'Vị vua yêu nước (vòng xoay Hồ Con Rùa)' },
+    { era: 'Sau 1975 – Nay', name: 'Đường Phạm Ngọc Thạch', note: 'Dữ liệu ghi 04/04/1985 – đang đối chiếu văn bản gốc' }
   ],
   street_nguyen_dinh_chieu: [
-    { era: 'Thời Pháp thuộc', name: 'Rue Legrand-de-la-Liraye', note: 'Học giả, nhà truyền giáo' },
-    { era: 'Giai đoạn 1955 – 1975', name: 'Đường Phan Thanh Giản', note: 'Đại thần triều Nguyễn' },
-    { era: 'Từ 1975 – Nay', name: 'Đường Nguyễn Đình Chiểu', note: 'Đổi tên năm 1975 – đang đối chiếu số văn bản' }
+    { era: 'Thời Pháp thuộc', name: 'Rue Richaud', note: 'Đặt thời chính quyền thuộc địa' },
+    { era: 'Trước 1975', name: 'Đường Phan Đình Phùng', note: 'Lãnh tụ khởi nghĩa Hương Khê' },
+    { era: 'Sau 1975 – Nay', name: 'Đường Nguyễn Đình Chiểu', note: 'Chưa xác minh thời điểm đổi tên' }
   ],
   street_le_quy_don: [
     { era: 'Thời Pháp thuộc', name: 'Rue Barbé', note: 'Đại úy quân viễn chinh Pháp' },
-    { era: 'Giai đoạn 1955 – 1975', name: 'Đường Lê Quý Đôn', note: 'Khuôn viên trường Trung học Lê Quý Đôn' },
-    { era: 'Từ 1975 – Nay', name: 'Đường Lê Quý Đôn', note: 'Giữ tên nhà bác học' }
+    { era: 'Trước 1975', name: 'Đường Lê Quý Đôn', note: 'Khuôn viên trường Trung học Lê Quý Đôn' },
+    { era: 'Hiện nay', name: 'Đường Lê Quý Đôn', note: 'Giữ tên nhà bác học – chưa xác minh năm đặt tên' }
   ],
   street_truong_dinh: [
-    { era: 'Thời Pháp thuộc', name: 'Rue Larégnère', note: 'Tên sĩ quan Pháp' },
-    { era: 'Giai đoạn 1955 – 1975', name: 'Đường Trương Công Định', note: 'Thủ lĩnh kháng Pháp Nam Kỳ' },
-    { era: 'Từ 1975 – Nay', name: 'Đường Trương Định', note: 'Đổi tên năm 1975 – đang đối chiếu số văn bản' }
+    { era: 'Thời Pháp thuộc', name: 'Rue Amiral Roze và Rue Larégnère', note: 'Hai đường riêng' },
+    { era: 'Giai đoạn 1955 – 1975', name: 'Đường Trương Công Định và đường Đoàn Thị Điểm', note: 'Đặt ngày 22/03/1955' },
+    { era: 'Từ 1975 – Nay', name: 'Đường Trương Định', note: 'Nhập hai đường ngày 14/08/1975 – đang đối chiếu số văn bản' }
   ],
   street_hai_ba_trung: [
     { era: 'Thời Pháp thuộc', name: 'Rue Paul Blanchy', note: 'Khu vực chợ Tân Định' },
-    { era: 'Giai đoạn 1955 – 1975', name: 'Đường Hai Bà Trưng', note: 'Đặt từ năm 1955' },
-    { era: 'Từ 1975 – Nay', name: 'Đường Hai Bà Trưng', note: 'Giữ nguyên tên hai nữ anh hùng' }
+    { era: '1952 – 1955', name: 'Đường Trưng Nữ Vương', note: 'Đoạn Norodom – cầu Kiệu' },
+    { era: 'Từ 1955 – Nay', name: 'Đường Hai Bà Trưng', note: 'Đặt năm 1955, giữ tên sau 1975' }
   ],
   street_dien_bien_phu: [
-    { era: 'Thời Pháp thuộc', name: 'Rue Legrand-de-la-Liraye', note: 'Đoạn ngoại vi Sài Gòn' },
-    { era: 'Giai đoạn 1955 – 1975', name: 'Đường Phan Thanh Giản', note: 'Đoạn nối về cầu Điện Biên Phủ' },
-    { era: 'Từ 1975 – Nay', name: 'Đường Điện Biên Phủ', note: 'Kỷ niệm chiến thắng Điện Biên Phủ' }
+    { era: 'Thời Pháp thuộc', name: 'Rue Legrand de la Liraye', note: 'Trước đó là Rue Baria (1871)' },
+    { era: 'Giai đoạn 1955 – 1975', name: 'Đường Phan Thanh Giản', note: 'Đặt ngày 22/03/1955' },
+    { era: 'Từ 1975 – Nay', name: 'Đường Điện Biên Phủ', note: 'Nhập với đoạn xa lộ ngày 14/08/1975 – đang đối chiếu số văn bản' }
   ],
   street_nguyen_thi_dieu: [
     { era: 'Thời Pháp thuộc', name: 'Đường quy hoạch khu Tây', note: 'Khu biệt thự cổ điển Quận 3' },
-    { era: 'Giai đoạn 1955 – 1985', name: 'Đường Trần Trung Lập', note: 'Tên thời Đô thành Sài Gòn' },
-    { era: 'Từ 1985 – Nay', name: 'Đường Nguyễn Thị Diệu', note: 'Dữ liệu ghi 04/04/1985 – đang đối chiếu văn bản gốc' }
+    { era: 'Trước 1985', name: 'Đường Trần Trung Lập', note: 'Chưa tìm thấy nguồn xác nhận' },
+    { era: 'Hiện nay', name: 'Đường Nguyễn Thị Diệu', note: 'Dữ liệu ghi 04/04/1985 – đang đối chiếu văn bản gốc' }
   ]
 };
 
@@ -2417,7 +2420,7 @@ const QUIZ_QUESTIONS = [
       { key: 'C', text: 'Đường Lý Chính Thắng' }
     ],
     correct: 'A',
-    explanation: 'Chính xác! Đường Phạm Ngọc Thạch (trước năm 1985 là đường Duy Tân) nối từ trung tâm Quận 1 qua vòng xoay Hồ Con Rùa tới ngã tư Võ Thị Sáu.'
+    explanation: 'Chính xác! Đường Phạm Ngọc Thạch (trước năm 1975 là đường Duy Tân) nối từ trung tâm Quận 1 qua vòng xoay Hồ Con Rùa tới ngã tư Võ Thị Sáu.'
   },
   {
     question: 'Đường Nguyễn Thị Minh Khai trước năm 1975 mang tên gì?',
