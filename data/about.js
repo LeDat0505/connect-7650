@@ -129,7 +129,7 @@ var CONNECT_ABOUT = {
   feedback: {
     title: 'GÓP Ý & ĐÍNH CHÍNH',
     text: 'Bạn phát hiện thông tin chưa chính xác hoặc muốn đề xuất thêm địa điểm, tuyến đường? Hãy gửi góp ý cho nhóm qua biểu mẫu dưới đây.',
-    formUrl: ''
+    formUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSc4cLOYgIRWSh4ZmFIrV9fj_-CoziuArfhCd1d5nU1Xc5Zusg/viewform'
   }
 };
 
