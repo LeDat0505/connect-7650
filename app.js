@@ -759,10 +759,10 @@ function loadSpeechVoices(timeoutMs = 2000) {
   });
 }
 
-// Best Vietnamese voice on this device, or null. Natural/online voices sound far better.
-function pickVietnameseVoice(voices) {
-  const vi = voices.filter(v => (v.lang || '').replace('_', '-').toLowerCase().startsWith('vi'));
-  if (!vi.length) return null;
+// Vietnamese voices on this device, best first (never any other language).
+// Natural/online voices sound far better but need the network, so keep the rest as fallbacks.
+function listVietnameseVoices(voices) {
+  const vi = voices.filter(v => /^vi([-_]|e\b|e-|$)/i.test((v.lang || '').trim()));
   const score = v => {
     const n = v.name.toLowerCase();
     let s = 0;
@@ -772,7 +772,7 @@ function pickVietnameseVoice(voices) {
     if (n.includes('compact')) s -= 1;
     return s;
   };
-  return vi.sort((a, b) => score(b) - score(a))[0];
+  return vi.sort((a, b) => score(b) - score(a));
 }
 
 // Long single utterances get cut off on Chrome/Android, so read sentence by sentence
@@ -867,9 +867,10 @@ async function toggleAudioGuide() {
   setAudioButtonState(true, 'Đang chuẩn bị…');
   isAudioPlaying = true;
 
-  const voice = pickVietnameseVoice(await loadSpeechVoices());
+  const viVoices = listVietnameseVoices(await loadSpeechVoices());
   if (session !== audioSessionId) return; // stopped while voices were loading
-  if (!voice) {
+  let voiceIndex = 0;
+  if (!viVoices.length) {
     isAudioPlaying = false;
     setAudioButtonState(false);
     showVietnameseVoiceHelp();
@@ -884,16 +885,28 @@ async function toggleAudioGuide() {
       return;
     }
     const utterance = new SpeechSynthesisUtterance(chunks[index]);
-    utterance.voice = voice;
-    utterance.lang = voice.lang;
+    utterance.voice = viVoices[voiceIndex];
+    // Always a standard Vietnamese tag: if the browser ignores .voice (Chrome does when the
+    // voice list reloads), it picks by lang – a non-standard tag like "vi_VN" could fall back
+    // to the default (often English) voice.
+    utterance.lang = 'vi-VN';
     utterance.rate = 0.95;
     utterance.onstart = () => {
       if (session === audioSessionId) setAudioButtonState(true);
     };
     utterance.onend = () => speakNext(index + 1);
     utterance.onerror = (e) => {
-      // "interrupted"/"canceled" come from our own stop; anything else ends the reading
-      if (session === audioSessionId && e.error !== 'interrupted' && e.error !== 'canceled') stopAudioGuide();
+      // "interrupted"/"canceled" come from our own stop
+      if (session !== audioSessionId || e.error === 'interrupted' || e.error === 'canceled') return;
+      // An online voice failed (e.g. offline): retry this sentence with the next Vietnamese voice.
+      // Never switch to a voice in another language.
+      if (voiceIndex + 1 < viVoices.length) {
+        voiceIndex += 1;
+        speakNext(index);
+      } else {
+        stopAudioGuide();
+        showMapToast('Không phát được giọng đọc tiếng Việt trên thiết bị này. Thuyết minh đã dừng.', 5000);
+      }
     };
     currentUtterance = utterance;
     window.speechSynthesis.speak(utterance);
