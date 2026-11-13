@@ -4109,10 +4109,10 @@ var CONNECT_DATA = {
       "figure_id": null,
       "naming_history": {
         "previous_names": "Kênh Lớn / kênh Charner, sau khi lấp kênh năm 1877 là đại lộ Charner (thời Pháp thuộc)",
-        "decision": "Mang tên Nguyễn Huệ từ năm 1956",
-        "year": 1956,
+        "decision": "Năm 1955 chính quyền Việt Nam Cộng hòa đổi đại lộ Charner thành đại lộ Nguyễn Huệ (đang đối chiếu văn bản)",
+        "year": 1955,
         "verified": false,
-        "verification_note": "Đối chiếu bổ sung 13/11/2026: tên cũ Charner khớp, nhưng năm KHÔNG khớp: dữ liệu (theo PLO) ghi 1956, còn Wikipedia tiếng Việt và tiếng Anh đều ghi năm 1955 chính quyền Việt Nam Cộng hòa đổi đại lộ Charner thành Nguyễn Huệ. Cần đối chiếu văn bản để chọn năm đúng."
+        "verification_note": "Đối chiếu bổ sung 13/11/2026: tên cũ Charner khớp. Năm: dữ liệu cũ (theo PLO) ghi 1956, Wikipedia tiếng Việt và tiếng Anh đều ghi 1955 – nhóm chọn 1955 (13/11/2026). Chưa có văn bản gốc xác nhận."
       },
       "biography_summary": "Nguyễn Huệ (Hoàng đế Quang Trung) là nhà quân sự kiệt xuất của phong trào Tây Sơn thế kỷ XVIII.",
       "milestones": [],
@@ -4185,7 +4185,7 @@ var CONNECT_DATA = {
           "note": ""
         },
         {
-          "era": "Từ 1956 – Nay",
+          "era": "Từ 1955 – Nay",
           "name": "Đường Nguyễn Huệ",
           "note": "Phố đi bộ khánh thành 29/04/2015"
         }
